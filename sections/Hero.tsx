@@ -2,6 +2,8 @@ import styles from './Hero.module.scss'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { init } from 'ityped'
+import { motion } from 'framer-motion'
+import { staggerContainer, fadeIn } from '@/utils/motion'
 
 const text = ["Todays web, slowly reaching it's limits.", 'Clouds services are getting more expensive.']
 
@@ -25,14 +27,16 @@ const Hero = () => {
 
   return (
     <section className={`${'section_wrapper'} ${styles.hero}`}>
-      <div className={styles.left}>
-        <h1 className={styles.ityped} ref={textRef}></h1>
-        <h4></h4>
-      </div>
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }} className={styles.motion_wrapper}>
+        <div className={styles.left}>
+          <h1 className={styles.ityped} ref={textRef}></h1>
+          <motion.h2 variants={fadeIn('up', 'tween', 4.5, 1)}>What's next then ?</motion.h2>
+        </div>
 
-      <div className={styles.right}>
-        <Image src="/images/cloud.png" alt="cloud" width={520} height={300} />
-      </div>
+        <motion.div variants={fadeIn('left', 'tween', 6, 1)} className={styles.right}>
+          <Image src="/images/cloud.png" alt="cloud" width={520} height={300} />
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

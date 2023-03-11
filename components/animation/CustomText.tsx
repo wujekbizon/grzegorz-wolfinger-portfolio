@@ -8,11 +8,6 @@ type TypingTextProps = {
   textStyles?: string
 }
 
-type TextProps = {
-  title: ReactNode
-  textStyles?: string
-}
-
 export const TypingText = ({ title, textStyles }: TypingTextProps) => (
   <motion.p variants={textContainer} className={`${textStyles} ${styles.text_typed}`}>
     {Array.from(title).map((letter, index) => (
