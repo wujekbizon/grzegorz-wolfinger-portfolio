@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1480px;
   height: 100%;
   margin: auto;
   display: flex;
@@ -9,6 +9,12 @@
 
   .left {
     flex: 1;
+
+    .ityped {
+      color: white;
+      font-size: 30px;
+      font-weight: 200;
+    }
   }
 
   .right {
@@ -23,6 +29,8 @@
       border-top-left-radius: 60px;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 60px;
+      border: 8px solid #30363d;
+      object-fit: cover;
     }
   }
 }
