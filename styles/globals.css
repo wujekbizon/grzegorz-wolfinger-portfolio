@@ -62,7 +62,7 @@ h4,
 h5,
 h6 {
   font-family: 'Eudoxus Sans';
-  color: #1e2d3d;
+  color: white;
 }
 
 a {
@@ -72,5 +72,5 @@ a {
 
 .section_wrapper {
   height: 100vh;
-  padding: 64px;
+  padding: 4rem 6rem;
 }

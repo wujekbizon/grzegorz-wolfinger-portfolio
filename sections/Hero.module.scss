@@ -1,36 +1,43 @@
 .hero {
-  width: 100%;
-  max-width: 1480px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-
   .motion_wrapper {
     width: 100%;
+    height: 100%;
+    max-width: 1480px;
+    margin: auto;
     display: flex;
     align-items: center;
 
     .left {
-      flex: 1;
+      flex: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 100%;
+      min-height: 400px;
+
+      padding: 18px;
 
       .ityped {
-        color: white;
-        font-size: 30px;
-        font-weight: 200;
+        font-size: 33px;
+        font-weight: 500;
+        letter-spacing: -1px;
       }
 
       h2 {
         margin-top: 30px;
-        font-size: 30px;
+        font-size: 28px;
+        color: #ae67fa;
+        font-weight: 300;
+      }
+
+      span {
+        font-size: 50px;
+        margin-right: 10px;
       }
     }
 
     .right {
-      height: 100%;
       flex: 1;
       display: flex;
       justify-content: center;
@@ -40,7 +47,10 @@
         border-top-left-radius: 60px;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 60px;
-        border: 8px solid #30363d;
+        border: 8px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         object-fit: cover;
       }
     }

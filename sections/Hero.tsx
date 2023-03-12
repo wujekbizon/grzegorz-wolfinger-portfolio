@@ -17,9 +17,9 @@ const Hero = () => {
     }
 
     init(textRef.current, {
-      cursorChar: '',
-      showCursor: true,
+      showCursor: false,
       strings: debouncedText,
+      typeSpeed: 60,
       backDelay: 1800,
       backSpeed: 20
     })
@@ -28,12 +28,15 @@ const Hero = () => {
   return (
     <section className={`${'section_wrapper'} ${styles.hero}`}>
       <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }} className={styles.motion_wrapper}>
-        <div className={styles.left}>
+        <motion.div variants={fadeIn('left', 'tween', 0.4, 0.4)} className={styles.left}>
           <h1 className={styles.ityped} ref={textRef}></h1>
-          <motion.h2 variants={fadeIn('up', 'tween', 4.5, 1)}>What's next then ?</motion.h2>
-        </div>
+          <motion.h2 variants={fadeIn('up', 'tween', 2, 1)}>
+            {' '}
+            <span>&gt; </span> What's next?
+          </motion.h2>
+        </motion.div>
 
-        <motion.div variants={fadeIn('left', 'tween', 6, 1)} className={styles.right}>
+        <motion.div variants={fadeIn('left', 'tween', 4, 1)} className={` ${styles.right}`}>
           <Image src="/images/cloud.png" alt="cloud" width={520} height={300} />
         </motion.div>
       </motion.div>

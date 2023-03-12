@@ -1,3 +1,4 @@
 import Hero from './Hero'
+import Explore from './Explore'
 
-export { Hero }
+export { Hero, Explore }
