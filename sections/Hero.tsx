@@ -28,15 +28,17 @@ const Hero = () => {
   return (
     <section className={`${'section_wrapper'} ${styles.hero}`}>
       <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }} className={styles.motion_wrapper}>
-        <motion.div variants={fadeIn('left', 'tween', 0.4, 0.4)} className={styles.left}>
-          <h1 className={styles.ityped} ref={textRef}></h1>
-          <motion.h2 variants={fadeIn('up', 'tween', 2, 1)}>
+        <motion.div variants={fadeIn('right', 'tween', 0.1, 0.1)} className={styles.left}>
+          <h1 className={styles.ityped} ref={textRef}>
+            {' '}
+          </h1>
+          <motion.h2 variants={fadeIn('right', 'tween', 2, 1)}>
             {' '}
             <span>&gt; </span> What's next?
           </motion.h2>
         </motion.div>
 
-        <motion.div variants={fadeIn('left', 'tween', 4, 1)} className={` ${styles.right}`}>
+        <motion.div variants={fadeIn('left', 'tween', 3, 1)} className={` ${styles.right}`}>
           <Image src="/images/cloud.png" alt="cloud" width={520} height={300} />
         </motion.div>
       </motion.div>
