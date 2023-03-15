@@ -19,14 +19,14 @@
       padding: 18px;
 
       .ityped {
-        font-size: 33px;
+        font-size: 38px;
         font-weight: 500;
         letter-spacing: -1px;
       }
 
       h2 {
         margin-top: 30px;
-        font-size: 28px;
+        font-size: 34px;
         color: #ae67fa;
         font-weight: 300;
       }
@@ -34,6 +34,17 @@
       span {
         font-size: 50px;
         margin-right: 10px;
+      }
+
+      h6 {
+        margin-top: 150px;
+        font-size: 18px;
+        color: rgb(224, 176, 176); 
+      }
+
+      h6 :first-child {
+        font-size: 20px;
+        color: orange;
       }
     }
 

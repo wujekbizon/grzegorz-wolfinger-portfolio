@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { init } from 'ityped'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn } from '@/utils/motion'
+import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 
-const text = ["Todays web, slowly reaching it's limits.", 'Clouds services are getting more expensive.']
+const text = ["Todays web, slowly reaching it's limits.", 'Clouds services are getting more expensive.', 'Is there any way of changing that?']
 
 const Hero = () => {
   const textRef = useRef<HTMLHeadingElement>(null)
@@ -32,13 +32,16 @@ const Hero = () => {
           <h1 className={styles.ityped} ref={textRef}>
             {' '}
           </h1>
-          <motion.h2 variants={fadeIn('right', 'tween', 2, 1)}>
+          <motion.h2 variants={fadeIn('right', 'tween', 4, 1)}>
             {' '}
             <span>&gt; </span> What's next?
           </motion.h2>
+          <motion.h6 variants={zoomIn(14, 1.3)}>
+          <span>&#8650; </span>Scroll down 
+          </motion.h6>
         </motion.div>
 
-        <motion.div variants={fadeIn('left', 'tween', 3, 1)} className={` ${styles.right}`}>
+        <motion.div variants={fadeIn('left', 'tween', 6, 1.2)} className={` ${styles.right}`}>
           <Image src="/images/cloud.png" alt="cloud" width={520} height={300} />
         </motion.div>
       </motion.div>
