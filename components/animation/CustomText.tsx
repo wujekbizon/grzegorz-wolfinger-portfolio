@@ -1,5 +1,4 @@
 import styles from './CustomText.module.scss'
-import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { textContainer, textVariant } from '../../utils/motion'
 
