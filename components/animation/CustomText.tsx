@@ -8,7 +8,7 @@ type TypingTextProps = {
 }
 
 export const TypingText = ({ title, textStyles }: TypingTextProps) => (
-  <motion.p variants={textContainer} className={`${textStyles} ${styles.text_typed}`}>
+  <motion.p variants={textContainer} className={`${textStyles} ${styles.text_typed} gradient_text`}>
     {Array.from(title).map((letter, index) => (
       <motion.span variants={textVariant} key={index}>
         {letter === ' ' ? '\u00A0' : letter}

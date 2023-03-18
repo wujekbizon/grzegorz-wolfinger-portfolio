@@ -95,12 +95,16 @@ a {
   filter: blur(125px);
 }
 
-.text_typed span {
-   
-    font-family: 'Eudoxus Sans';
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: capitalize;
-    color: whitesmoke;
-  
+.gradient_private {
+  background: linear-gradient(270deg, #cc0303, #10204d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient_text {
+  background: linear-gradient(270deg, #00dbd8, #b133ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
