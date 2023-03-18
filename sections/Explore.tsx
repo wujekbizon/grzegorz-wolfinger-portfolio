@@ -1,8 +1,8 @@
 import styles from './Explore.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
-
+import { staggerContainer, fadeIn } from '@/utils/motion'
+import { features } from '@/data/features'
 const Explore = () => {
   return (
     <section className={`section_wrapper`}>
@@ -11,17 +11,37 @@ const Explore = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={styles.motion_explore}
+        className={styles.explore}
       >
-        <motion.h1 variants={fadeIn('up', 'tween', 2, 1)}>
-          Cloud services can be expensive, especially for businesses that
-          require a large amount of storage and computing power.
-        </motion.h1>
-        <motion.h1 variants={fadeIn('up', 'tween', 4, 1)}>
-          Is there any way of changing that?
-        </motion.h1>
+        <motion.div
+          className={styles.left}
+          variants={fadeIn('down', 'tween', 1, 1)}
+        >
+          <div>
+            <Image
+              src="/images/cloud.png"
+              alt="cloud"
+              width={700}
+              height={400}
+            />
+          </div>
+
+          <div>
+            {features.map((feature) => (
+              <h1 key={feature.id}>{feature.title}</h1>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          className={styles.right}
+          variants={fadeIn('up', 'tween', 1, 1)}
+        >
+          <h1>Is there any way of changing that?</h1>
+          <div>
+            <Image src="/images/bot.png" alt="ai" width={700} height={400} />
+          </div>
+        </motion.div>
       </motion.div>
-      <h1>Explore</h1>
     </section>
   )
 }
