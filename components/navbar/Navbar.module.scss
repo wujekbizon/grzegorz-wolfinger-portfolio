@@ -29,16 +29,21 @@
       align-items: center;
       justify-content: space-evenly;
 
-      li {
+      .link_btn {
         font-size: 20px;
         font-weight: 300;
-        color: #00dbd8;
+        color: rgba(0, 219, 216, 0.4);
         text-transform: uppercase;
       }
 
-      li:hover {
+      .link_btn:hover {
         text-decoration: underline;
-        color: rgb(248, 172, 30);
+        color: rgba(0, 219, 216, 1);
+      }
+
+      .active {
+        text-decoration: underline;
+        color: rgba(0, 219, 216, 1);
       }
     }
   }

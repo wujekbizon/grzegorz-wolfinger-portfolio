@@ -4,8 +4,11 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { navVariants } from '@/utils/motion'
 import { Logo } from '@/components'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+  const router = useRouter()
+  console.log(router.pathname)
   return (
     <motion.header variants={navVariants} initial="hidden" whileInView="show" className={styles.header}>
       <div className={`${styles.navbar_gradient} gradient-01 `} />
@@ -13,7 +16,7 @@ const Navbar = () => {
         <Logo />
         <ul className={styles.links}>
           {links.map(({ label, url }) => (
-            <li key={label}>
+            <li className={url === router.pathname ? `${styles.active} ${styles.link_btn}` : `${styles.link_btn}`} key={label}>
               <Link href={url}>{label}</Link>
             </li>
           ))}
