@@ -36,7 +36,18 @@ const Explore = () => {
           className={styles.right}
           variants={fadeIn('up', 'tween', 1, 1)}
         >
-          <h1>Is there any way of changing that?</h1>
+          <h1>
+            How should we create a modern, scalable application that is
+            cost-effective, cross-platform, secure, using a P2P network,
+            reliable and most of the task we can commission to artificial
+            intelligence ? The answer is simple :
+          </h1>
+          <h2 className={styles.socket}>
+            {' '}
+            Socket
+            <span className="gradient_private"> Supply CO.</span>
+            <br />
+          </h2>
           <div>
             <Image src="/images/bot.png" alt="ai" width={700} height={400} />
           </div>

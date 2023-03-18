@@ -53,7 +53,7 @@ export const textContainer = {
   },
   show: (i = 1) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.06, delayChildren: i * 0.04 }
+    transition: { staggerChildren: 0.04, delayChildren: i * 0.04 }
   })
 }
 
@@ -82,7 +82,12 @@ export const textVariant = {
   }
 }
 
-export const fadeIn = (direction: string, type: string, delay: number, duration: number) => ({
+export const fadeIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
     y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
@@ -118,7 +123,12 @@ export const zoomIn = (delay: number, duration: number) => ({
   }
 })
 
-export const slideIn = (direction: string, type: string, delay: number, duration: number) => ({
+export const slideIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === 'left' ? '-150%' : direction === 'right' ? '100%' : 0,
     y: direction === 'up' ? '-100%' : direction === 'down' ? '100%' : 0

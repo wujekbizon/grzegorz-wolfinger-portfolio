@@ -12,6 +12,6 @@ export const features = [
   {
     id: 3,
     title:
-      ' Developers should start using p2p and cross platform approach to create applications that are more secure, reliable, and accessible to a wider range of users.'
+      ' Developers should start using P2P and cross platform approach to create applications that are more secure, reliable, and accessible to a wider range of users.'
   }
 ]
