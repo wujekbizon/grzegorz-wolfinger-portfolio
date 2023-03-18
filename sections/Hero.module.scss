@@ -1,67 +1,44 @@
 .hero {
-  height: calc(100vh - 80px);
-  .motion_wrapper {
+  height: calc(100vh - 20px);
+  text-align: center;
+
+  .scroll {
+    font-size: 18px;
+    color: rgb(224, 176, 176);
+  }
+
+  .scroll :first-child {
+    font-size: 20px;
+    color: #fa8231;
+  }
+  .hero_wrapper {
     width: 100%;
     height: calc(100% - 40px);
     max-width: 1480px;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    h6 {
-      margin-top: 150px;
-      font-size: 18px;
-      color: rgb(224, 176, 176);
-    }
-
-    h6 :first-child {
-      font-size: 20px;
-      color: orange;
-    }
-
-    .hero_container {
+    .title {
       display: flex;
-      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
+      min-height: 400px;
+      padding: 50px;
 
-      .left {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 400px;
-        padding: 50px;
-
-        h1 {
-          margin-top: 10px;
-          font-size: 28px;
-          font-weight: 300;
-        }
-        // custom TypingText css rule
-        .text {
-          margin-bottom: 50px;
-        }
+      h1 {
+        margin-top: 10px;
+        font-size: 28px;
+        font-weight: 300;
       }
-
-      .right {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-          border-top-left-radius: 60px;
-          border-top-right-radius: 20px;
-          border-bottom-right-radius: 60px;
-          border: 4px solid rgba(177, 51, 255, 0.2);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          backdrop-filter: blur(4px);
-          -webkit-backdrop-filter: blur(4px);
-          object-fit: cover;
-        }
+      // custom TypingText css rule
+      .text {
+        margin-bottom: 50px;
+        font-size: 50px;
+        font-weight: 600;
       }
     }
   }

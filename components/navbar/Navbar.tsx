@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 
 const Navbar = () => {
   const router = useRouter()
-  console.log(router.pathname)
   return (
     <motion.header variants={navVariants} initial="hidden" whileInView="show" className={styles.header}>
       <div className={`${styles.navbar_gradient} gradient-01 `} />
