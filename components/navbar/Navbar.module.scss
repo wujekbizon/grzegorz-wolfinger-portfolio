@@ -33,8 +33,13 @@
       li {
         font-size: 25px;
         font-weight: 300;
-        color: #bbddd3fa;
+        color: #00dbd8;
         text-transform: uppercase;
+      }
+
+      li:hover {
+        text-decoration: underline;
+        color: rgb(248, 172, 30);
       }
     }
   }

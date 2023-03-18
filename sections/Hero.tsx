@@ -11,7 +11,7 @@ const Hero = () => {
         <div className={styles.hero_container}>
           <motion.div className={styles.left}>
             <TypingText title={`Todays web, reaching it's limits.`} textStyles={styles.text} />
-            <motion.h1 variants={fadeIn('up', 'tween', 2.3, 1)}>Clouds services are getting more expensive.</motion.h1>
+            <motion.h1 variants={fadeIn('up', 'tween', 2, 1)}>Clouds services are getting more expensive.</motion.h1>
             <motion.h1 variants={fadeIn('up', 'tween', 4, 1)}>Is there any way of changing that?</motion.h1>
           </motion.div>
           <motion.div variants={fadeIn('left', 'tween', 3.4, 1)} className={` ${styles.right}`}>
