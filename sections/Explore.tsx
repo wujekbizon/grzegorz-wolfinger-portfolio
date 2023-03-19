@@ -2,7 +2,7 @@ import styles from './Explore.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn } from '@/utils/motion'
-import { features } from '@/data/features'
+import { features, modernLinks } from '@/data/features'
 const Explore = () => {
   return (
     <section className={`section_wrapper`}>
@@ -15,7 +15,7 @@ const Explore = () => {
       >
         <motion.div
           className={styles.left}
-          variants={fadeIn('down', 'tween', 1, 1)}
+          variants={fadeIn('right', 'tween', 1, 1)}
         >
           <div>
             <Image
@@ -34,20 +34,13 @@ const Explore = () => {
         </motion.div>
         <motion.div
           className={styles.right}
-          variants={fadeIn('up', 'tween', 1, 1)}
+          variants={fadeIn('left', 'tween', 1, 1)}
         >
-          <h1>
-            How should we create a modern, scalable application that is
-            cost-effective, cross-platform, secure, using a P2P network,
-            reliable and most of the task we can commission to artificial
-            intelligence ? The answer is simple :
-          </h1>
-          <h2 className={styles.socket}>
-            {' '}
-            Socket
-            <span className="gradient_private"> Supply CO.</span>
-            <br />
-          </h2>
+          <div>
+            {modernLinks.map((link) => (
+              <h1 key={link.id}>{link.link}</h1>
+            ))}
+          </div>
           <div>
             <Image src="/images/bot.png" alt="ai" width={700} height={400} />
           </div>
