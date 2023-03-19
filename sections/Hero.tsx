@@ -20,8 +20,9 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <motion.h6 className={styles.scroll} variants={zoomIn(2, 1)}>
+      <motion.h6 className={styles.scroll} variants={zoomIn(3, 1.5)}>
         <span>&#8650; </span>Scroll down
+        <div className="footer_gradient" />
       </motion.h6>
     </motion.section>
   )

@@ -1,9 +1,18 @@
 import styles from './Explore.module.scss'
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn } from '@/utils/motion'
+import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import { features, modernLinks } from '@/data/features'
 const Explore = () => {
+  const [active, setActive] = useState(false)
+
+  const onClickHandler = () => {
+    setTimeout(() => {
+      setActive(!active)
+    }, 1000)
+  }
+
   return (
     <section className={`section_wrapper`}>
       <motion.div
@@ -32,17 +41,26 @@ const Explore = () => {
             ))}
           </div>
         </motion.div>
+
         <motion.div
           className={styles.right}
-          variants={fadeIn('left', 'tween', 1, 1)}
+          variants={fadeIn('left', 'tween', 2, 1)}
         >
           <div>
             {modernLinks.map((link) => (
               <h1 key={link.id}>{link.link}</h1>
             ))}
           </div>
-          <div>
+          <div className="feedback_gradient" />
+          <div style={{ position: 'relative' }}>
+            <div className={active ? 'eye_gradient' : ''} />
+            <div className={active ? 'eye2_gradient' : ''} />
+            <div className={active ? 'laser_gradient' : ''} />
+            <div className={active ? 'laser2_gradient' : ''} />
             <Image src="/images/bot.png" alt="ai" width={700} height={400} />
+            <button onClick={onClickHandler} className={styles.btn}>
+              Fatal Error
+            </button>
           </div>
         </motion.div>
       </motion.div>

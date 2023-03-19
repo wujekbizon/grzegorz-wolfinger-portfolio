@@ -86,10 +86,10 @@ a {
 
 .section_wrapper {
   height: 100vh;
-  padding: 4rem 6rem;
+  padding: 4rem;
 }
 
-.gradient-01 {
+.gradient_01 {
   background-image: linear-gradient(
     270deg,
     hsl(295deg 76% 51%) 0%,
@@ -101,6 +101,99 @@ a {
     hsl(220deg 76% 51%) 100%
   );
   filter: blur(125px);
+}
+
+.gradient_04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient_05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.feedback_gradient {
+  position: absolute;
+  width: 250px;
+  height: 450px;
+  right: 0;
+  bottom: 20%;
+  background: #7c4daa;
+  filter: blur(145px);
+}
+
+.laser_gradient {
+  position: absolute;
+  width: 5px;
+  height: 175px;
+  right: 29%;
+  top: 21px;
+  background: linear-gradient(#7c4daa, rgba(212, 17, 0.7));
+  border: 1px solid red;
+  filter: blur(2px);
+  transform: rotate(140deg);
+  z-index: 1;
+}
+
+.eye_gradient {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 40.5%;
+  top: 5%;
+  background: red;
+  border: 4px solid black;
+  filter: blur(2px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.eye2_gradient {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 35%;
+  top: 7%;
+  background: red;
+  border: 4px solid black;
+  filter: blur(2px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.laser2_gradient {
+  position: absolute;
+  width: 6px;
+  height: 200px;
+  right: 32.5%;
+  top: 14px;
+  background: linear-gradient(#7c4daa, rgba(212, 17, 17, 0.8));
+  border: 1px solid red;
+  filter: blur(2px);
+  transform: rotate(140deg);
+  z-index: 1;
+}
+
+.footer_gradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 37%;
+  bottom: 0;
+
+  background: #65c4fa;
+  filter: blur(150px);
 }
 
 .gradient_private {

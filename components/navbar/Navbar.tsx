@@ -15,7 +15,7 @@ const Navbar = () => {
       whileInView="show"
       className={styles.header}
     >
-      <div className={`${styles.navbar_gradient} gradient-01 `} />
+      <div className={`${styles.navbar_gradient} gradient_01 `} />
       <nav className={styles.navbar}>
         <Logo />
         <ul className={styles.links}>
