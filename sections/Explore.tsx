@@ -10,7 +10,7 @@ const Explore = () => {
   const onClickHandler = () => {
     setTimeout(() => {
       setActive(!active)
-    }, 1000)
+    }, 500)
   }
 
   return (
@@ -51,12 +51,18 @@ const Explore = () => {
               <h1 key={link.id}>{link.link}</h1>
             ))}
           </div>
-          <div className="feedback_gradient" />
+          <div
+            className={
+              active ? 'active feedback_gradient' : 'feedback_gradient'
+            }
+          />
           <div style={{ position: 'relative' }}>
             <div className={active ? 'eye_gradient' : ''} />
             <div className={active ? 'eye2_gradient' : ''} />
             <div className={active ? 'laser_gradient' : ''} />
             <div className={active ? 'laser2_gradient' : ''} />
+            <div className={active ? 'boil_gradient' : ''} />
+            <div className={active ? 'black_gradient' : ''} />
             <Image src="/images/bot.png" alt="ai" width={700} height={400} />
             <button onClick={onClickHandler} className={styles.btn}>
               Fatal Error
