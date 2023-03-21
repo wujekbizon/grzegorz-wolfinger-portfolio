@@ -1,4 +1,8 @@
+import About from "@/sections/About"
+
 const AboutPage = () => {
-  return <div>About Page</div>
+  return (
+    <About/>
+  )
 }
 export default AboutPage
