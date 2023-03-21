@@ -1,3 +1,8 @@
+import { BsPersonWorkspace, BsLinkedin, BsGithub } from 'react-icons/bs'
+import { GrLocation, GrMailOption } from 'react-icons/gr'
+import { BiTimeFive, BiLink } from 'react-icons/bi'
+import { ProfileItems } from '@/types'
+
 export const aboutTexts = [
   {
     id: 1,
@@ -10,5 +15,47 @@ export const aboutTexts = [
   {
     id: 3,
     text: "Cross platform application development is an important skill to have in today's world. By learning how to develop applications that can run on multiple platforms, you can create powerful and versatile applications that can reach a wider audience. With the right tools and knowledge, you can create applications that are both powerful and accessible to users on any device."
+  }
+]
+
+export const profileItems: ProfileItems[] = [
+  {
+    id: 1,
+    icon: BsPersonWorkspace,
+    title: 'Freelancer'
+  },
+  {
+    id: 2,
+    icon: GrLocation,
+    title: 'Cracow, Poland'
+  },
+  {
+    id: 3,
+    icon: BiTimeFive,
+    title: 'Current local time',
+    date: new Date()
+  },
+  {
+    id: 4,
+    icon: GrMailOption,
+    title: 'grzegorz.wolfinger@gmail.com'
+  },
+  {
+    id: 5,
+    icon: BiLink,
+    title: 'Blog',
+    link: 'https://grzegorz-wolfinger-blog.vercel.app/'
+  },
+  {
+    id: 6,
+    icon: BsLinkedin,
+    title: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/'
+  },
+  {
+    id: 7,
+    icon: BsGithub,
+    title: 'Github',
+    link: 'https://github.com/wujekbizon'
   }
 ]

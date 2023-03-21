@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
+import { profileItems } from '@/data/about'
 
 const About = () => {
   return (
@@ -25,6 +26,22 @@ const About = () => {
               className={styles.image}
             />
             <div className={styles.emoji_container}>🎯</div>
+
+            <div>
+              {profileItems.map(({ id, icon, title, date, link }) => (
+                <div className={styles.item} key={id}>
+                  {link && (
+                    <>
+                      {icon}
+                      <a target="_blank" href={link}>
+                        {title}
+                      </a>
+                    </>
+                  )}
+                  {date && date.toDateString()}
+                </div>
+              ))}
+            </div>
           </div>
           <div className={styles.content}>
             <hr className={styles.hr} />
