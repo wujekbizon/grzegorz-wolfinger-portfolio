@@ -4,6 +4,7 @@ import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import { profileItems } from '@/data/about'
+import TagLink from '@/components/tag/TagLink'
 
 const About = () => {
   return (
@@ -28,19 +29,37 @@ const About = () => {
             <div className={styles.emoji_container}>🎯</div>
 
             <div>
-              {profileItems.map(({ id, icon, title, date, link }) => (
-                <div className={styles.item} key={id}>
-                  {link && (
-                    <>
-                      {icon}
-                      <a target="_blank" href={link}>
-                        {title}
-                      </a>
-                    </>
-                  )}
-                  {date && date.toDateString()}
-                </div>
-              ))}
+              {profileItems.map(({ id, icon, title, date, link }) => {
+                let humanReadableDate
+                if (!date) {
+                  const newdate = new Date()
+                  humanReadableDate = new Date(newdate).toLocaleDateString(
+                    'en-US',
+                    {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric'
+                    }
+                  )
+                } else {
+                  humanReadableDate = new Date(date).toLocaleDateString(
+                    'en-US',
+                    {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric'
+                    }
+                  )
+                }
+
+                return (
+                  <div className={styles.item} key={id}>
+                    {link && <TagLink icon={icon} title={title} link={link} />}
+
+                    {date && humanReadableDate}
+                  </div>
+                )
+              })}
             </div>
           </div>
           <div className={styles.content}>
