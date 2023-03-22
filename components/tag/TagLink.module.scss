@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  svg {
+    font-size: 36px;
+    color: aliceblue;
+    background-color: rgba(124, 77, 170, 0.4);
+    border-radius: 10px;
+  }
+
+  .tag {
+    margin-left: 20px;
+    width: 300px;
+    height: 41px;
+
+    .link {
+      padding: 5px 20px;
+      border: 1px solid rgba(124, 77, 170, 0.4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+      }
+
+      &:hover {
+        border-color: rgba(124, 77, 170, 1);
+      }
+    }
+  }
+}
