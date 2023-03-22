@@ -21,40 +21,40 @@ export const aboutTexts = [
 export const profileItems: ProfileItems[] = [
   {
     id: 1,
-    icon: BsPersonWorkspace,
+    icon: <BsPersonWorkspace />,
     title: 'Freelancer'
   },
   {
     id: 2,
-    icon: GrLocation,
+    icon: <GrLocation />,
     title: 'Cracow, Poland'
   },
   {
     id: 3,
-    icon: BiTimeFive,
+    icon: <BiTimeFive />,
     title: 'Current local time',
     date: new Date()
   },
   {
     id: 4,
-    icon: GrMailOption,
+    icon: <GrMailOption />,
     title: 'grzegorz.wolfinger@gmail.com'
   },
   {
     id: 5,
-    icon: BiLink,
+    icon: <BiLink />,
     title: 'Blog',
     link: 'https://grzegorz-wolfinger-blog.vercel.app/'
   },
   {
     id: 6,
-    icon: BsLinkedin,
+    icon: <BsLinkedin />,
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/'
   },
   {
     id: 7,
-    icon: BsGithub,
+    icon: <BsGithub />,
     title: 'Github',
     link: 'https://github.com/wujekbizon'
   }

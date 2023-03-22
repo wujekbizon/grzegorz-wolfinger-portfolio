@@ -1,8 +1,6 @@
-import { IconType } from 'react-icons/lib/esm/iconBase'
-
 export interface ProfileItems {
   id: number
-  icon: IconType
+  icon: JSX.Element
   title?: string
   link?: string
   date?: Date
