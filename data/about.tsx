@@ -1,12 +1,12 @@
 import { BsPersonWorkspace, BsLinkedin, BsGithub } from 'react-icons/bs'
 import { GrLocation, GrMailOption } from 'react-icons/gr'
-import { BiTimeFive, BiLink } from 'react-icons/bi'
+import { BiLink } from 'react-icons/bi'
 import { ProfileItems } from '@/types'
 
 export const aboutTexts = [
   {
     id: 1,
-    text: " I am passionate about shaping the future of web development and leveraging the power of peer-to-peer networks and artificial intelligence in today's applications. I believe that with my technical knowledge, creative problem solving skills, and dedication to learning new technologies, I can make a positive impact on any project. I am eager to join a team of like-minded professionals who are dedicated to creating innovative solutions for the web."
+    text: "I am passionate about shaping the future of web development and leveraging the power of peer-to-peer networks and artificial intelligence in today's applications. I believe that with my technical knowledge, creative problem solving skills, and dedication to learning new technologies, I can make a positive impact on any project. I am eager to join a team of like-minded professionals who are dedicated to creating innovative solutions for the web."
   },
   {
     id: 2,

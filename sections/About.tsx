@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
+import { TypingText } from '@/components/animation/CustomText'
 import { profileItems } from '@/data/about'
 import { humanReadableDate } from '@/utils/date'
 import TagLink from '@/components/tag/TagLink'
@@ -31,9 +32,13 @@ const About = () => {
 
             <div className={styles.date}>
               {humanReadableDate && (
-                <h2>Welcome, today is {humanReadableDate}</h2>
+                <h2 className="gradient_text">
+                  Welcome, today is {humanReadableDate}
+                </h2>
               )}
-              <div className={styles.emoji_container}>🎯</div>
+              <div className={styles.emoji_container}>
+                <span>📅</span>
+              </div>
             </div>
             <div className={styles.tags}>
               {profileItems.map(({ id, icon, title, link }) => {
@@ -49,7 +54,20 @@ const About = () => {
               })}
             </div>
           </div>
-          <div className={styles.content}>
+          <div className={styles.content_container}>
+            <div className={styles.title}>
+              <h1>
+                Hi, I'm <span className={styles.letter}>G</span>rzegorz{' '}
+                <span className={styles.letter}>W</span>olfinger
+              </h1>
+              <h4>
+                NextJs/React Developer <span>|</span> Junior Web Developer{' '}
+                <span>|</span> JavaScript Engineer
+              </h4>
+            </div>
+            <div className={styles.about_title}>
+              ◻️ <h2>About</h2>
+            </div>
             <hr className={styles.hr} />
             {aboutTexts.map(({ id, text }) => (
               <h4 className={styles.content} key={id}>
