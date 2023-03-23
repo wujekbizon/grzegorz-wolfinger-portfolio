@@ -1,9 +1,11 @@
 import styles from './About.module.scss'
 import Image from 'next/image'
+import { Fragment } from 'react'
 import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import { profileItems } from '@/data/about'
+import { humanReadableDate } from '@/utils/date'
 import TagLink from '@/components/tag/TagLink'
 
 const About = () => {
@@ -26,38 +28,23 @@ const About = () => {
               priority
               className={styles.image}
             />
-            <div className={styles.emoji_container}>🎯</div>
 
-            <div>
-              {profileItems.map(({ id, icon, title, date, link }) => {
-                let humanReadableDate
-                if (!date) {
-                  const newdate = new Date()
-                  humanReadableDate = new Date(newdate).toLocaleDateString(
-                    'en-US',
-                    {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric'
-                    }
-                  )
-                } else {
-                  humanReadableDate = new Date(date).toLocaleDateString(
-                    'en-US',
-                    {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric'
-                    }
-                  )
-                }
-
+            <div className={styles.date}>
+              {humanReadableDate && (
+                <h2>Welcome, today is {humanReadableDate}</h2>
+              )}
+              <div className={styles.emoji_container}>🎯</div>
+            </div>
+            <div className={styles.tags}>
+              {profileItems.map(({ id, icon, title, link }) => {
                 return (
-                  <div className={styles.item} key={id}>
-                    {link && <TagLink icon={icon} title={title} link={link} />}
-
-                    {date && humanReadableDate}
-                  </div>
+                  <Fragment key={id}>
+                    <div className={styles.item}>
+                      {link && (
+                        <TagLink icon={icon} title={title} link={link} />
+                      )}
+                    </div>
+                  </Fragment>
                 )
               })}
             </div>

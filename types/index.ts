@@ -3,5 +3,4 @@ export interface ProfileItems {
   icon: JSX.Element
   title: string
   link?: string
-  date?: Date
 }

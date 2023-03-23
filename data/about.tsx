@@ -31,29 +31,23 @@ export const profileItems: ProfileItems[] = [
   },
   {
     id: 3,
-    icon: <BiTimeFive />,
-    title: 'Current local time',
-    date: new Date()
-  },
-  {
-    id: 4,
     icon: <GrMailOption />,
     title: 'grzegorz.wolfinger@gmail.com'
   },
   {
-    id: 5,
+    id: 4,
     icon: <BiLink />,
     title: 'Blog',
     link: 'https://grzegorz-wolfinger-blog.vercel.app/'
   },
   {
-    id: 6,
+    id: 5,
     icon: <BsLinkedin />,
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/'
   },
   {
-    id: 7,
+    id: 6,
     icon: <BsGithub />,
     title: 'Github',
     link: 'https://github.com/wujekbizon'
