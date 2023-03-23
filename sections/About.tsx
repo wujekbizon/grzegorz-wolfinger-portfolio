@@ -49,6 +49,7 @@ const About = () => {
                         <TagLink icon={icon} title={title} link={link} />
                       )}
                     </div>
+                    {!link && <TagLink icon={icon} title={title} />}
                   </Fragment>
                 )
               })}

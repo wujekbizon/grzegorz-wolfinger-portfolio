@@ -3,7 +3,7 @@ import styles from './TagLink.module.scss'
 type TagProps = {
   icon: JSX.Element
   title: string
-  link: string
+  link?: string
 }
 
 const TagLink = ({ icon, title, link }: TagProps) => {
