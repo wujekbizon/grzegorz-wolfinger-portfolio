@@ -1,5 +1,4 @@
 import styles from './FeatureProject.module.scss'
-import { Fragment } from 'react'
 import Image from 'next/image'
 
 interface FeatureProjectProps {
@@ -18,18 +17,20 @@ const FeatureProject = ({
   info
 }: FeatureProjectProps) => {
   return (
-    <Fragment key={id}>
-      <div className={styles.about_title}>
+    <article key={id} className={styles.wrapper}>
+      <div className={styles.project_title}>
         <span>◻️</span>
         <h2>{projectName}</h2>
       </div>
       <div className={styles.feature_project}>
-        <a target="_blank" href={url}>
-          <Image src={imgSrc} alt={projectName} width={400} height={250} />
-        </a>
+        <div className={styles.image_container}>
+          <a target="_blank" href={url}>
+            <Image src={imgSrc} alt={projectName} width={400} height={250} />
+          </a>
+        </div>
         <h4 className={styles.content}>{info}</h4>
       </div>
-    </Fragment>
+    </article>
   )
 }
 export default FeatureProject

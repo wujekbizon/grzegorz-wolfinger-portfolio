@@ -90,6 +90,7 @@ const About = () => {
 
             {featureProjects.map(({ id, url, info, imgSrc, projectName }) => (
               <FeatureProject
+                key={id}
                 id={id}
                 url={url}
                 info={info}
