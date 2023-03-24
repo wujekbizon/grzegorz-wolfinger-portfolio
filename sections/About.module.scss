@@ -51,6 +51,11 @@
             font-size: 24px;
             font-weight: 400;
           }
+
+          .date_title {
+            font-size: 25px;
+            font-weight: 300;
+          }
         }
       }
 
@@ -98,6 +103,10 @@
           align-items: center;
           margin-bottom: 10px;
 
+          span {
+            font-size: 25px;
+          }
+
           h2 {
             margin-left: 10px;
           }
@@ -110,7 +119,7 @@
         .content {
           font-size: 22px;
           font-weight: 400;
-          padding: 30px 10px;
+          padding: 20px 10px;
           line-height: 30px;
         }
       }

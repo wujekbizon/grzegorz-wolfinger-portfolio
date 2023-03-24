@@ -1,6 +1,7 @@
 import { BsPersonWorkspace, BsLinkedin, BsGithub } from 'react-icons/bs'
-import { GrLocation, GrMailOption } from 'react-icons/gr'
+import { GrLocation, GrMail } from 'react-icons/gr'
 import { BiLink } from 'react-icons/bi'
+import { MdOutlineMyLocation } from 'react-icons/md'
 import { ProfileItems } from '@/types'
 
 export const aboutTexts = [
@@ -26,12 +27,12 @@ export const profileItems: ProfileItems[] = [
   },
   {
     id: 2,
-    icon: <GrLocation />,
+    icon: <MdOutlineMyLocation />,
     title: 'Cracow, Poland'
   },
   {
     id: 3,
-    icon: <GrMailOption />,
+    icon: <GrMail />,
     title: 'grzegorz.wolfinger@gmail.com'
   },
   {
