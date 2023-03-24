@@ -89,7 +89,7 @@ const About = () => {
             <hr className={styles.hr} />
 
             {featureProjects.map(
-              ({ id, url, info, imgSrc, projectName, logo }) => (
+              ({ id, url, info, imgSrc, projectName, logo, text }) => (
                 <FeatureProject
                   key={id}
                   id={id}
@@ -98,6 +98,7 @@ const About = () => {
                   imgSrc={imgSrc}
                   projectName={projectName}
                   logo={logo}
+                  text={text}
                 />
               )
             )}
