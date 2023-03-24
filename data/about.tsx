@@ -1,5 +1,5 @@
 import { BsPersonWorkspace, BsLinkedin, BsGithub } from 'react-icons/bs'
-import { GrLocation, GrMail } from 'react-icons/gr'
+import { GrMail } from 'react-icons/gr'
 import { BiLink } from 'react-icons/bi'
 import { MdOutlineMyLocation } from 'react-icons/md'
 import { ProfileItems } from '@/types'

@@ -34,3 +34,13 @@ export const modernLinks = [
     link: 'Finally, they should have a robust API that allows for easy integration with other applications.'
   }
 ]
+
+export const featureProjects = [
+  {
+    id: 1,
+    projectName: 'wolfpad',
+    url: 'https://wolfpad.vercel.app/',
+    imgSrc: '/images/cell.png',
+    info: 'Wolfpad is a powerful tool for developers of all levels. It provides an intuitive and user-friendly interface that allows users to quickly create, edit, and debug code. With an interactive coding environment, users can easily test their code in real-time and get immediate feedback on their progress.'
+  }
+]

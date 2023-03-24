@@ -4,10 +4,10 @@ import { Fragment } from 'react'
 import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
-import { TypingText } from '@/components/animation/CustomText'
 import { profileItems } from '@/data/about'
 import { humanReadableDate } from '@/utils/date'
 import TagLink from '@/components/tag/TagLink'
+import { featureProjects } from '@/data/features'
 
 const About = () => {
   return (
@@ -37,10 +37,6 @@ const About = () => {
             >
               {humanReadableDate && (
                 <h2 className="gradient_text">
-                  {/* <TypingText
-                    title={`Welcome, today is ${humanReadableDate}r`}
-                    textStyles={styles.date_title}
-                  /> */}
                   Welcome, today is {humanReadableDate}r.
                 </h2>
               )}
@@ -82,7 +78,7 @@ const About = () => {
             </div>
 
             <div className={styles.about_title}>
-              <span>◻️</span> <h2>About</h2>
+              <span>◻️</span> <h2>About Me</h2>
             </div>
             <hr className={styles.hr} />
             {aboutTexts.map(({ id, text }) => (
@@ -91,6 +87,25 @@ const About = () => {
               </h4>
             ))}
             <hr className={styles.hr} />
+
+            <div className={styles.about_title}>
+              <span>◻️</span>
+              <h2>Wolfpad 2.0 - Ineractive Coding Environment</h2>
+            </div>
+
+            {featureProjects.map(({ id, url, info, imgSrc, projectName }) => (
+              <div className={styles.feature_project} key={id}>
+                <a target="_blank" href={url}>
+                  <Image
+                    src={imgSrc}
+                    alt={projectName}
+                    width={400}
+                    height={250}
+                  />
+                </a>
+                <h4 className={styles.content}>{info}</h4>
+              </div>
+            ))}
           </motion.div>
         </div>
       </motion.div>
