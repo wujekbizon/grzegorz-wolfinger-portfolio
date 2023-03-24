@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import { profileItems } from '@/data/about'
 import { humanReadableDate } from '@/utils/date'
-import TagLink from '@/components/tag/TagLink'
+import { TagLink, FeatureProject } from '@/components'
 import { featureProjects } from '@/data/features'
 
 const About = () => {
@@ -88,23 +88,14 @@ const About = () => {
             ))}
             <hr className={styles.hr} />
 
-            <div className={styles.about_title}>
-              <span>◻️</span>
-              <h2>Wolfpad 2.0 - Ineractive Coding Environment</h2>
-            </div>
-
             {featureProjects.map(({ id, url, info, imgSrc, projectName }) => (
-              <div className={styles.feature_project} key={id}>
-                <a target="_blank" href={url}>
-                  <Image
-                    src={imgSrc}
-                    alt={projectName}
-                    width={400}
-                    height={250}
-                  />
-                </a>
-                <h4 className={styles.content}>{info}</h4>
-              </div>
+              <FeatureProject
+                id={id}
+                url={url}
+                info={info}
+                imgSrc={imgSrc}
+                projectName={projectName}
+              />
             ))}
           </motion.div>
         </div>
