@@ -7,6 +7,7 @@ interface FeatureProjectProps {
   url: string
   imgSrc: string
   info: string
+  logo?: string
 }
 
 const FeatureProject = ({
@@ -14,7 +15,8 @@ const FeatureProject = ({
   projectName,
   url,
   imgSrc,
-  info
+  info,
+  logo
 }: FeatureProjectProps) => {
   return (
     <article key={id} className={styles.wrapper}>
@@ -25,10 +27,31 @@ const FeatureProject = ({
       <div className={styles.feature_project}>
         <div className={styles.image_container}>
           <a target="_blank" href={url}>
-            <Image src={imgSrc} alt={projectName} width={400} height={250} />
+            <Image
+              src={imgSrc}
+              alt={projectName}
+              width={400}
+              height={250}
+              priority
+              className={styles.image}
+            />
+            <div className={styles.cover} />
           </a>
         </div>
-        <h4 className={styles.content}>{info}</h4>
+        <div className={styles.content}>
+          <h4>{info}</h4>
+          <div className={styles.logo_container}>
+            {logo && (
+              <Image
+                src={logo}
+                className={styles.logo}
+                alt="logo"
+                width={60}
+                height={60}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </article>
   )

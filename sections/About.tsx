@@ -49,7 +49,7 @@ const About = () => {
                 return (
                   <Fragment key={id}>
                     <motion.div
-                      variants={fadeIn('right', 'tween', 1 + index, 0.8)}
+                      variants={fadeIn('right', 'tween', 1 + index / 2, 0.8)}
                       className={styles.item}
                     >
                       {link && (
@@ -88,16 +88,19 @@ const About = () => {
             ))}
             <hr className={styles.hr} />
 
-            {featureProjects.map(({ id, url, info, imgSrc, projectName }) => (
-              <FeatureProject
-                key={id}
-                id={id}
-                url={url}
-                info={info}
-                imgSrc={imgSrc}
-                projectName={projectName}
-              />
-            ))}
+            {featureProjects.map(
+              ({ id, url, info, imgSrc, projectName, logo }) => (
+                <FeatureProject
+                  key={id}
+                  id={id}
+                  url={url}
+                  info={info}
+                  imgSrc={imgSrc}
+                  projectName={projectName}
+                  logo={logo}
+                />
+              )
+            )}
           </motion.div>
         </div>
       </motion.div>
