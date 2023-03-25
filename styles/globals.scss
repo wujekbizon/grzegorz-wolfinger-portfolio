@@ -8,9 +8,16 @@
 // Media query
 
 $widthSmWideScreen: 1570px;
+$widthLgTablet: 1180px;
 
 @mixin smallWideScreen {
   @media (max-width: #{$widthSmWideScreen}) {
+    @content;
+  }
+}
+
+@mixin lgTablet {
+  @media (max-width: #{$widthLgTablet}) {
     @content;
   }
 }

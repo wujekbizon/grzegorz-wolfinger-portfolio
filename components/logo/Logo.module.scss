@@ -1,8 +1,14 @@
+@import '../../styles/globals.scss';
+
 .logo_container {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @include lgTablet {
+    display: none;
+  }
 
   h1 {
     font-weight: 300;

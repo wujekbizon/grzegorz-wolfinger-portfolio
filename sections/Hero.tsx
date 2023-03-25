@@ -9,7 +9,7 @@ const Hero = () => {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.25 }}
       className={`${'section_wrapper'} ${styles.hero}`}
     >
       <div className={styles.hero_wrapper}>
