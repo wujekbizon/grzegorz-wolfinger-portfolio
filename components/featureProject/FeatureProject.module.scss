@@ -1,3 +1,5 @@
+@import '../../styles/globals.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -26,29 +28,38 @@
     align-items: center;
     padding: 2rem 0;
     background: #040c18;
-    // border: 1px solid rgba(124, 77, 170, 0.3);
     border-bottom-right-radius: 80px;
 
     .bottom {
-      width: 100%;
+      height: 100%;
       display: flex;
+      flex-direction: row;
       align-items: center;
       padding: 40px;
+
+      @include smallWideScreen {
+        flex-direction: column;
+      }
 
       h3 {
         flex: 1;
         padding: 0 40px;
         font-weight: 300;
         line-height: 30px;
+
+        @include smallWideScreen {
+          padding: 40px 40px;
+        }
       }
 
       .image_container {
         flex: 1;
-        height: 380px;
         position: relative;
         border: 2px solid rgba(124, 77, 170, 0.5);
         border-radius: 15px;
-        align-self: flex-start;
+
+        @include smallWideScreen {
+        }
 
         .cover {
           position: absolute;

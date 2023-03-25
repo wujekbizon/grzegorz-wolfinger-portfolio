@@ -11,15 +11,7 @@ interface FeatureProjectProps {
   text?: string
 }
 
-const FeatureProject = ({
-  id,
-  projectName,
-  url,
-  imgSrc,
-  info,
-  logo,
-  text
-}: FeatureProjectProps) => {
+const FeatureProject = ({ id, projectName, url, imgSrc, info, logo, text }: FeatureProjectProps) => {
   return (
     <article key={id} className={styles.wrapper}>
       <div className={styles.project_title}>
@@ -30,14 +22,7 @@ const FeatureProject = ({
         <div className={styles.bottom}>
           <div className={styles.image_container}>
             <a target="_blank" href={url}>
-              <Image
-                src={imgSrc}
-                alt={projectName}
-                width={400}
-                height={250}
-                priority
-                className={styles.image}
-              />
+              <Image src={imgSrc} alt={projectName} width={300} height={200} priority className={styles.image} />
               <div className={styles.cover} />
             </a>
           </div>
@@ -47,15 +32,7 @@ const FeatureProject = ({
           <h4>{info}</h4>
         </div>
         <div className={styles.logo_container}>
-          {logo && (
-            <Image
-              src={logo}
-              className={styles.logo}
-              alt="logo"
-              width={80}
-              height={80}
-            />
-          )}
+          {logo && <Image src={logo} className={styles.logo} alt="logo" width={80} height={80} />}
         </div>
       </div>
     </article>
