@@ -1,73 +1,61 @@
 .explore {
   height: 100%;
-  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
 
-  .left {
-    flex: 1;
+  .cloud_typing {
+    margin-bottom: 30px;
+  }
+
+  .explore_cloud {
+    height: 90vh;
+    max-width: 1440px;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
     align-items: center;
-    gap: 80px;
-    padding: 30px;
-    position: relative;
+    gap: 100px;
 
     h1 {
-      padding: 0 100px;
       font-weight: 400;
       font-family: 'Raleway';
       font-size: 22px;
-      margin-top: 25px;
+      padding: 10px 0;
     }
 
     img {
       border-top-right-radius: 60px;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 60px;
-      // border: 4px solid rgba(177, 51, 255, 0.1);
-      // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       object-fit: cover;
     }
   }
 
-  .right {
-    flex: 1;
+  .explore_modern {
+    height: 90vh;
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+    max-width: 1440px;
+    flex-direction: row;
     align-items: center;
-    gap: 40px;
-    padding: 30px;
-    position: relative;
+    gap: 100px;
 
     img {
       border-top-right-radius: 60px;
       border-bottom-right-radius: 20px;
       border-bottom-left-radius: 60px;
-      // border: 4px solid rgba(177, 51, 255, 0.1);
-      // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       object-fit: cover;
     }
 
     h1 {
-      padding: 0 100px;
       font-weight: 400;
       font-family: 'Raleway';
       font-size: 22px;
-      margin-top: 25px;
-    }
-
-    span {
-      font-family: 'Raleway';
-      font-size: 25px;
-      margin-left: 10px;
-      font-weight: 300;
+      padding: 10px 0;
     }
 
     .btn {

@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import { features, modernLinks } from '@/data/features'
+import { TypingText } from '@/components/animation/CustomText'
+
 const Explore = () => {
   const [active, setActive] = useState(false)
 
@@ -14,7 +16,7 @@ const Explore = () => {
   }
 
   return (
-    <section className={`section_wrapper`}>
+    <section>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -22,40 +24,28 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={styles.explore}
       >
-        <motion.div
-          className={styles.left}
-          variants={fadeIn('right', 'tween', 1, 1)}
-        >
-          <div>
-            <Image
-              src="/images/cloud.png"
-              alt="cloud"
-              width={700}
-              height={400}
-            />
-          </div>
-
-          <div>
-            {features.map((feature) => (
-              <h1 key={feature.id}>{feature.title}</h1>
+        <motion.div className={styles.explore_cloud}>
+          <motion.div variants={fadeIn('right', 'tween', 0.7, 1)} className={styles.image_container}>
+            <Image src="/images/cloud.png" alt="cloud" width={700} height={400} />
+          </motion.div>
+          <div className={styles.titles}>
+            <TypingText title="# Cloud Services" textStyles={styles.cloud_typing} />
+            {features.map((feature, index) => (
+              <motion.h1 variants={fadeIn('left', 'tween', 1 + index / 2, 1)} key={feature.id}>
+                {feature.title}
+              </motion.h1>
             ))}
           </div>
         </motion.div>
 
-        <motion.div
-          className={styles.right}
-          variants={fadeIn('left', 'tween', 2, 1)}
-        >
+        <motion.div className={styles.explore_modern} variants={fadeIn('left', 'tween', 1.3, 1)}>
           <div>
+            <TypingText title="# Modern Applications" textStyles={styles.cloud_typing} />
             {modernLinks.map((link) => (
               <h1 key={link.id}>{link.link}</h1>
             ))}
           </div>
-          <div
-            className={
-              active ? 'active feedback_gradient' : 'feedback_gradient'
-            }
-          />
+          <div className={active ? 'active feedback_gradient' : 'feedback_gradient'} />
           <div style={{ position: 'relative' }}>
             <div className={active ? 'eye_gradient' : ''} />
             <div className={active ? 'eye2_gradient' : ''} />

@@ -1,5 +1,5 @@
 .hero {
-  height: calc(100vh - 20px);
+  height: calc(100vh - 80px);
   text-align: center;
 
   .scroll {
@@ -23,10 +23,11 @@
     .title {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       width: 100%;
-      min-height: 400px;
+      // min-height: 400px;
       padding: 50px;
 
       h1 {
@@ -34,11 +35,12 @@
         font-size: 28px;
         font-weight: 300;
       }
+
       // custom TypingText css rule
-      .text {
-        font-size: 50px;
-        font-weight: 400;
-      }
+      // .text {
+      //   font-size: 55px;
+      //   font-weight: 600;
+      // }
     }
   }
 }

@@ -14,10 +14,7 @@ const Hero = () => {
     >
       <div className={styles.hero_wrapper}>
         <motion.div className={styles.title}>
-          <TypingText
-            title={`Today's web is pushing the boundaries of what is possible, \n and the possibilities are limitless!`}
-            textStyles={styles.text}
-          />
+          <TypingText title={`Today's web is pushing the boundaries of what is possible.`} textStyles={styles.text} />
         </motion.div>
       </div>
       <motion.h6 className={styles.scroll} variants={zoomIn(3, 1.5)}>
