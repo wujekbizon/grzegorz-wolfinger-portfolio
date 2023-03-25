@@ -1,7 +1,7 @@
 .container {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin: 25px 0;
 
   svg {
     font-size: 36px;
@@ -12,11 +12,11 @@
 
   .tag {
     margin-left: 20px;
-    width: 450px;
+    width: 100%;
     height: 41px;
 
     .link {
-      padding: 5px 20px;
+      padding: 10px 20px;
       border: 1px solid rgba(124, 77, 170, 0.4);
       border-radius: 10px;
       display: flex;

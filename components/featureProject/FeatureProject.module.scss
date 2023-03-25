@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  padding: 4rem 0;
 
   .project_title {
     display: flex;
@@ -25,14 +26,13 @@
     align-items: center;
     padding: 2rem 0;
     background: #040c18;
-    border: 1px solid rgba(124, 77, 170, 0.3);
+    // border: 1px solid rgba(124, 77, 170, 0.3);
     border-bottom-right-radius: 80px;
 
     .bottom {
       width: 100%;
       display: flex;
       align-items: center;
-      // gap: 100px;
       padding: 40px;
 
       h3 {
@@ -103,8 +103,8 @@
 
     .logo_container {
       position: absolute;
-      right: 80px;
-      bottom: 80px;
+      right: 70px;
+      bottom: 130px;
 
       .logo {
         border-radius: 50%;

@@ -22,24 +22,10 @@ const About = () => {
         <div className={styles.container}>
           <div className={styles.image_container}>
             <motion.div variants={zoomIn(0.3, 1)}>
-              <Image
-                src="/images/founder.jpg"
-                alt="dev"
-                width={450}
-                height={450}
-                priority
-                className={styles.image}
-              />
+              <Image src="/images/founder.jpg" alt="dev" width={450} height={450} priority className={styles.image} />
             </motion.div>
-            <motion.div
-              variants={fadeIn('right', 'tween', 0.4, 1)}
-              className={styles.date}
-            >
-              {humanReadableDate && (
-                <h2 className="gradient_text">
-                  Welcome, today is {humanReadableDate}r.
-                </h2>
-              )}
+            <motion.div variants={fadeIn('right', 'tween', 0.4, 1)} className={styles.date}>
+              {humanReadableDate && <h2 className="gradient_text">Welcome, today is {humanReadableDate}r.</h2>}
               <div className={styles.emoji_container}>
                 <span>📅</span>
               </div>
@@ -48,13 +34,8 @@ const About = () => {
               {profileItems.map(({ id, icon, title, link }, index) => {
                 return (
                   <Fragment key={id}>
-                    <motion.div
-                      variants={fadeIn('right', 'tween', 1 + index / 2, 0.8)}
-                      className={styles.item}
-                    >
-                      {link && (
-                        <TagLink icon={icon} title={title} link={link} />
-                      )}
+                    <motion.div variants={fadeIn('right', 'tween', 1 + index / 2, 0.8)} className={styles.item}>
+                      {link && <TagLink icon={icon} title={title} link={link} />}
                       {!link && <TagLink icon={icon} title={title} />}
                     </motion.div>
                   </Fragment>
@@ -62,18 +43,13 @@ const About = () => {
               })}
             </div>
           </div>
-          <motion.div
-            variants={fadeIn('left', 'tween', 1, 1)}
-            className={styles.content_container}
-          >
+          <motion.div variants={fadeIn('left', 'tween', 1, 1)} className={styles.content_container}>
             <div className={styles.title}>
               <h1>
-                Hi, I'm <span className={styles.letter}>G</span>rzegorz{' '}
-                <span className={styles.letter}>W</span>olfinger
+                Hi, I'm <span className={styles.letter}>G</span>rzegorz <span className={styles.letter}>W</span>olfinger
               </h1>
               <h4>
-                NextJs/React Developer <span>|</span> Junior Web Developer{' '}
-                <span>|</span> JavaScript Engineer
+                NextJs/React Developer <span>|</span> Junior Web Developer <span>|</span> JavaScript Engineer
               </h4>
             </div>
 
@@ -88,20 +64,18 @@ const About = () => {
             ))}
             <hr className={styles.hr} />
 
-            {featureProjects.map(
-              ({ id, url, info, imgSrc, projectName, logo, text }) => (
-                <FeatureProject
-                  key={id}
-                  id={id}
-                  url={url}
-                  info={info}
-                  imgSrc={imgSrc}
-                  projectName={projectName}
-                  logo={logo}
-                  text={text}
-                />
-              )
-            )}
+            {featureProjects.map(({ id, url, info, imgSrc, projectName, logo, text }) => (
+              <FeatureProject
+                key={id}
+                id={id}
+                url={url}
+                info={info}
+                imgSrc={imgSrc}
+                projectName={projectName}
+                logo={logo}
+                text={text}
+              />
+            ))}
           </motion.div>
         </div>
       </motion.div>
