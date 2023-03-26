@@ -5,13 +5,15 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 6rem 4rem;
+  gap: 150px;
 
-  .cloud_typing {
+  .typing {
     margin-bottom: 30px;
   }
 
   .explore_cloud {
-    height: 90vh;
+    height: 100%;
     max-width: 1440px;
     display: flex;
     align-items: center;
@@ -34,47 +36,19 @@
     }
   }
 
-  .explore_modern {
-    height: 90vh;
+  .explore_modern_app {
+    height: 100%;
     display: flex;
     max-width: 1440px;
     flex-direction: row;
     align-items: center;
     gap: 100px;
 
-    img {
-      border-top-right-radius: 60px;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 60px;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      object-fit: cover;
-    }
-
     h1 {
       font-weight: 400;
       font-family: 'Raleway';
       font-size: 22px;
       padding: 10px 0;
-    }
-
-    .btn {
-      position: absolute;
-      top: 25%;
-      left: 40%;
-      cursor: pointer;
-      padding: 15px 10px;
-      background: rgba(124, 77, 170, 0.5);
-      border: none;
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 30px;
-      color: white;
-      font-size: 20px;
-
-      &:hover {
-        background: rgba(124, 77, 170, 1);
-      }
     }
   }
 }

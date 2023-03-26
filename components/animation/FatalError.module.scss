@@ -1,0 +1,29 @@
+.animation_container {
+  position: relative;
+
+  img {
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 60px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    object-fit: cover;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background: rgba(124, 77, 170, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      background: rgba(124, 77, 170, 1);
+    }
+  }
+}
