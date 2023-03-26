@@ -1,7 +1,6 @@
 import styles from './Hero.module.scss'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
-import { TypingText } from '@/components/animation/CustomText'
 import Image from 'next/image'
 import { customers } from '@/data/customers'
 
@@ -20,15 +19,26 @@ const Hero = () => {
             Today's web is pushing the boundaries of what is possible.
           </motion.h1>
           <div className={styles.map_container}>
+            <div className={styles.network}>
+              <h2>P2P Connection Network</h2>
+              <div className={styles.status}>
+                <div className={`${styles.status_online}`} />
+                <h6> - online user</h6>
+              </div>
+              <div className={styles.status}>
+                <div className={`${styles.status_offline}`} />
+                <h6> - offline user</h6>
+              </div>
+            </div>
             {customers.map((customer, index) => (
               <motion.div
                 variants={zoomIn(index * 0.5, 0.4)}
                 key={customer.id}
-                className={styles.dot}
+                className={customer.status === 'online' ? styles.dot : styles.dot_offline}
                 style={{ top: customer.top, left: customer.left }}
               >
                 <div className={styles.dot_container}>
-                  <p className={styles.dot_content}>{customer.name}</p>
+                  <p className={styles.dot_content}>{customer.status === 'online' ? customer.name : 'User Offline'}</p>
                 </div>
               </motion.div>
             ))}

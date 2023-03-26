@@ -1,3 +1,5 @@
+@import '../styles/globals.scss';
+
 .explore {
   height: 100%;
   display: flex;
@@ -8,6 +10,10 @@
   padding: 6rem 4rem;
   gap: 150px;
 
+  @include lgTablet {
+    gap: 80px;
+  }
+
   .typing {
     margin-bottom: 30px;
   }
@@ -16,8 +22,13 @@
     height: 100%;
     max-width: 1440px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 100px;
+
+    @include lgTablet {
+      flex-direction: column-reverse;
+    }
 
     h1 {
       font-weight: 400;
@@ -59,6 +70,10 @@
     flex-direction: row;
     align-items: center;
     gap: 100px;
+
+    @include lgTablet {
+      flex-direction: column-reverse;
+    }
 
     h1 {
       font-weight: 400;

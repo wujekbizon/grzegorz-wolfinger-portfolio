@@ -11,7 +11,7 @@ const FatalErrorAnimation = () => {
   const [activeGradient, setActiveGradient] = useState(false)
 
   const onClickHandler = () => {
-    if (active && activeLaser && activeImplosion) {
+    if (active && activeLaser && activeImplosion && activeGradient) {
       setActive(!active)
       setActiveLaser(!activeLaser)
       setActiveImplosion(!activeImplosion)
