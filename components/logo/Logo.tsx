@@ -7,7 +7,7 @@ const Logo = () => {
     <div className={styles.logo_container}>
       <h1>Grzegorz</h1>
       <Link href="/">
-        <Image src="/images/logo.png" alt="wolfinger" width={180} height={22} />
+        <Image src="/images/logo.png" alt="wolfinger" width={180} height={22} priority />
       </Link>
       <h1>Portfolio</h1>
     </div>
