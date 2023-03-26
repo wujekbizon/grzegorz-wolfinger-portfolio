@@ -63,7 +63,7 @@ export const titleTextContainer = {
   },
   show: (i = 0.5) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.1 }
+    transition: { staggerChildren: 0.08, delayChildren: i * 0.08 }
   })
 }
 

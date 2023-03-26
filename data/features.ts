@@ -18,10 +18,6 @@ export const features = [
 
 export const modernLinks = [
   {
-    id: 1,
-    link: 'As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure, utilizing a P2P network, reliable and leveraging artificial intelligence for most tasks.'
-  },
-  {
     id: 2,
     link: 'Applications should also be user-friendly, intuitive, and able to integrate with existing systems. Additionally, they should be able to handle large amounts of data and be able to process it quickly.'
   },
