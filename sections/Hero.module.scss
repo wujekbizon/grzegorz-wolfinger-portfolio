@@ -49,6 +49,10 @@
           transform: scale(0.8);
         }
 
+        @include tablet {
+          transform: scale(0.6);
+        }
+
         .map {
           width: 1200px;
           height: 100%;
@@ -203,7 +207,12 @@
         font-size: 30px;
         font-weight: 600;
         text-align: center;
-        line-height: 45px;
+        line-height: 40px;
+
+        @include tablet {
+          font-size: 22px;
+          line-height: 35px;
+        }
       }
 
       .hero_uppertitle {

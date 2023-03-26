@@ -1,3 +1,5 @@
+@import '../../styles/globals.scss';
+
 .animation_container {
   position: relative;
 
@@ -8,6 +10,11 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     object-fit: cover;
+
+    @include tablet {
+      width: 600px;
+      height: 350px;
+    }
   }
 
   .btn {

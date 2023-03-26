@@ -7,15 +7,23 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6rem 4rem;
+  padding: 4rem;
   gap: 150px;
 
   @include lgTablet {
     gap: 80px;
   }
 
+  @include tablet {
+    padding: 2rem;
+  }
+
   .typing {
     margin-bottom: 30px;
+  }
+
+  .titles {
+    padding: 0 3rem;
   }
 
   .explore_cloud {
@@ -44,6 +52,11 @@
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       object-fit: cover;
+
+      @include tablet {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -60,6 +73,10 @@
       border-top: 1px solid rgba(124, 77, 170, 0.4);
       border-bottom: 1px solid rgba(124, 77, 170, 0.4);
       text-align: center;
+
+      @include tablet {
+        font-size: 24px;
+      }
     }
   }
 
