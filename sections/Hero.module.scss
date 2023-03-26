@@ -1,5 +1,5 @@
 .hero {
-  padding: 4rem;
+  padding: 0 0 4rem 0;
 
   .scroll {
     font-size: 18px;
@@ -13,30 +13,107 @@
   }
   .hero_wrapper {
     width: 100%;
-    height: calc(100vh - 200px);
-    max-width: 1280px;
+    height: calc(100vh - 120px);
     margin: auto;
     display: flex;
     align-items: center;
 
     .title_container {
-      width: 100%;
-      height: 100%;
       display: flex;
+      width: 1380px;
+      margin-right: auto;
+      margin-left: auto;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      background-color: #040c18;
+      border-radius: 24px;
 
-      .map {
-        width: 90%;
-        height: auto;
-        object-fit: contain;
+      .map_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1280px;
+        width: 100%;
+        height: 550px;
+        position: relative;
+
+        .map {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .dot {
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+          border-radius: 50%;
+          cursor: pointer;
+          color: #040c18;
+          z-index: 0;
+
+          &:hover {
+            width: 200px;
+            height: 120px;
+            border-radius: 10px 32px 32px 32px;
+            background-image: url('/images/blank.png');
+            background-size: 140% 100%;
+            background-position: center;
+            color: #040c18;
+            border: 1px solid rgba(124, 77, 170, 0.4);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .dot_container {
+              opacity: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .dot_content {
+                opacity: 1;
+                font-family: 'Eudoxus Sans';
+                font-weight: 600;
+                font-size: 18px;
+                color: #040c18;
+                text-align: center;
+              }
+            }
+          }
+
+          .dot_container {
+            opacity: 0;
+
+            .dot-content {
+              opacity: 0;
+            }
+          }
+        }
       }
 
       h1 {
-        padding: 40px 0;
-        font-size: 38px;
-        font-weight: 500;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 45px;
+      }
+
+      .hero_uppertitle {
+        position: absolute;
+        top: 18%;
+        right: 0;
+        left: 0;
+      }
+
+      .hero_lowertitle {
+        position: absolute;
+        bottom: 14%;
+        right: 0;
+        left: 0;
       }
     }
   }
