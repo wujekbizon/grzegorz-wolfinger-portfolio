@@ -5,5 +5,7 @@ import CustomError from './error/CustomError'
 import Logo from './logo/Logo'
 import TagLink from './tag/TagLink'
 import FeatureProject from './featureProject/FeatureProject'
+import ProjectList from './projects/ProjectList'
+import ProjectCard from './projects/ProjectCard'
 
-export { Layout, Home, Navbar, CustomError, Logo, FeatureProject, TagLink }
+export { Layout, Home, Navbar, CustomError, Logo, FeatureProject, TagLink, ProjectList, ProjectCard }

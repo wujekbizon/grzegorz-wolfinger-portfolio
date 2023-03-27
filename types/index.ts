@@ -7,7 +7,7 @@ export interface ProfileItems {
 }
 
 export interface ProjectData {
-  _id: ObjectId | number
+  _id: string
   type: string
   name: string
   text: string
