@@ -7,7 +7,7 @@ export interface ProfileItems {
 }
 
 export interface ProjectData {
-  id: ObjectId | number
+  _id: ObjectId | number
   type: string
   name: string
   text: string
@@ -18,5 +18,5 @@ export interface ProjectData {
   url: string
   githubUrl: string
   imgSrc: string
-  createdAt: Date
+  createdAt?: Date
 }

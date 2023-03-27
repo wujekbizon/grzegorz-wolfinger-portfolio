@@ -66,7 +66,7 @@ const Hero = () => {
                 </motion.div>
               )
             })}
-            <Image src="/images/map.png" alt="map" width={700} height={350} className={styles.map} />
+            <Image src="/images/map.png" alt="map" width={700} height={350} priority className={styles.map} />
           </div>
 
           <motion.h1 className={` ${styles.hero_lowertitle}`} variants={fadeIn('up', 'tween', 2.5, 2)}>
