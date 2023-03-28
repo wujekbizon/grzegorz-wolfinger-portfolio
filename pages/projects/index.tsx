@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next'
 import type { ProjectData } from '@/types'
 import { getAllProjects } from '@/helpers/api'
-import { ProjectList } from '@/components'
 import Head from 'next/head'
+import Projects from '@/sections/Projects'
 
 const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
   return (
@@ -11,7 +11,7 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
         <title>All Lockers</title>
         <meta name="description" content="Browse a huge list of Grzegorz Wolfinger portfolio projects." />
       </Head>
-      <ProjectList projects={projects} />
+      <Projects projects={projects} />
     </>
   )
 }

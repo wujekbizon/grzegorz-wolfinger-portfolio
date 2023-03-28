@@ -1,7 +1,7 @@
 import type { ProjectData } from '@/types'
 import { ProjectCard } from '@/components'
 
-type ProjectsProps = {
+export type ProjectsProps = {
   projects: ProjectData[]
 }
 
