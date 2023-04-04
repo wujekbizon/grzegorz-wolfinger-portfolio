@@ -7,11 +7,11 @@ export type ProjectsProps = {
 
 const ProjectList = ({ projects }: ProjectsProps) => {
   return (
-    <ul>
+    <>
       {projects.map((project) => {
         return <ProjectCard key={project._id} {...project} />
       })}
-    </ul>
+    </>
   )
 }
 export default ProjectList

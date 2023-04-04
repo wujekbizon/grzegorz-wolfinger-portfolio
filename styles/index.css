@@ -36,5 +36,20 @@ a {
 
 #canvas-projects-element {
   height: calc(100vh - 80px) !important;
-  background: radial-gradient(circle at 3% 25%, #011627 0%, #040c18 100%);
+  /* background: radial-gradient(circle at 3% 25%, #011627 0%, #040c18 100%); */
+  background-color: #040c18;
+  position: relative;
+}
+
+#canvas-projects-element div {
+  transform: none !important;
+}
+
+#canvas-projects-element div:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
 }

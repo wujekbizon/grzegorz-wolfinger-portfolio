@@ -16,12 +16,12 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
         <meta name="description" content="Browse a huge list of Grzegorz Wolfinger portfolio projects." />
       </Head>
       <Canvas id="canvas-projects-element">
+        <Suspense fallback={null}>
+          <Three projects={projects} />
+        </Suspense>
         <Html>
           <Projects projects={projects} />
         </Html>
-        <Suspense fallback={null}>
-          <Three />
-        </Suspense>
       </Canvas>
     </>
   )

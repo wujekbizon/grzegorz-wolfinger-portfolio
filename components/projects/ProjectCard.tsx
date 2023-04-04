@@ -17,14 +17,12 @@ const ProjectCard = ({
   githubUrl
 }: ProjectData) => {
   return (
-    <li>
-      <div>
-        <div>
-          <h1>{name}</h1>
-          <Image src={imgSrc} alt="my locker" width={150} height={150} loader={cloudinaryLoader} priority />
-        </div>
+    <div className={styles.card}>
+      <div className={styles.image_container}>
+        {/* <h1>{name}</h1> */}
+        <Image src={imgSrc} alt="my locker" width={150} height={150} loader={cloudinaryLoader} priority />
       </div>
-    </li>
+    </div>
   )
 }
 export default ProjectCard
