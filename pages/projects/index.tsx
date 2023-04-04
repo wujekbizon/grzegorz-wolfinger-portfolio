@@ -19,9 +19,7 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
         <Suspense fallback={null}>
           <Three projects={projects} />
         </Suspense>
-        <Html>
-          <Projects projects={projects} />
-        </Html>
+        <Html>{/* <Projects projects={projects} /> */}</Html>
       </Canvas>
     </>
   )

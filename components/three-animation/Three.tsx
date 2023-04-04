@@ -1,10 +1,11 @@
 import { useRef, useEffect } from 'react'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
-import { PerspectiveCamera, OrbitControls, Environment, Ring } from '@react-three/drei'
+import { PerspectiveCamera, OrbitControls, Environment } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { ProjectsProps } from '../projects/ProjectList'
+import * as THREE from 'three'
 
 const Three = ({ projects }: ProjectsProps) => {
   const result = useLoader(TextureLoader, '/images/map.png')
@@ -21,21 +22,19 @@ const Three = ({ projects }: ProjectsProps) => {
     }
   })
 
-  console.log(projects.length)
-
   return (
     <>
-      <PerspectiveCamera makeDefault position={[0, 20, 5]} />
+      <PerspectiveCamera makeDefault position={[0, 23, 5]} />
       <OrbitControls ref={orbitControlsRef} minPolarAngle={angleToRadius(30)} maxPolarAngle={angleToRadius(180)} />
 
       <group>
         {/* Ball */}
-        <mesh position={[0, 0.5, 0]} castShadow ref={ballRef}>
-          <sphereGeometry args={[0.1, 32, 32]} />
+        <mesh position={[5, -6, -4]} castShadow ref={ballRef}>
+          <sphereGeometry args={[0.5, 32, 32]} />
           <meshStandardMaterial color="white" map={ballImage} />
         </mesh>
-        <mesh position={[3, 0.5, 0]} castShadow ref={ballRef}>
-          <sphereGeometry args={[0.1, 32, 32]} />
+        <mesh position={[-5, 6, 4]} castShadow ref={ballRef}>
+          <sphereGeometry args={[0.5, 32, 32]} />
           <meshStandardMaterial color="white" />
         </mesh>
       </group>
@@ -48,6 +47,17 @@ const Three = ({ projects }: ProjectsProps) => {
 
       {/* Ambient light */}
       <ambientLight args={['#ffffff', 0.2]} />
+      {/* 
+      Directional Light */}
+      <directionalLight args={['#ffffff']} />
+
+      {/* Environment */}
+      <Environment background>
+        <mesh>
+          <sphereGeometry args={[50, 100, 100]} />
+          <meshBasicMaterial side={THREE.BackSide} color="#011627" />
+        </mesh>
+      </Environment>
     </>
   )
 }

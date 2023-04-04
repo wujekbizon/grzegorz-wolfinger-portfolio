@@ -35,10 +35,10 @@ a {
 }
 
 #canvas-projects-element {
-  height: calc(100vh - 80px) !important;
-  /* background: radial-gradient(circle at 3% 25%, #011627 0%, #040c18 100%); */
-  background-color: #040c18;
-  position: relative;
+  height: 85vh !important;
+  max-width: 75% !important;
+  margin-left: auto;
+  padding: 4rem;
 }
 
 #canvas-projects-element div {
