@@ -7,5 +7,6 @@ import TagLink from './tag/TagLink'
 import FeatureProject from './featureProject/FeatureProject'
 import ProjectList from './projects/ProjectList'
 import ProjectCard from './projects/ProjectCard'
+import Three from './three-animation/Index'
 
-export { Layout, Home, Navbar, CustomError, Logo, FeatureProject, TagLink, ProjectList, ProjectCard }
+export { Layout, Home, Navbar, CustomError, Logo, FeatureProject, TagLink, ProjectList, ProjectCard, Three }

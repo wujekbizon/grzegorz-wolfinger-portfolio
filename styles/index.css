@@ -33,3 +33,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+#canvas-projects-element {
+  height: calc(100vh - 80px) !important;
+  background: radial-gradient(circle at 3% 25%, #011627 0%, #040c18 100%);
+}
