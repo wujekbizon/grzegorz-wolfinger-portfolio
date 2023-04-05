@@ -27,11 +27,21 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
 export default ProjectsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allProjects = await getAllProjects()
+  // const allProjects = await getAllProjects()
+
+  const generateRandomColor = () => {
+    return Math.random() * 0xffffff
+  }
+
+  const allProjects = [
+    { _id: 'dasdas', x: 5, y: -6, z: -4, color: generateRandomColor() },
+    { _id: 'addasdaxxs', x: -5, y: 6, z: 4, color: generateRandomColor() },
+    { _id: 'rerrre' }
+  ]
 
   return {
     props: {
-      projects: allProjects.map((project) => ({
+      projects: allProjects?.map((project) => ({
         ...project,
         _id: project._id.toString()
       }))

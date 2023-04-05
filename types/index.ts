@@ -19,4 +19,8 @@ export interface ProjectData {
   githubUrl: string
   imgSrc: string
   createdAt?: Date
+  x?: number
+  y?: number
+  z?: number
+  color?: string
 }
