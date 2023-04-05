@@ -46,7 +46,7 @@ a {
 }
 
 #canvas-projects-element div:nth-child(2) {
-  width: 100%;
+  width: calc(100vw + 200px);
   height: 100%;
   position: absolute;
   top: 0;

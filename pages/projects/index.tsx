@@ -34,8 +34,8 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   const allProjects = [
-    { _id: 'dasdas', x: 5, y: -6, z: -4, color: generateRandomColor() },
-    { _id: 'addasdaxxs', x: -5, y: 6, z: 4, color: generateRandomColor() },
+    { _id: 'dasdas', x: 5, y: -7, z: -4, color: generateRandomColor() },
+    { _id: 'addasdaxxs', x: -5, y: 7, z: 4, color: generateRandomColor() },
     { _id: 'rerrre' }
   ]
 
