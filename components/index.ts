@@ -10,6 +10,7 @@ import ProjectCard from './projects/ProjectCard'
 import Three from './three-animation/Three'
 import Stars from './three-animation/Stars'
 import Core from './three-animation/Core'
+import CameraContainer from './camera/CameraContainer'
 
 export {
   Layout,
@@ -23,5 +24,6 @@ export {
   ProjectCard,
   Three,
   Stars,
-  Core
+  Core,
+  CameraContainer
 }

@@ -8,7 +8,7 @@ import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { ProjectsProps } from '../projects/ProjectList'
-import { Core, Stars } from '@/components'
+import { Core, Stars, CameraContainer } from '@/components'
 
 const Three = ({ projects }: ProjectsProps) => {
   const result = useLoader(TextureLoader, '/images/map.png')
@@ -86,7 +86,7 @@ const Three = ({ projects }: ProjectsProps) => {
   return (
     <>
       {/* Camera */}
-      <PerspectiveCamera makeDefault position={[-10, 30, 1]} />
+      <PerspectiveCamera makeDefault position={[-10, 40, 1]} />
 
       {isFreeMode && <OrbitControls makeDefault />}
 
@@ -108,26 +108,13 @@ const Three = ({ projects }: ProjectsProps) => {
       </group>
 
       <Html className={styles.panel}>
-        <div className={styles.camera_container}>
-          <div className={styles.btns}>
-            <h4>OrbitControl Camera</h4>
-            <button onClick={resetClickHandler}>Reset Camera</button>
-            <button onClick={freeModeClickHandler}>Free Mode {!isFreeMode ? 'On' : 'Off'}</button>
-            <div className={styles.earth_speed}>
-              <div className={styles.speed}>
-                <h4>Earth Rotation Speed</h4> - <h4>{earthRotationSpeed}</h4>
-              </div>
-              <input
-                id="range"
-                type="range"
-                min={1}
-                max={40}
-                value={earthRotationSpeed}
-                onChange={(e) => setEarthRotationSpeed(e.target.value)}
-              />
-            </div>
-          </div>
-        </div>
+        <CameraContainer
+          isFreeMode={isFreeMode}
+          earthRotationSpeed={earthRotationSpeed}
+          resetClickHandler={resetClickHandler}
+          freeModeClickHandler={freeModeClickHandler}
+          setEarthRotationSpeed={setEarthRotationSpeed}
+        />
       </Html>
 
       {/* Floor */}
