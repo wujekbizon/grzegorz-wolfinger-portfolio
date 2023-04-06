@@ -15,7 +15,7 @@ const Three = ({ projects }: ProjectsProps) => {
   const moonTexture = useLoader(TextureLoader, '/images/blog02.png')
 
   const [isFreeMode, setIsFreeMode] = useState(false)
-  const [earthRotationSpeed, setEarthRotationSpeed] = useState('1')
+  const [earthRotationSpeed, setEarthRotationSpeed] = useState('15')
 
   // code to move camera around
   const orbitControlsRef = useRef<OrbitControlsImpl>(null)
@@ -114,7 +114,9 @@ const Three = ({ projects }: ProjectsProps) => {
             <button onClick={resetClickHandler}>Reset Camera</button>
             <button onClick={freeModeClickHandler}>Free Mode {!isFreeMode ? 'On' : 'Off'}</button>
             <div className={styles.earth_speed}>
-              <label htmlFor="range">Earth Rotation Speed</label>
+              <div className={styles.speed}>
+                <h4>Earth Rotation Speed</h4> - <h4>{earthRotationSpeed}</h4>
+              </div>
               <input
                 id="range"
                 type="range"

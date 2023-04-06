@@ -35,21 +35,20 @@ a {
 }
 
 #canvas-projects-element {
-  height: 100vh !important;
-  max-width: 85% !important;
+  height: 95vh !important;
+  max-width: 75% !important;
   margin-left: auto;
   padding: 4rem;
 }
 
 #canvas-projects-element div {
   transform: none !important;
+  top: 0;
+  left: 0;
 }
 
 #canvas-projects-element div:nth-child(2) {
   width: calc(100vw + 200px);
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: transparent;
 }
