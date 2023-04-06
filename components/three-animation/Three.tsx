@@ -8,7 +8,7 @@ import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { ProjectsProps } from '../projects/ProjectList'
-import Stars from './Stars'
+import { Core, Stars } from '@/components'
 
 const Three = ({ projects }: ProjectsProps) => {
   const result = useLoader(TextureLoader, '/images/map.png')
@@ -85,6 +85,7 @@ const Three = ({ projects }: ProjectsProps) => {
 
   return (
     <>
+      {/* Camera */}
       <PerspectiveCamera makeDefault position={[-10, 30, 1]} />
 
       {isFreeMode && <OrbitControls makeDefault />}
@@ -96,9 +97,8 @@ const Three = ({ projects }: ProjectsProps) => {
       {/* Stars */}
       <Stars color={'#f272c8'} size={0.5} />
 
+      {/* Projects Spheres */}
       <group>
-        {/* Spheres */}
-
         {projects.map(({ _id, x = 0, y = 0, z = 0, color = '#ffffff' }) => (
           <mesh key={_id} position={[x, y, z]} ref={ballRef}>
             <sphereGeometry args={[0.7, 64, 64]} />
@@ -137,11 +137,14 @@ const Three = ({ projects }: ProjectsProps) => {
       </mesh>
 
       {/* Moon */}
-
       <mesh position={[10, 18, -5]} rotation={[angleToRadius(50), -angleToRadius(90), 0]} ref={moonSphereRef}>
         <sphereGeometry args={[2.5, 128, 128]} />
         <meshBasicMaterial map={moonTexture} wireframe />
       </mesh>
+
+      {/* Earth Core */}
+
+      <Core />
 
       {/* Ambient light */}
       <ambientLight args={['#ffffff', 0.3]} />
@@ -149,7 +152,7 @@ const Three = ({ projects }: ProjectsProps) => {
       <directionalLight args={['#B5F5F3', 8]} position={[25, 38, -15]} />
 
       {/* Spotlight light */}
-      {/* <spotLight args={['#B5F5F3', 20, 50, angleToRadius(90), 2, 0.1]} position={[0, 38, -15]} castShadow /> */}
+      {/* <spotLight args={['#B5F5F3', 20, 150, angleToRadius(10), 2, 0.1]} position={[0, 38, -15]} castShadow /> */}
 
       {/* Environment */}
       <Environment background>

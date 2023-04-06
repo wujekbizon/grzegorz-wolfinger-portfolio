@@ -8,5 +8,20 @@ import FeatureProject from './featureProject/FeatureProject'
 import ProjectList from './projects/ProjectList'
 import ProjectCard from './projects/ProjectCard'
 import Three from './three-animation/Three'
+import Stars from './three-animation/Stars'
+import Core from './three-animation/Core'
 
-export { Layout, Home, Navbar, CustomError, Logo, FeatureProject, TagLink, ProjectList, ProjectCard, Three }
+export {
+  Layout,
+  Home,
+  Navbar,
+  CustomError,
+  Logo,
+  FeatureProject,
+  TagLink,
+  ProjectList,
+  ProjectCard,
+  Three,
+  Stars,
+  Core
+}
