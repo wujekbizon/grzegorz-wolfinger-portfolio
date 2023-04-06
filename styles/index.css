@@ -35,8 +35,8 @@ a {
 }
 
 #canvas-projects-element {
-  height: 85vh !important;
-  max-width: 75% !important;
+  height: 100vh !important;
+  max-width: 85% !important;
   margin-left: auto;
   padding: 4rem;
 }

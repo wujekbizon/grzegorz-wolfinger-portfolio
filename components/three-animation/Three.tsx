@@ -1,25 +1,27 @@
 import styles from './Three.module.scss'
-
 import { useRef, useEffect, useState } from 'react'
+import * as THREE from 'three'
+import gsap from 'gsap'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
-import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry, Points, Line } from '@react-three/drei'
+import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { ProjectsProps } from '../projects/ProjectList'
-import * as THREE from 'three'
-import gsap from 'gsap'
+import Stars from './Stars'
 
 const Three = ({ projects }: ProjectsProps) => {
   const result = useLoader(TextureLoader, '/images/map.png')
   const moonTexture = useLoader(TextureLoader, '/images/blog02.png')
 
   const [isFreeMode, setIsFreeMode] = useState(false)
+  const [earthRotationSpeed, setEarthRotationSpeed] = useState('1')
 
   // code to move camera around
   const orbitControlsRef = useRef<OrbitControlsImpl>(null)
   const moonSphereRef = useRef(null)
   const ballRef = useRef<MeshLineGeometry>(null)
+  const earthRef = useRef<MeshLineGeometry>(null)
 
   useFrame((state) => {
     if (!!orbitControlsRef.current) {
@@ -27,6 +29,13 @@ const Three = ({ projects }: ProjectsProps) => {
       orbitControlsRef.current.setAzimuthalAngle(-x * angleToRadius(180))
       orbitControlsRef.current.setPolarAngle(y + 1 * angleToRadius(120 - 30))
       orbitControlsRef.current.update()
+    }
+  })
+
+  useFrame((state, delta) => {
+    if (!!earthRef.current) {
+      // earthRef.current.rotation.x -= delta / 10
+      earthRef.current.rotation.y -= delta / Number(earthRotationSpeed)
     }
   })
 
@@ -84,6 +93,9 @@ const Three = ({ projects }: ProjectsProps) => {
         <OrbitControls ref={orbitControlsRef} minPolarAngle={angleToRadius(30)} maxPolarAngle={angleToRadius(180)} />
       )}
 
+      {/* Stars */}
+      <Stars color={'#f272c8'} size={0.5} />
+
       <group>
         {/* Spheres */}
 
@@ -95,25 +107,29 @@ const Three = ({ projects }: ProjectsProps) => {
         ))}
       </group>
 
-      <points position={[0, 0, 0]}>
-        <Line points={[-10, 0, 0]} color="red" lineWidth={50} />
-        <Line points={[0, 10, 0]} color="red" lineWidth={50} />
-        <Line points={[10, 0, 0]} color="red" lineWidth={50} />
-        <lineBasicMaterial color="red" attach="material" />
-      </points>
-
       <Html className={styles.panel}>
         <div className={styles.camera_container}>
           <div className={styles.btns}>
             <h4>OrbitControl Camera</h4>
             <button onClick={resetClickHandler}>Reset Camera</button>
             <button onClick={freeModeClickHandler}>Free Mode {!isFreeMode ? 'On' : 'Off'}</button>
+            <div className={styles.earth_speed}>
+              <label htmlFor="range">Earth Rotation Speed</label>
+              <input
+                id="range"
+                type="range"
+                min={1}
+                max={40}
+                value={earthRotationSpeed}
+                onChange={(e) => setEarthRotationSpeed(e.target.value)}
+              />
+            </div>
           </div>
         </div>
       </Html>
 
       {/* Floor */}
-      <mesh rotation={[-angleToRadius(0), 0, 0]}>
+      <mesh rotation={[-angleToRadius(0), 0, 0]} ref={earthRef}>
         <sphereGeometry args={[8, 512, 512]} />
         <meshStandardMaterial attach="material" map={result} metalness={0.6} roughness={0.6} wireframe />
       </mesh>
@@ -136,7 +152,8 @@ const Three = ({ projects }: ProjectsProps) => {
       {/* Environment */}
       <Environment background>
         <mesh>
-          <sphereGeometry args={[50, 100, 100]} />
+          {/* <Stars color={'#B5F5F3'} size={0.002} /> */}
+          <sphereGeometry args={[100, 100, 100]} />
           <meshBasicMaterial side={THREE.BackSide} color="#011627" />
         </mesh>
       </Environment>
