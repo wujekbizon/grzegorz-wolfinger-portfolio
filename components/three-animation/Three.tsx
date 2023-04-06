@@ -1,17 +1,17 @@
 import styles from './Three.module.scss'
 import { useRef, useEffect, useState } from 'react'
 import * as THREE from 'three'
-import gsap from 'gsap'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
+import type { ProjectsProps } from '../projects/ProjectList'
 import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
+import { timelineAnimation } from '@/utils/timelineAnimation'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { ProjectsProps } from '../projects/ProjectList'
 import { Core, Stars, CameraContainer } from '@/components'
 
 const Three = ({ projects }: ProjectsProps) => {
-  const result = useLoader(TextureLoader, '/images/map.png')
+  const mapTexture = useLoader(TextureLoader, '/images/map.png')
   const moonTexture = useLoader(TextureLoader, '/images/blog02.png')
 
   const [isFreeMode, setIsFreeMode] = useState(false)
@@ -49,38 +49,7 @@ const Three = ({ projects }: ProjectsProps) => {
   }
 
   useEffect(() => {
-    if (!!ballRef.current) {
-      // Timeline
-      let timeline = gsap.timeline({ paused: false, delay: 2 })
-
-      // start timeline
-
-      timeline.to(
-        ballRef.current.position,
-        {
-          y: 11,
-          duration: 2
-        },
-        '>'
-      )
-
-      for (let i = 1; i < 100; i++) {
-        timeline.to(ballRef.current.position, { y: 11 - i * 0.08, z: 0 + i * 0.12, duration: 0.05 }, '>')
-      }
-
-      timeline.to(ballRef.current.position, { y: 0, z: 12, duration: 2 }, '>')
-
-      for (let i = 1; i < 100; i++) {
-        timeline.to(ballRef.current.position, { y: 0 - i * 0.1, z: 12 - i * 0.1, duration: 0.05 }, '>')
-      }
-
-      timeline.to(ballRef.current.position, { x: 0, y: -11, z: 0, duration: 2 }, '>')
-      timeline.to(ballRef.current.position, { x: 0, y: 0, z: 0, duration: 2 }, '>')
-
-      // Play
-      timeline.play()
-      timeline.repeat(Infinity)
-    }
+    timelineAnimation(ballRef)
   }, [ballRef])
 
   return (
@@ -99,12 +68,15 @@ const Three = ({ projects }: ProjectsProps) => {
 
       {/* Projects Spheres */}
       <group>
-        {projects.map(({ _id, x = 0, y = 0, z = 0, color = '#ffffff' }) => (
-          <mesh key={_id} position={[x, y, z]} ref={ballRef}>
-            <sphereGeometry args={[0.7, 64, 64]} />
-            <meshStandardMaterial attach="material" color={color} wireframe />
-          </mesh>
-        ))}
+        {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'black', imgSrc = '/images/js.png' }) => {
+          const texture = useLoader(TextureLoader, imgSrc)
+          return (
+            <mesh key={_id} position={[x, y, z]} ref={ballRef}>
+              <sphereGeometry args={[0.7, 64, 64]} />
+              <meshStandardMaterial attach="material" color={color} metalness={0.4} roughness={0.4} map={texture} />
+            </mesh>
+          )
+        })}
       </group>
 
       <Html className={styles.panel}>
@@ -117,10 +89,11 @@ const Three = ({ projects }: ProjectsProps) => {
         />
       </Html>
 
+      <fog color={'red'} near={1} far={1000} />
       {/* Floor */}
       <mesh rotation={[-angleToRadius(0), 0, 0]} ref={earthRef}>
         <sphereGeometry args={[8, 512, 512]} />
-        <meshStandardMaterial attach="material" map={result} metalness={0.6} roughness={0.6} wireframe />
+        <meshStandardMaterial attach="material" map={mapTexture} metalness={0.6} roughness={0.6} wireframe />
       </mesh>
 
       {/* Moon */}
@@ -144,7 +117,6 @@ const Three = ({ projects }: ProjectsProps) => {
       {/* Environment */}
       <Environment background>
         <mesh>
-          {/* <Stars color={'#B5F5F3'} size={0.002} /> */}
           <sphereGeometry args={[100, 100, 100]} />
           <meshBasicMaterial side={THREE.BackSide} color="#011627" />
         </mesh>

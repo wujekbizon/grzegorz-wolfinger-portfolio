@@ -6,7 +6,7 @@ import { Points as PointsType } from 'three'
 
 const Stars = (props: any) => {
   const ref = useRef<PointsType>(null)
-  const [sphere] = useState(() => inSphere(new Float32Array(150000), { radius: 350, center: [0, 0, 0] }))
+  const [sphere] = useState(() => inSphere(new Float32Array(100000), { radius: 350, center: [0, 0, 0] }))
 
   useFrame((state, delta) => {
     if (!!ref.current) {
