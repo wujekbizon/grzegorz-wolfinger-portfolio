@@ -86,6 +86,7 @@
       border-radius: 15px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       background: radial-gradient(#011627 30%, #040c18 100%);
 
       @include lgTablet {

@@ -1,11 +1,9 @@
-import { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
 import { GetStaticProps } from 'next'
 import type { ProjectData } from '@/types'
 import { getAllProjects } from '@/helpers/api'
 import Head from 'next/head'
 import Projects from '@/sections/Projects'
-import { Three } from '@/components'
+import { ThreeCanvas } from '@/canvas'
 
 const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
   return (
@@ -14,12 +12,7 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
         <title>All Lockers</title>
         <meta name="description" content="Browse a huge list of Grzegorz Wolfinger portfolio projects." />
       </Head>
-      <Canvas id="canvas-projects-element">
-        <Suspense fallback={null}>
-          <Three />
-        </Suspense>
-      </Canvas>
-
+      <ThreeCanvas />
       <Projects projects={projects} />
     </>
   )

@@ -13,6 +13,7 @@ import Core from './three-animation/Core'
 import CameraContainer from './camera/CameraContainer'
 import Ball from './three-animation/Ball'
 import ExperienceCard from './experienceCard/ExperienceCard'
+import ScrollButton from './animation/ScrollButton'
 
 export {
   Layout,
@@ -29,5 +30,6 @@ export {
   Core,
   CameraContainer,
   Ball,
-  ExperienceCard
+  ExperienceCard,
+  ScrollButton
 }
