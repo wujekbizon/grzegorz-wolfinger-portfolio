@@ -1,32 +1,35 @@
+import styles from './ExperienceCard.module.scss'
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import type { ExperienceProps } from '@/types'
+import 'react-vertical-timeline-component/style.min.css'
 
 const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: 'radial-gradient(#011627 30%, #040c18 100%)',
+        background: 'radial-gradient(#f49867 20%, #040c18 100%)',
+        border: '1px solid #040c18',
         color: '#fff'
       }}
-      contentArrowStyle={{ borderRight: '7px solid  rgba(124, 77, 170, 0.4)' }}
+      contentArrowStyle={{ borderRight: '7px solid #f49867' }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" />
+        <div className={styles.image_container}>
+          <img src={experience.icon} alt={experience.company_name} className={styles.image} />
         </div>
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+        <h3 className={styles.title}>{experience.title}</h3>
+        <p className={styles.name} style={{ margin: 0 }}>
           {experience.company_name}
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul className={styles.list}>
         {experience.points.map((point, index) => (
-          <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
+          <li key={`experience-point-${index}`} className={styles.list_item}>
             {point}
           </li>
         ))}

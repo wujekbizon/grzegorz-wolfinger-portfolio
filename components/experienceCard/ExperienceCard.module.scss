@@ -1,0 +1,41 @@
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .image {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 20%;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.name {
+  color: #00dbd8;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.list {
+  margin-top: 1.25rem;
+  list-style-type: disc;
+  margin-left: 1.25rem;
+
+  .list_item {
+    margin-top: 8px;
+    color: #040c18;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 0.25rem;
+    letter-spacing: 0.05rem;
+  }
+}

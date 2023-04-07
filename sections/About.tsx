@@ -41,14 +41,6 @@ const About = () => {
               )
             })}
           </div>
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7047969513551634432"
-            height="300"
-            width={'100%'}
-            frameBorder="0"
-            allowFullScreen={false}
-            title="Embedded post"
-          />
         </div>
         <motion.div variants={fadeIn('left', 'tween', 1, 1)} className={styles.content_container}>
           <div className={styles.title}>

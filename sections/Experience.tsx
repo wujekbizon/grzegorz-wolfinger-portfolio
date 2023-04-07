@@ -12,7 +12,9 @@ const Experience = () => {
     <>
       <motion.div variants={text2Variant(1)}>
         <p className={styles.subtitle}>What I have done so far</p>
-        <h2 className={styles.title}>Work Experience.</h2>
+        <h2 className={styles.title}>
+          Work <span className={styles.span}>Exp</span>erience.
+        </h2>
       </motion.div>
 
       <div className={styles.experience_container}>
