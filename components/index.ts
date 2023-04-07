@@ -14,6 +14,7 @@ import CameraContainer from './camera/CameraContainer'
 import Ball from './three-animation/Ball'
 import ExperienceCard from './experienceCard/ExperienceCard'
 import ScrollButton from './animation/ScrollButton'
+import CanvasLoader from './canvasLoader/CanvasLoader'
 
 export {
   Layout,
@@ -31,5 +32,6 @@ export {
   CameraContainer,
   Ball,
   ExperienceCard,
-  ScrollButton
+  ScrollButton,
+  CanvasLoader
 }

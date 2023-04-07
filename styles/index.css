@@ -35,11 +35,11 @@ a {
 }
 
 #canvas-projects-element {
-  height: 95vh !important;
+  height: 90vh !important;
   max-width: 75% !important;
   margin-left: auto;
   margin-right: auto;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 #canvas-projects-element div {
