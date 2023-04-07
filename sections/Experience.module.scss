@@ -1,0 +1,20 @@
+.subtitle {
+  font-size: 14px;
+  color: rgb(170 166 195);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.title {
+  color: rgb(255 255 255);
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+}
+
+.experience_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}

@@ -1,11 +1,11 @@
 import styles from './Experience.module.scss'
 import { motion } from 'framer-motion'
 import { text2Variant } from '../utils/motion'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import { VerticalTimeline } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import { ExperienceCard } from '@/components'
-
 import { experiences } from '@/files/constants'
+import { SectionWrapper } from '@/hoc'
 
 const Experience = () => {
   return (
@@ -26,4 +26,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default SectionWrapper(Experience, 'work')
