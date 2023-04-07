@@ -11,6 +11,7 @@ import Three from './three-animation/Three'
 import Stars from './three-animation/Stars'
 import Core from './three-animation/Core'
 import CameraContainer from './camera/CameraContainer'
+import Ball from './three-animation/Ball'
 
 export {
   Layout,
@@ -25,5 +26,6 @@ export {
   Three,
   Stars,
   Core,
-  CameraContainer
+  CameraContainer,
+  Ball
 }

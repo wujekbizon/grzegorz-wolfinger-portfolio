@@ -8,7 +8,8 @@ import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
 import { timelineAnimation } from '@/utils/timelineAnimation'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { Core, Stars, CameraContainer } from '@/components'
+import { Core, Stars, CameraContainer, Ball } from '@/components'
+import { technologies } from '@/files/constants'
 
 const Three = ({ projects }: ProjectsProps) => {
   const mapTexture = useLoader(TextureLoader, '/images/map.png')
@@ -66,17 +67,20 @@ const Three = ({ projects }: ProjectsProps) => {
       {/* Stars */}
       <Stars color={'#f272c8'} size={0.5} />
 
-      {/* Projects Spheres */}
       <group>
-        {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'black', imgSrc = '/images/js.png' }) => {
-          const texture = useLoader(TextureLoader, imgSrc)
+        {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'red' }) => {
           return (
             <mesh key={_id} position={[x, y, z]} ref={ballRef}>
-              <sphereGeometry args={[0.7, 64, 64]} />
-              <meshStandardMaterial attach="material" color={color} metalness={0.4} roughness={0.4} map={texture} />
+              <sphereGeometry args={[0.8, 64, 64]} />
+              <meshStandardMaterial attach="material" color={color} metalness={0.1} roughness={0.1} />
             </mesh>
           )
         })}
+
+        {/* Skills Cubes */}
+        {technologies.map(({ name, icon, color, position }) => (
+          <Ball key={name} imgUrl={icon} color={color} position={position} />
+        ))}
       </group>
 
       <Html className={styles.panel}>
@@ -89,7 +93,6 @@ const Three = ({ projects }: ProjectsProps) => {
         />
       </Html>
 
-      <fog color={'red'} near={1} far={1000} />
       {/* Floor */}
       <mesh rotation={[-angleToRadius(0), 0, 0]} ref={earthRef}>
         <sphereGeometry args={[8, 512, 512]} />

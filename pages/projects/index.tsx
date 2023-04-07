@@ -19,7 +19,6 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
         <Suspense fallback={null}>
           <Three projects={projects} />
         </Suspense>
-        <Html>{/* <Projects projects={projects} /> */}</Html>
       </Canvas>
     </>
   )
@@ -29,15 +28,7 @@ export default ProjectsPage
 export const getStaticProps: GetStaticProps = async () => {
   // const allProjects = await getAllProjects()
 
-  const generateRandomColor = () => {
-    return Math.random() * 0xffffff
-  }
-
-  const allProjects = [
-    { _id: 'dasdas', x: 5, y: -7, z: -4, color: generateRandomColor() },
-    { _id: 'addasdaxxs', x: -5, y: 7, z: 4, color: generateRandomColor() },
-    { _id: 'rerrre' }
-  ]
+  const allProjects = [{ _id: 'dasdas' }]
 
   return {
     props: {
