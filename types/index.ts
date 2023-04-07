@@ -24,3 +24,12 @@ export interface ProjectData {
   z?: number
   color?: string
 }
+
+export type ExperienceProps = {
+  title: string
+  company_name: string
+  icon: string
+  iconBg: string
+  date: string
+  points: string[]
+}
