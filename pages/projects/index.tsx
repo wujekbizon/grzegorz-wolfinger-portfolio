@@ -1,6 +1,5 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Html } from '@react-three/drei'
 import { GetStaticProps } from 'next'
 import type { ProjectData } from '@/types'
 import { getAllProjects } from '@/helpers/api'
@@ -17,18 +16,18 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
       </Head>
       <Canvas id="canvas-projects-element">
         <Suspense fallback={null}>
-          <Three projects={projects} />
+          <Three />
         </Suspense>
       </Canvas>
+
+      <Projects projects={projects} />
     </>
   )
 }
 export default ProjectsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const allProjects = await getAllProjects()
-
-  const allProjects = [{ _id: 'dasdas' }]
+  const allProjects = await getAllProjects()
 
   return {
     props: {

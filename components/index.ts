@@ -12,6 +12,7 @@ import Stars from './three-animation/Stars'
 import Core from './three-animation/Core'
 import CameraContainer from './camera/CameraContainer'
 import Ball from './three-animation/Ball'
+import ExperienceCard from './experienceCard/ExperienceCard'
 
 export {
   Layout,
@@ -27,5 +28,6 @@ export {
   Stars,
   Core,
   CameraContainer,
-  Ball
+  Ball,
+  ExperienceCard
 }

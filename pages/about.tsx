@@ -1,8 +1,11 @@
-import About from "@/sections/About"
+import { About, Experience } from '@/sections'
 
 const AboutPage = () => {
   return (
-    <About/>
+    <>
+      <About />
+      <Experience />
+    </>
   )
 }
 export default AboutPage

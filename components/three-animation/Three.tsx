@@ -2,7 +2,6 @@ import styles from './Three.module.scss'
 import { useRef, useEffect, useState } from 'react'
 import * as THREE from 'three'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
-import type { ProjectsProps } from '../projects/ProjectList'
 import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
@@ -11,7 +10,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Core, Stars, CameraContainer, Ball } from '@/components'
 import { technologies } from '@/files/constants'
 
-const Three = ({ projects }: ProjectsProps) => {
+const Three = () => {
   const mapTexture = useLoader(TextureLoader, '/images/map.png')
   const moonTexture = useLoader(TextureLoader, '/images/blog02.png')
 
@@ -68,14 +67,14 @@ const Three = ({ projects }: ProjectsProps) => {
       <Stars color={'#f272c8'} size={0.5} />
 
       <group>
-        {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'red' }) => {
+        {/* {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'red' }) => {
           return (
             <mesh key={_id} position={[x, y, z]} ref={ballRef}>
               <sphereGeometry args={[0.8, 64, 64]} />
               <meshStandardMaterial attach="material" color={color} metalness={0.1} roughness={0.1} />
             </mesh>
           )
-        })}
+        })} */}
 
         {/* Skills Cubes */}
         {technologies.map(({ name, icon, color, position }) => (
