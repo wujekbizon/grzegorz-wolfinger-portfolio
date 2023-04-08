@@ -1,13 +1,78 @@
-.card {
+.tilt_container {
+  width: 360px;
+  min-height: 455px;
+  border-radius: 16px;
+  padding: 20px;
+  background: radial-gradient(#f49867 20%, #040c18 100%);
+
   .image_container {
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 230px;
 
     img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      border-radius: 16px;
+      object-fit: cover;
     }
+
+    .links {
+      position: absolute;
+      inset: 0px;
+      display: flex;
+      justify-content: flex-end;
+      margin: 12px;
+
+      .github {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .project_url {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    gap: 5px;
+    text-transform: lowercase;
   }
 }

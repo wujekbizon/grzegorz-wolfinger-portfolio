@@ -1,0 +1,16 @@
+.project_list {
+  max-width: 1280px;
+  display: flex;
+  padding: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 0;
+
+  .cards_wrapper {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+}
