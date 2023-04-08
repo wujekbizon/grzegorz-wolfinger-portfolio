@@ -1,10 +1,10 @@
 import styles from './ScrollButton.module.scss'
 import { motion } from 'framer-motion'
 
-const ScrollButton = () => {
+const ScrollButton = ({ tag }: { tag: string }) => {
   return (
     <div className={styles.container}>
-      <a href="#about">
+      <a href={`#${tag}`}>
         <div className={styles.btn_container}>
           <motion.div
             animate={{

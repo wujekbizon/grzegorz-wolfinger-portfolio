@@ -15,6 +15,7 @@ import Ball from './three-animation/Ball'
 import ExperienceCard from './experienceCard/ExperienceCard'
 import ScrollButton from './animation/ScrollButton'
 import CanvasLoader from './canvasLoader/CanvasLoader'
+import ProjectsHero from './projectsHero/ProjectsHero'
 
 export {
   Layout,
@@ -33,5 +34,6 @@ export {
   Ball,
   ExperienceCard,
   ScrollButton,
-  CanvasLoader
+  CanvasLoader,
+  ProjectsHero
 }
