@@ -6,7 +6,17 @@ import { Points as PointsType } from 'three'
 
 const Stars = (props: any) => {
   const ref = useRef<PointsType>(null)
-  const [sphere] = useState(() => inSphere(new Float32Array(100000), { radius: 350, center: [0, 0, 0] }))
+  let floatArray = new Float32Array(100000)
+
+  // Loop through the array and check each value with isNaN()
+  for (let i = 0; i < floatArray.length; i++) {
+    if (isNaN(floatArray[i])) {
+      // Replace NaN with a valid number
+      floatArray[i] = 0
+    }
+  }
+
+  const [sphere] = useState(() => inSphere(floatArray, { radius: 350 }))
 
   useFrame((state, delta) => {
     if (!!ref.current) {

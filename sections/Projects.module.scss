@@ -1,3 +1,12 @@
 .projects {
+  position: relative;
+  width: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .three_canvas_container {
+    display: flex;
+    justify-content: center;
+  }
 }
