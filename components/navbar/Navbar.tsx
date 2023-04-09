@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import styles from './Navbar.module.scss'
 import { links } from '@/data/links'
 import Link from 'next/link'
@@ -8,8 +9,30 @@ import { useRouter } from 'next/router'
 
 const Navbar = () => {
   const router = useRouter()
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let scrollTop = window.scrollY
+      if (scrollTop > 100) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <motion.header variants={navVariants} initial="hidden" whileInView="show" className={styles.header}>
+    <motion.header
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className={`${styles.header} ${scrolled ? 'scrolled' : ''}`}
+    >
       <div className={`${styles.navbar_gradient} gradient_01 `} />
       <nav className={styles.navbar}>
         <Logo />

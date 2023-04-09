@@ -6,10 +6,6 @@
   align-items: center;
   z-index: 20;
   top: 0;
-  background: transparent;
-
-  .scrolled {
-  }
 
   .navbar_gradient {
     position: absolute;
@@ -38,17 +34,17 @@
       .link_btn {
         font-size: 20px;
         font-weight: 300;
-        color: rgba(0, 219, 216, 0.4);
+        color: rgba(124, 77, 170, 0.4);
       }
 
       .link_btn:hover {
         text-decoration: underline;
-        color: rgba(0, 219, 216, 1);
+        color: rgba(124, 77, 170, 1);
       }
 
       .active {
         text-decoration: underline;
-        color: rgba(0, 219, 216, 1);
+        color: rgba(124, 77, 170, 1);
       }
     }
   }

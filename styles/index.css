@@ -46,14 +46,12 @@ a {
   left: 0;
 }
 
-/* #canvas-projects-element div:nth-child(2) {
-  width: calc(100vw + 200px);
-  height: 100%;
-  background-color: transparent;
-} */
-
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
   display: block;
+}
+
+.scrolled {
+  background-color: #040c18;
 }
