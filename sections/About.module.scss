@@ -1,14 +1,14 @@
 @import '../styles/globals.scss';
 
 .content_container {
-  flex: 2.5;
-  padding: 40px;
-  border-radius: 15px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 2.5;
+  padding: 40px;
   background: radial-gradient(#011627 60%, #040c18 100%);
-  position: relative;
+  border-radius: 15px;
 
   @include lgTablet {
     flex: 1;
@@ -174,5 +174,13 @@
       padding: 7px 5px;
       line-height: 25px;
     }
+  }
+
+  .scroll_btn {
+    width: 35px;
+
+    position: absolute;
+    bottom: -150px;
+    left: calc(50% - 35px / 2);
   }
 }

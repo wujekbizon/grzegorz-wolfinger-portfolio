@@ -4,6 +4,7 @@ import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
 import { SectionWrapper } from '@/hoc'
+import { ScrollButton } from '@/components'
 
 const About = () => {
   return (
@@ -30,6 +31,9 @@ const About = () => {
             {text}
           </h4>
         ))}
+        <div className={styles.scroll_btn}>
+          <ScrollButton tag="work" />
+        </div>
       </motion.div>
     </>
   )
