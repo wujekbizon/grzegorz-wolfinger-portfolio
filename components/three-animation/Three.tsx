@@ -8,7 +8,7 @@ import { angleToRadius } from '@/utils/angle'
 import { timelineAnimation } from '@/utils/timelineAnimation'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Core, Stars, CameraContainer, Ball } from '@/components'
-import { technologies } from '@/files/constants'
+import { technologies } from '@/data/constants'
 
 const Three = () => {
   const mapTexture = useLoader(TextureLoader, '/images/map.png')

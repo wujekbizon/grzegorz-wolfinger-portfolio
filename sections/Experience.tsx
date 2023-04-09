@@ -4,7 +4,7 @@ import { text2Variant } from '../utils/motion'
 import { VerticalTimeline } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import { ExperienceCard } from '@/components'
-import { experiences } from '@/files/constants'
+import { experiences } from '@/data/constants'
 import { SectionWrapper } from '@/hoc'
 
 const Experience = () => {
