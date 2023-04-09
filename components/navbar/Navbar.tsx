@@ -9,23 +9,14 @@ import { useRouter } from 'next/router'
 const Navbar = () => {
   const router = useRouter()
   return (
-    <motion.header
-      variants={navVariants}
-      initial="hidden"
-      whileInView="show"
-      className={styles.header}
-    >
+    <motion.header variants={navVariants} initial="hidden" whileInView="show" className={styles.header}>
       <div className={`${styles.navbar_gradient} gradient_01 `} />
       <nav className={styles.navbar}>
         <Logo />
         <ul className={styles.links}>
           {links.map(({ label, url }) => (
             <li
-              className={
-                url === router.pathname
-                  ? `${styles.active} ${styles.link_btn}`
-                  : `${styles.link_btn}`
-              }
+              className={url === router.pathname ? `${styles.active} ${styles.link_btn}` : `${styles.link_btn}`}
               key={label}
             >
               <Link href={url}>{label}</Link>

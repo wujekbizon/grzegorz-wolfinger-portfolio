@@ -15,7 +15,7 @@
   }
   .hero_wrapper {
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 30px);
     margin: auto;
     display: flex;
     align-items: center;
@@ -235,7 +235,7 @@
 
       .hero_uppertitle {
         position: absolute;
-        top: 18%;
+        top: 14%;
         right: 0;
         left: 0;
 
@@ -246,7 +246,7 @@
 
       .hero_lowertitle {
         position: absolute;
-        bottom: 14%;
+        bottom: 18%;
         right: 0;
         left: 0;
 

@@ -1,39 +1,44 @@
 .header {
-  height: 5rem;
+  height: 75px;
+  width: 100%;
+  position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  z-index: 20;
+  top: 0;
   background: transparent;
-  position: relative;
+
+  .scrolled {
+  }
 
   .navbar_gradient {
     position: absolute;
-    width: 100%;
+    width: 50%;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
+    z-index: -1;
   }
 
   .navbar {
-    width: 90vw;
     height: 100%;
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
 
     .links {
-      flex: 2;
       display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      gap: 40px;
 
       .link_btn {
         font-size: 20px;
         font-weight: 300;
         color: rgba(0, 219, 216, 0.4);
-        text-transform: uppercase;
       }
 
       .link_btn:hover {
