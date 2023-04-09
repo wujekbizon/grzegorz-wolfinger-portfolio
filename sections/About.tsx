@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 import { aboutTexts } from '@/data/about'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
+import { fadeIn, zoomIn } from '@/utils/motion'
 import { profileItems } from '@/data/about'
 import { humanReadableDate } from '@/utils/date'
 import { TagLink, FeatureProject } from '@/components'
@@ -58,7 +58,6 @@ const About = () => {
             {text}
           </h4>
         ))}
-        {/* <hr className={styles.hr} /> */}
 
         {/* {featureProjects.map(({ id, url, info, imgSrc, projectName, logo, text }) => (
           <FeatureProject

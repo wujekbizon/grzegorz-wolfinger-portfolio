@@ -1,9 +1,19 @@
+@import '../styles/globals.scss';
+
 .subtitle {
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(170 166 195);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include smMobile {
+    font-size: 10px;
+  }
 }
 
 .span {
@@ -15,6 +25,18 @@
   font-weight: 900;
   font-size: 60px;
   text-align: center;
+
+  @include tablet {
+    font-size: 50px;
+  }
+
+  @include mobile {
+    font-size: 40px;
+  }
+
+  @include smMobile {
+    font-size: 30px;
+  }
 }
 
 .experience_container {

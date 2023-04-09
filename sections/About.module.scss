@@ -75,6 +75,7 @@
 
   @include lgTablet {
     flex: 1;
+    padding: 24px;
   }
 
   .image {
@@ -86,15 +87,46 @@
     border-radius: 50%;
     border: 2px solid rgb(58, 56, 56);
     object-fit: cover;
+
+    @include lgTablet {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include mobile {
+      width: 120px;
+      height: 120px;
+      right: calc(50% - 120px / 2);
+    }
   }
 
   .title {
     align-self: center;
     padding: 50px 0;
 
+    @include smMobile {
+      padding-bottom: 30px;
+    }
+
     .letter {
       margin: 0;
       font-size: 60px;
+
+      @include tablet {
+        font-size: 50px;
+      }
+
+      @include lgMobile {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        font-size: 30px;
+      }
+
+      @include smMobile {
+        font-size: 21px;
+      }
     }
 
     h1 {
@@ -103,6 +135,24 @@
       font-size: 60px;
       font-weight: 900;
       padding: 10px;
+      text-align: center;
+
+      @include tablet {
+        font-size: 50px;
+      }
+
+      @include lgMobile {
+        font-size: 40px;
+        line-height: 45px;
+      }
+
+      @include mobile {
+        font-size: 30px;
+      }
+
+      @include smMobile {
+        font-size: 21px;
+      }
     }
 
     h4 {
@@ -110,6 +160,16 @@
       font-weight: 300;
       font-size: 20px;
       padding: 10px;
+
+      @include tablet {
+        font-size: 17px;
+      }
+
+      @include lgMobile {
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+      }
     }
 
     span {
@@ -125,6 +185,10 @@
     margin-bottom: 10px;
     margin-top: 30px;
 
+    @include smMobile {
+      margin-top: 10px;
+    }
+
     span {
       font-size: 25px;
     }
@@ -132,6 +196,10 @@
     h2 {
       margin-left: 10px;
       color: #fa6400;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
   }
 
@@ -145,5 +213,11 @@
     color: rgb(197, 194, 211);
     padding: 20px 10px;
     line-height: 30px;
+
+    @include lgMobile {
+      font-size: 15px;
+      padding: 7px 5px;
+      line-height: 25px;
+    }
   }
 }
