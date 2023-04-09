@@ -164,7 +164,7 @@ export const experiences = [
     iconBg: 'rgb(170 166 195)',
     date: 'January 2023 - present',
     points: [
-      'Learning the fundamentals of computer networking and distributed systems. Understanding the basics of how computers communicate with each other is essential for developing a successful P2P application.',
+      'Learning the fundamentals of computer networking and distributed systems.',
       'Becoming familiar with the different types of P2P architectures and protocols.',
       'Familiarizing with existing P2P applications and their source code.',
       'AI Programming Fundamentals.'

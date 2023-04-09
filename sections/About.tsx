@@ -8,18 +8,12 @@ import { profileItems } from '@/data/about'
 import { humanReadableDate } from '@/utils/date'
 import { TagLink, FeatureProject } from '@/components'
 import { featureProjects } from '@/data/features'
+import { SectionWrapper } from '@/hoc'
 
 const About = () => {
   return (
-    <section className={styles.wrapper}>
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={styles.container}
-      >
-        <div className={styles.image_container}>
+    <>
+      {/* <div className={styles.image_container}>
           <motion.div variants={zoomIn(0.3, 1)}>
             <Image src="/images/founder.jpg" alt="dev" width={450} height={450} priority className={styles.image} />
           </motion.div>
@@ -41,43 +35,45 @@ const About = () => {
               )
             })}
           </div>
+        </div> */}
+      <motion.div variants={fadeIn('left', 'tween', 1, 1)} className={styles.content_container}>
+        <div className={styles.title}>
+          <h1>
+            Hi, I'm <span className={styles.letter}>G</span>rzegorz <span className={styles.letter}>W</span>olfinger
+          </h1>
+
+          <h4>
+            NextJs/React Developer <span>|</span> Junior Web Developer <span>|</span> JavaScript Engineer
+          </h4>
         </div>
-        <motion.div variants={fadeIn('left', 'tween', 1, 1)} className={styles.content_container}>
-          <div className={styles.title}>
-            <h1>
-              Hi, I'm <span className={styles.letter}>G</span>rzegorz <span className={styles.letter}>W</span>olfinger
-            </h1>
-            <h4>
-              NextJs/React Developer <span>|</span> Junior Web Developer <span>|</span> JavaScript Engineer
-            </h4>
-          </div>
 
-          <div className={styles.about_title}>
-            <span>◻️</span> <h2>About Me</h2>
-          </div>
-          <hr className={styles.hr} />
-          {aboutTexts.map(({ id, text }) => (
-            <h4 className={styles.content} key={id}>
-              {text}
-            </h4>
-          ))}
-          <hr className={styles.hr} />
+        <Image src="/images/founder.jpg" alt="dev" width={150} height={150} priority className={styles.image} />
+        <hr className={styles.hr} />
+        <div className={styles.about_title}>
+          <span>◻️</span> <h2>About Me</h2>
+        </div>
 
-          {featureProjects.map(({ id, url, info, imgSrc, projectName, logo, text }) => (
-            <FeatureProject
-              key={id}
-              id={id}
-              url={url}
-              info={info}
-              imgSrc={imgSrc}
-              projectName={projectName}
-              logo={logo}
-              text={text}
-            />
-          ))}
-        </motion.div>
+        {aboutTexts.map(({ id, text }) => (
+          <h4 className={styles.content} key={id}>
+            {text}
+          </h4>
+        ))}
+        {/* <hr className={styles.hr} /> */}
+
+        {/* {featureProjects.map(({ id, url, info, imgSrc, projectName, logo, text }) => (
+          <FeatureProject
+            key={id}
+            id={id}
+            url={url}
+            info={info}
+            imgSrc={imgSrc}
+            projectName={projectName}
+            logo={logo}
+            text={text}
+          />
+        ))} */}
       </motion.div>
-    </section>
+    </>
   )
 }
-export default About
+export default SectionWrapper(About, '')

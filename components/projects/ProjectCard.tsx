@@ -41,14 +41,16 @@ const ProjectCard = ({ project, index }: ProjecCardProps) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.content_wrapper}>
           <h3 className={styles.name}>{name}</h3>
           <p className={styles.text}>{text}</p>
         </div>
         <div className={styles.tags}>
           {skills.map((tag) => {
+            const randomColor = generateRandomColor()
+
             return (
-              <p key={`${tag}-${index}`} style={{ color: generateRandomColor(), fontSize: '14px', fontWeight: 600 }}>
+              <p key={`${tag}-${index}`} style={{ color: randomColor, fontSize: '14px', fontWeight: '600' }}>
                 #{tag}
               </p>
             )

@@ -1,9 +1,15 @@
+@import '../styles/globals.scss';
+
 .section_wrapper {
+  height: 100%;
   padding: 4rem;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 0;
-  // background: radial-gradient(circle at 3% 25%, #011627 0%, #040c18 100%);
+
+  @include mobile {
+    padding: 1.5rem;
+  }
 }

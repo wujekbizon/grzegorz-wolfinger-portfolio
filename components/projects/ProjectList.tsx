@@ -3,6 +3,12 @@ import type { ProjectData } from '@/types'
 import { ProjectCard } from '@/components'
 import { staggerContainer } from '../../utils/motion'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
+
+const DynamicProjectCard = dynamic(() => import('../projects/ProjectCard'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false
+})
 
 export type ProjectsProps = {
   projects: ProjectData[]
@@ -19,7 +25,7 @@ const ProjectList = ({ projects }: ProjectsProps) => {
     >
       <div className={styles.cards_wrapper}>
         {projects.map((project, index) => {
-          return <ProjectCard key={project._id} index={index} project={project} />
+          return <DynamicProjectCard key={project._id} index={index} project={project} />
         })}
       </div>
     </motion.div>

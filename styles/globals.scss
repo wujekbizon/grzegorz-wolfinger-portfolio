@@ -11,6 +11,7 @@ $widthSmWideScreen: 1570px;
 $widthXLgTablet: 1360px;
 $widthLgTablet: 1180px;
 $widthTablet: 960px;
+$widthMobile: 640px;
 
 @mixin smallWideScreen {
   @media (max-width: #{$widthSmWideScreen}) {
@@ -32,6 +33,12 @@ $widthTablet: 960px;
 
 @mixin tablet {
   @media (max-width: #{$widthTablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$widthMobile}) {
     @content;
   }
 }
