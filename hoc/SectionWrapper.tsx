@@ -9,7 +9,7 @@ const SectionWrapper = (Component: () => JSX.Element, idName: string) =>
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.25 }}
         className={styles.section_wrapper}
       >
         <span className="hash-span" id={idName}>

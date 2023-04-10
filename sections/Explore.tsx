@@ -1,7 +1,7 @@
 import styles from './Explore.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
+import { staggerContainer, fadeIn, zoomIn, text2Variant } from '@/utils/motion'
 import { features, modernLinks } from '@/data/features'
 import { TypingText } from '@/components/animation/CustomText'
 import FatalErrorAnimation from '@/components/animation/FatalError'
@@ -15,25 +15,11 @@ const Explore = () => {
       viewport={{ once: false, amount: 0.25 }}
       className={styles.explore}
     >
-      <article className={styles.explore_cloud}>
-        <motion.div variants={fadeIn('right', 'tween', 1, 1)} className={styles.image_container}>
-          <Image src="/images/cloud.png" alt="cloud" width={700} height={400} />
-        </motion.div>
-        <div className={styles.titles}>
-          <TypingText title="# Cloud Services" textStyles={styles.typing} />
-          {features.map((feature, index) => (
-            <motion.h1 variants={fadeIn('left', 'tween', 1 + index / 2, 1)} key={feature.id}>
-              {feature.title}
-            </motion.h1>
-          ))}
-        </div>
-      </article>
-      <article className={styles.divider}>
-        <motion.h1 variants={zoomIn(1, 2)}>
-          As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure, utilizing a
-          P2P network, reliable and leveraging artificial intelligence for most tasks.
-        </motion.h1>
-      </article>
+      <motion.div id="explore" variants={text2Variant(0.01)}>
+        <p className={styles.subtitle}>Introduction</p>
+        <h2 className={styles.title}>Overview.</h2>
+      </motion.div>
+
       <motion.article
         variants={staggerContainer}
         initial="hidden"
@@ -51,6 +37,25 @@ const Explore = () => {
         </div>
         <FatalErrorAnimation />
       </motion.article>
+      <article className={styles.divider}>
+        <motion.h1 variants={zoomIn(1, 2)}>
+          As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure, utilizing a
+          P2P network, reliable and leveraging artificial intelligence for most tasks.
+        </motion.h1>
+      </article>
+      <article className={styles.explore_cloud}>
+        <motion.div variants={fadeIn('right', 'tween', 1, 1)} className={styles.image_container}>
+          <Image src="/images/cloud.png" alt="cloud" width={700} height={400} />
+        </motion.div>
+        <div className={styles.titles}>
+          <TypingText title="# Cloud Services" textStyles={styles.typing} />
+          {features.map((feature, index) => (
+            <motion.h1 variants={fadeIn('left', 'tween', 1 + index / 2, 1)} key={feature.id}>
+              {feature.title}
+            </motion.h1>
+          ))}
+        </div>
+      </article>
     </motion.section>
   )
 }

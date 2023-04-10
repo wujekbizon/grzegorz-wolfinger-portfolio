@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import Image from 'next/image'
 import { customers } from '@/data/customers'
+import { ScrollButton } from '@/components'
 
 type User = {
   id: number
@@ -30,7 +31,7 @@ const Hero = () => {
     >
       <div className={styles.hero_wrapper}>
         <motion.div variants={fadeIn('left', 'tween', 0.3, 1)} className={styles.title_container}>
-          <motion.h1 className={`${styles.hero_uppertitle}`} variants={fadeIn('down', 'tween', 2, 2)}>
+          <motion.h1 className={`${styles.hero_uppertitle}`} variants={fadeIn('up', 'tween', 0.3, 1)}>
             Today's <span> web </span>is pushing the boundaries of what is possible.
           </motion.h1>
           <div className={styles.map_container}>
@@ -69,15 +70,18 @@ const Hero = () => {
             <Image src="/images/map.png" alt="map" width={700} height={350} priority className={styles.map} />
           </div>
 
-          <motion.h1 className={` ${styles.hero_lowertitle}`} variants={fadeIn('up', 'tween', 2.5, 2)}>
+          <motion.h1 className={` ${styles.hero_lowertitle}`} variants={fadeIn('down', 'tween', 0.3, 1)}>
             Let's create a network of endless possibilities <span>together</span>.
           </motion.h1>
         </motion.div>
       </div>
-      <motion.h6 className={styles.scroll} variants={fadeIn('up', 'tween', 3, 1)}>
+      {/* <motion.h6 className={styles.scroll} variants={fadeIn('up', 'tween', 1, 1)}>
         <span>&#8650; </span>Scroll down
-        <div className="footer_gradient" />
-      </motion.h6>
+ 
+      </motion.h6> */}
+      <div className={styles.scroll}>
+        <ScrollButton tag="explore" />
+      </div>
     </motion.section>
   )
 }
