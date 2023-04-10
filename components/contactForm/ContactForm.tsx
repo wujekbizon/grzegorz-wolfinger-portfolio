@@ -2,6 +2,8 @@ import styles from './ContactForn.module.scss'
 import React, { ChangeEventHandler, FormEventHandler, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { slideIn } from '../../utils/motion'
+import { Social } from '@/components'
+import Tilt from 'react-parallax-tilt'
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null)
@@ -27,7 +29,7 @@ const ContactForm = () => {
     setLoading(true)
   }
   return (
-    <div className={styles.contact}>
+    <Tilt scale={1} transitionSpeed={250} tiltMaxAngleX={10} tiltMaxAngleY={10} className={styles.contact}>
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className={styles.form_container}>
         <p className={styles.subtitle}>Get in touch</p>
         <h2 className={styles.title}>Contact.</h2>
@@ -72,10 +74,10 @@ const ContactForm = () => {
           </button>
         </form>
       </motion.div>
-      <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className={styles.canvas_container}>
-        <h1>Hello</h1>
+      <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className={styles.social_container}>
+        <Social />
       </motion.div>
-    </div>
+    </Tilt>
   )
 }
 export default ContactForm

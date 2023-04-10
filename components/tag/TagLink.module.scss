@@ -4,20 +4,16 @@
   display: flex;
   align-items: center;
   position: relative;
-  width: 380px;
-
-  @include smMobile {
-    width: 320px;
-  }
 
   .icon {
     position: absolute;
-    left: 20px;
+    right: 20px;
     top: 0;
+    z-index: 20;
 
     svg {
       font-size: 18px;
-      color: #f49867;
+      color: #fa6400;
     }
   }
 
@@ -27,18 +23,26 @@
     margin: 0 3px 5px 3px;
 
     .link {
-      padding: 5px 30px;
-      border-bottom: 1px solid rgba(244, 152, 103, 0.2);
+      padding: 10px 30px;
       display: flex;
       align-items: center;
-      justify-content: center;
+
+      @include tablet {
+        padding-left: 0;
+      }
 
       h4 {
-        font-size: 17px;
-        font-weight: 300;
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        letter-spacing: 0.1rem;
+
+        @include lgTablet {
+          font-size: 20px;
+        }
 
         @include smMobile {
-          font-size: 16px;
+          font-size: 15px;
         }
       }
     }
