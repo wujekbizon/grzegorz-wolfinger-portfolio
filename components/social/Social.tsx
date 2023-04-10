@@ -8,9 +8,9 @@ import { TagLink } from '@/components'
 
 const Social = () => {
   return (
-    <div className={styles.image_container}>
+    <div className={styles.social_container}>
       <motion.div variants={fadeIn('right', 'tween', 0.4, 1)} className={styles.date}>
-        {humanReadableDate && <h2 className="gradient_text">Welcome, today is {humanReadableDate}r.</h2>}
+        {humanReadableDate && <h2>Today is {humanReadableDate}r.</h2>}
         <div className={styles.emoji_container}>
           <span>📅</span>
         </div>

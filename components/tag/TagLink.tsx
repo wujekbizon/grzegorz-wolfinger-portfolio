@@ -9,7 +9,7 @@ type TagProps = {
 const TagLink = ({ icon, title, link }: TagProps) => {
   return (
     <div className={styles.container}>
-      {icon}
+      <div className={styles.icon}>{icon}</div>
       <div className={styles.tag}>
         <a target="_blank" href={link} className={styles.link}>
           <h4>{title}</h4>

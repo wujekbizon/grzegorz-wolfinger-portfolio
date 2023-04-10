@@ -1,61 +1,40 @@
-.image_container {
-  flex: 1;
-  padding: 0 2rem 2rem 0;
+@import '../styles/globals.scss';
+
+.social_container {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  @include lgTablet {
-    padding: 0 0 2rem 0;
-  }
-
-  .image {
-    border-radius: 50%;
-    border: 2px solid rgb(58, 56, 56);
-    object-fit: cover;
-    margin-bottom: 30px;
-  }
+  gap: 20px;
+  margin-bottom: 50px;
 
   .emoji_container {
     display: flex;
     position: absolute;
-    right: 30px;
-    top: -15px;
-
-    span {
-      transform: scale(1.8);
-    }
+    right: 20px;
+    top: -12px;
   }
 
   .tags {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .date {
-    height: 70px;
-    width: 100%;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25px 0 60px 0;
-    border: 1px solid rgba(124, 77, 170, 0.4);
-    border-radius: 15px;
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    border: 1px solid rgba(124, 77, 170, 0.2);
+    border-radius: 5px;
     position: relative;
 
-    @include lgTablet {
-      width: 70%;
-    }
-
     h2 {
-      font-size: 24px;
-      font-weight: 400;
-    }
-
-    .date_title {
-      font-size: 25px;
-      font-weight: 300;
+      font-size: 14px;
     }
   }
 }

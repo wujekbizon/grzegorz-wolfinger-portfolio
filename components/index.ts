@@ -16,6 +16,8 @@ import ExperienceCard from './experienceCard/ExperienceCard'
 import ScrollButton from './animation/ScrollButton'
 import CanvasLoader from './canvasLoader/CanvasLoader'
 import ProjectsHero from './projectsHero/ProjectsHero'
+import Social from './social/Social'
+import ContactForm from './contactForm/ContactForm'
 
 export {
   Layout,
@@ -35,5 +37,7 @@ export {
   ExperienceCard,
   ScrollButton,
   CanvasLoader,
-  ProjectsHero
+  ProjectsHero,
+  Social,
+  ContactForm
 }

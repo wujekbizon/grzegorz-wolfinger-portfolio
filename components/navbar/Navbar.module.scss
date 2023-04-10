@@ -34,17 +34,17 @@
       .link_btn {
         font-size: 20px;
         font-weight: 300;
-        color: rgba(124, 77, 170, 0.4);
+        color: rgb(170 166 195);
       }
 
       .link_btn:hover {
         text-decoration: underline;
-        color: rgba(124, 77, 170, 1);
+        color: rgb(255 255 255);
       }
 
       .active {
         text-decoration: underline;
-        color: rgba(124, 77, 170, 1);
+        color: rgb(255 255 255);
       }
     }
   }

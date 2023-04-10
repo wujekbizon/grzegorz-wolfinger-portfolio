@@ -1,10 +1,11 @@
-import { About, Experience } from '@/sections'
+import { About, Experience, Footer } from '@/sections'
 
 const AboutPage = () => {
   return (
     <>
       <About />
       <Experience />
+      <Footer />
     </>
   )
 }
