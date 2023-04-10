@@ -1,3 +1,104 @@
-.form {
-  height: 100%;
+@import '../styles/globals.scss';
+
+.contact {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 40px;
+
+  .subtitle {
+    font-size: 18px;
+    color: rgb(170 166 195);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include smMobile {
+      font-size: 10px;
+    }
+  }
+
+  .span {
+    color: #fa6400;
+  }
+
+  .title {
+    color: rgb(255 255 255);
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+
+    @include smMobile {
+      font-size: 30px;
+    }
+  }
+
+  .form_container {
+    flex: 0.75;
+    background-color: rgb(16 13 37);
+    padding: 32px;
+    border-radius: 10px;
+
+    .form {
+      height: 100%;
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .label {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .span {
+        color: white;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+      .input {
+        background-color: rgb(21 16 48);
+        padding: 16px 0;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: 500;
+
+        &::placeholder {
+          color: rgb(170 166 195);
+        }
+      }
+
+      .btn {
+        background-color: rgb(21 16 48);
+        padding: 12px 32px;
+        border-radius: 12px;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        width: fit-content;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .canvas_container {
+    flex: 1;
+    height: auto;
+  }
 }

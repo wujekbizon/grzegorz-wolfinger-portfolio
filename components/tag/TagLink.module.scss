@@ -1,8 +1,14 @@
+@import '../styles/globals.scss';
+
 .container {
   display: flex;
   align-items: center;
   position: relative;
   width: 380px;
+
+  @include smMobile {
+    width: 320px;
+  }
 
   .icon {
     position: absolute;
@@ -10,25 +16,30 @@
     top: 0;
 
     svg {
-      font-size: 20px;
+      font-size: 18px;
       color: #f49867;
     }
   }
 
   .tag {
     position: relative;
-    margin-left: 20px;
     width: 100%;
+    margin: 0 3px 5px 3px;
 
     .link {
       padding: 5px 30px;
-      border-bottom: 1px solid rgba(124, 77, 170, 0.1);
+      border-bottom: 1px solid rgba(244, 152, 103, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
 
       h4 {
-        font-size: 18px;
+        font-size: 17px;
+        font-weight: 300;
+
+        @include smMobile {
+          font-size: 16px;
+        }
       }
     }
   }
