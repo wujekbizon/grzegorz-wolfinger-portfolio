@@ -5,6 +5,7 @@ import { staggerContainer, fadeIn, zoomIn, text2Variant } from '@/utils/motion'
 import { features, modernLinks } from '@/data/features'
 import { TypingText } from '@/components/animation/CustomText'
 import FatalErrorAnimation from '@/components/animation/FatalError'
+import Link from 'next/link'
 
 const Explore = () => {
   return (
@@ -56,6 +57,13 @@ const Explore = () => {
           ))}
         </div>
       </article>
+
+      <motion.h1 variants={fadeIn('up', 'tween', 1, 1)}>
+        Do you want to find out more about new ways of creating application?{' '}
+        <Link href="/about#contact">
+          Please <span className={styles.span}>contact me</span>
+        </Link>
+      </motion.h1>
     </motion.section>
   )
 }

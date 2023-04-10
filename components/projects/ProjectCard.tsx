@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }: ProjecCardProps) => {
 
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <Tilt className={styles.tilt_container} scale={1} transitionSpeed={450} tiltMaxAngleX={45} tiltMaxAngleY={45}>
+      <Tilt className={styles.tilt_container} scale={1} transitionSpeed={450} tiltMaxAngleX={25} tiltMaxAngleY={25}>
         <div className={styles.image_container}>
           <Image
             src={imgSrc}

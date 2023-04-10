@@ -19,7 +19,7 @@ export const features = [
 export const modernLinks = [
   {
     id: 2,
-    link: 'Applications should also be user-friendly, intuitive, and able to integrate with existing systems. Additionally, they should be able to handle large amounts of data and be able to process it quickly.'
+    link: 'Applications should be user-friendly, intuitive, and able to integrate with existing systems. Additionally, they should be able to handle large amounts of data and be able to process it quickly.'
   },
   {
     id: 3,

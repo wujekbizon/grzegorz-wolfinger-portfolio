@@ -1,4 +1,5 @@
 import styles from './Hero.module.scss'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
 import Image from 'next/image'
@@ -12,14 +13,39 @@ type User = {
   left: string
   status: string
 }
+let allUsers: User[] = []
 
 const Hero = () => {
+  const [users, setUsers] = useState<User[]>(customers)
+  const [isAllConnected, setIsAllConnected] = useState(false)
+
   let onlineUsers: User[] = customers.reduce((acc: User[], currentValue) => {
     if (currentValue.status === 'online') {
       acc.push(currentValue)
     }
     return acc
   }, [])
+
+  const onClickHandler = () => {
+    if (isAllConnected) {
+      for (let user of allUsers) {
+        user.status = 'offline'
+      }
+
+      setUsers(allUsers)
+      setIsAllConnected(false)
+      return
+    }
+
+    allUsers = []
+
+    for (let customer of customers) {
+      customer.status = 'online'
+      allUsers.push(customer)
+    }
+    setIsAllConnected(true)
+    setUsers(allUsers)
+  }
 
   return (
     <motion.section
@@ -49,9 +75,13 @@ const Hero = () => {
                 <h4 className={styles.total_users}>
                   Total Users: <span className="gradient_hero"> {onlineUsers.length} </span> / {customers.length}
                 </h4>
+
+                <button className={styles.users_btn} onClick={onClickHandler}>
+                  {isAllConnected ? 'Disconnnect Users' : 'Connect All Users'}
+                </button>
               </div>
             </div>
-            {customers.map((customer, index) => {
+            {users.map((customer, index) => {
               return (
                 <motion.div
                   variants={zoomIn(index * 0.5, 0.4)}
@@ -75,10 +105,6 @@ const Hero = () => {
           </motion.h1>
         </motion.div>
       </div>
-      {/* <motion.h6 className={styles.scroll} variants={fadeIn('up', 'tween', 1, 1)}>
-        <span>&#8650; </span>Scroll down
- 
-      </motion.h6> */}
       <div className={styles.scroll}>
         <ScrollButton tag="explore" />
       </div>
