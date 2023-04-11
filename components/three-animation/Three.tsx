@@ -64,18 +64,9 @@ const Three = () => {
       )}
 
       {/* Stars */}
-      <Stars color={'#f272c8'} size={0.5} />
+      <Stars color={'#f272c8'} size={0.4} />
 
       <group>
-        {/* {projects.map(({ _id, x = 0, y = 0, z = 0, color = 'red' }) => {
-          return (
-            <mesh key={_id} position={[x, y, z]} ref={ballRef}>
-              <sphereGeometry args={[0.8, 64, 64]} />
-              <meshStandardMaterial attach="material" color={color} metalness={0.1} roughness={0.1} />
-            </mesh>
-          )
-        })} */}
-
         {/* Skills Cubes */}
         {technologies.map(({ name, icon, color, position }) => (
           <Ball key={name} imgUrl={icon} color={color} position={position} />
