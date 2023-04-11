@@ -1,11 +1,17 @@
+@import '../styles/globals.scss';
+
 .project_list {
   max-width: 1280px;
   display: flex;
-  padding: 4rem;
+  padding: 64px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 0;
+
+  @include mobile {
+    padding: 24px;
+  }
 
   .cards_wrapper {
     display: flex;

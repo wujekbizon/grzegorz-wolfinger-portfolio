@@ -1,3 +1,5 @@
+@import '../styles/globals.scss';
+
 .projects_hero_container {
   height: 80vh;
   display: flex;
@@ -5,10 +7,24 @@
   justify-content: center;
   background-image: url('/images/gate.png');
   background-position: top;
-  background-size: 80% 55%;
+  background-size: 80% 60%;
   background-repeat: no-repeat;
   margin-top: 50px;
   padding-top: 40px;
+
+  @include lgMobile {
+    background-size: 90% 60%;
+    padding-top: 0;
+  }
+
+  @include mobile {
+    background-size: 100% 60%;
+    align-items: center;
+  }
+
+  @include smMobile {
+    margin-top: 0;
+  }
 
   .span {
     height: 20px;
@@ -37,9 +53,19 @@
     .content {
       font-size: 17px;
       color: rgb(197, 194, 211);
-      margin-top: 12px;
+      margin-top: 25px;
       line-height: 30px;
-      font-weight: 500;
+      font-weight: 700;
+
+      @include lgMobile {
+        font-weight: 900;
+      }
+
+      @include mobile {
+        font-size: 15px;
+        text-align: center;
+        background-color: rgba(1, 1, 1, 0.4);
+      }
     }
   }
 }

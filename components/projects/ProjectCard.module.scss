@@ -1,9 +1,15 @@
+@import '../styles/globals.scss';
+
 .tilt_container {
   width: 360px;
   min-height: 455px;
   border-radius: 16px;
   padding: 20px;
   background: radial-gradient(#f49867 20%, #040c18 100%);
+
+  @include mobile {
+    width: 100%;
+  }
 
   .image_container {
     position: relative;
@@ -73,7 +79,7 @@
 
     .name {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     .text {
