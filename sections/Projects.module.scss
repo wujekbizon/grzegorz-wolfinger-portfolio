@@ -58,9 +58,70 @@
     .content {
       font-size: 16px;
       color: rgb(197, 194, 211);
+      margin-top: 33px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+
+  .project {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 64px 64px 0 64px;
+
+    @include lgMobile {
+      text-align: center;
+    }
+
+    @include mobile {
+      padding: 24px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: rgb(170 166 195);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 70px;
+
+      @include smMobile {
+        font-size: 10px;
+        margin-top: 60px;
+      }
+    }
+
+    .span {
+      color: #fa6400;
+    }
+
+    .title {
+      color: rgb(255 255 255);
+      font-weight: 900;
+      font-size: 45px;
+
+      @include mobile {
+        font-size: 40px;
+      }
+
+      @include smMobile {
+        font-size: 30px;
+      }
+    }
+
+    .content {
+      font-size: 16px;
+      color: rgb(197, 194, 211);
       margin-top: 35px;
       font-weight: 400;
-      text-align: center;
+      line-height: 24px;
+      text-align: left;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 
