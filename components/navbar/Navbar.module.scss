@@ -1,3 +1,5 @@
+@import '../styles/globals.scss';
+
 .header {
   height: 75px;
   width: 100%;
@@ -26,14 +28,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 64px;
+
+    @include lgMobile {
+      padding: 20px 24px;
+    }
 
     .links {
       display: flex;
       gap: 40px;
 
       .link_btn {
-        font-size: 20px;
-        font-weight: 300;
+        font-size: 18px;
+        font-weight: 500;
         color: rgb(170 166 195);
       }
 

@@ -4,13 +4,12 @@ import Image from 'next/image'
 
 const Logo = () => {
   return (
-    <div className={styles.logo_container}>
-      <h1>Grzegorz</h1>
-      <Link href="/">
-        <Image src="/images/logo.png" alt="wolfinger" width={180} height={22} priority />
-      </Link>
-      <h1>Portfolio</h1>
-    </div>
+    <Link href="/">
+      <div className={styles.logo_container}>
+        <Image src="/images/logo.png" alt="wolfinger" width={150} height={22} priority />
+        <h1>| Portfolio</h1>
+      </div>
+    </Link>
   )
 }
 
