@@ -6,10 +6,12 @@ import { motion } from 'framer-motion'
 import { navVariants } from '@/utils/motion'
 import { Logo } from '@/components'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 const Navbar = () => {
   const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
+  const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +48,33 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <div className={styles.menu}>
+          <Image
+            src={toggle ? '/images/close.svg' : '/images/menu.svg'}
+            alt="menu"
+            width={28}
+            height={28}
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${
+              !toggle ? 'hidden' : 'flex'
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              {links.map(({ label, url }) => (
+                <li
+                  className={url === router.pathname ? `${styles.active} ${styles.link_btn}` : `${styles.link_btn}`}
+                  key={label}
+                >
+                  <Link href={url}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </nav>
     </motion.header>
   )
