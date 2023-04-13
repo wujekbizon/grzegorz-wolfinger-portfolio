@@ -13,7 +13,7 @@ const Explore = () => {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.25 }}
       className={styles.explore}
     >
       <motion.div id="explore" variants={text2Variant(0.01)}>
@@ -21,13 +21,7 @@ const Explore = () => {
         <h2 className={styles.title}>Overview.</h2>
       </motion.div>
 
-      <motion.article
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={styles.explore_modern_app}
-      >
+      <article className={styles.explore_modern_app}>
         <div className={styles.titles}>
           <TypingText title="# Modern Applications" textStyles={styles.typing} />
           {modernLinks.map((link, index) => (
@@ -37,7 +31,7 @@ const Explore = () => {
           ))}
         </div>
         <FatalErrorAnimation />
-      </motion.article>
+      </article>
       <article className={styles.divider}>
         <motion.h1 variants={zoomIn(1, 2)}>
           As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure, utilizing a
@@ -58,12 +52,14 @@ const Explore = () => {
         </div>
       </article>
 
-      <motion.h1 variants={fadeIn('up', 'tween', 1, 1)}>
-        Do you want to find out more about new ways of creating application?{' '}
-        <Link href="/about#contact">
-          Please <span className={styles.span}>contact me</span>
-        </Link>
-      </motion.h1>
+      <article className={styles.divider}>
+        <motion.h1 variants={fadeIn('up', 'tween', 1, 1)}>
+          Do you want to find out more about new ways of creating application?{' '}
+          <Link href="/about#contact">
+            Please <span className={styles.span}>contact me</span>
+          </Link>
+        </motion.h1>
+      </article>
     </motion.section>
   )
 }

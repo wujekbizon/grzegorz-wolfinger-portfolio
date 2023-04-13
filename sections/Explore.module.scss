@@ -14,8 +14,12 @@
     gap: 80px;
   }
 
+  @include mobile {
+    gap: 50px;
+  }
+
   @include tablet {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .subtitle {
@@ -24,7 +28,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 90px;
 
     @include tablet {
       font-size: 14px;
@@ -83,11 +87,30 @@
       flex-direction: column-reverse;
     }
 
+    @include mobile {
+      gap: 60px;
+    }
+
     h1 {
       font-weight: 400;
       font-family: 'Raleway';
       font-size: 22px;
       padding: 10px 0;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include smMobile {
+        font-size: 16px;
+      }
+    }
+
+    .image_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
 
     img {
@@ -122,6 +145,10 @@
       @include tablet {
         font-size: 24px;
       }
+
+      @include smMobile {
+        font-size: 20px;
+      }
     }
   }
 
@@ -137,11 +164,19 @@
       flex-direction: column;
     }
 
+    @include mobile {
+      gap: 60px;
+    }
+
     h1 {
       font-weight: 400;
       font-family: 'Raleway';
       font-size: 22px;
       padding: 10px 0;
+
+      @include smMobile {
+        font-size: 18px;
+      }
     }
   }
 }

@@ -41,10 +41,12 @@ const FatalErrorAnimation = () => {
       <div className={activeImplosion ? 'black_gradient' : ''} />
       <div className={activeImplosion ? 'boil_gradient' : ''} />
       <div className={activeGradient ? 'active feedback_gradient' : 'feedback_gradient'} />
-      <Image src="/images/bot.png" alt="ai" width={700} height={400} />
-      <button onClick={onClickHandler} className={styles.btn}>
-        {!active ? 'Run "Fatal Error Animation"' : 'Abort Termination'}
-      </button>
+      <div className={styles.image_container}>
+        <Image src="/images/bot.png" alt="ai" width={700} height={400} />
+        <button onClick={onClickHandler} className={styles.btn}>
+          {!active ? 'Run "Fatal Error Animation"' : 'Abort Termination'}
+        </button>
+      </div>
     </motion.div>
   )
 }

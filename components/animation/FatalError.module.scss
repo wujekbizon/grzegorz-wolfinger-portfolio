@@ -3,6 +3,13 @@
 .animation_container {
   position: relative;
 
+  .image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
   img {
     border-top-right-radius: 60px;
     border-bottom-right-radius: 20px;

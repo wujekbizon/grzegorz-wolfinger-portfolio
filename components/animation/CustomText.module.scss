@@ -1,5 +1,15 @@
+@import '../styles/globals.scss';
+
 .text_typed {
   font-weight: 300;
   font-size: 25px;
   color: #fa6400;
+
+  @include mobile {
+    font-size: 21px;
+  }
+
+  @include smMobile {
+    font-size: 18px;
+  }
 }
