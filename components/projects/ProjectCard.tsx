@@ -13,7 +13,7 @@ type ProjecCardProps = {
 }
 
 const ProjectCard = ({ project, index }: ProjecCardProps) => {
-  const { _id, name, type, text, skills, items, btnText, btnCode, url, imgSrc, githubUrl } = project
+  const { name, text, skills, url, imgSrc, githubUrl } = project
 
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>

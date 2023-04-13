@@ -70,6 +70,10 @@
   .titles {
     padding: 0 3rem;
 
+    @include xLgTablet {
+      padding: 0;
+    }
+
     @include mobile {
       padding: 0;
     }
@@ -93,7 +97,6 @@
 
     h1 {
       font-weight: 400;
-      font-family: 'Raleway';
       font-size: 22px;
       padding: 10px 0;
 
@@ -170,12 +173,15 @@
 
     h1 {
       font-weight: 400;
-      font-family: 'Raleway';
       font-size: 22px;
       padding: 10px 0;
 
-      @include smMobile {
+      @include mobile {
         font-size: 18px;
+      }
+
+      @include smMobile {
+        font-size: 16px;
       }
     }
   }

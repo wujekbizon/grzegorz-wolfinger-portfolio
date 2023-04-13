@@ -13,10 +13,10 @@ const Explore = () => {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: false, amount: 0.25 }}
       className={styles.explore}
     >
-      <motion.div id="explore" variants={text2Variant(0.01)}>
+      <motion.div id="explore" variants={text2Variant(1)}>
         <p className={styles.subtitle}>Introduction</p>
         <h2 className={styles.title}>Overview.</h2>
       </motion.div>
