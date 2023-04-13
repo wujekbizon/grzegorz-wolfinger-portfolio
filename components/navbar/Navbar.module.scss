@@ -38,20 +38,76 @@
       display: flex;
       gap: 40px;
 
-      .link_btn {
-        font-size: 18px;
-        font-weight: 500;
-        color: rgb(170 166 195);
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .link_btn {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgb(170 166 195);
+    }
+
+    .link_btn:hover {
+      text-decoration: underline;
+      color: rgb(255 255 255);
+    }
+
+    .active {
+      text-decoration: underline;
+      color: rgb(255 255 255);
+    }
+
+    .menu {
+      display: none;
+
+      @include mobile {
+        display: flex;
+        flex: 1 1 0%;
+        align-items: center;
+        justify-content: flex-end;
       }
 
-      .link_btn:hover {
-        text-decoration: underline;
-        color: rgb(255 255 255);
+      .hidden {
+        display: none;
       }
 
-      .active {
-        text-decoration: underline;
-        color: rgb(255 255 255);
+      .show {
+        width: 100%;
+        display: flex;
+        padding: 24px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        margin-top: 5px;
+        z-index: 10;
+        border-radius: 12px;
+        border: 5px solid hsl(209, 61%, 16%);
+        background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+      }
+
+      .menu_list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 1 1 0%;
+        flex-direction: row;
+        gap: 16px;
+
+        @include smMobile {
+          flex-direction: column;
+        }
+
+        .link_btn {
+          color: hsl(209, 61%, 12%);
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        .active {
+          color: rgb(255 255 255);
+        }
       }
     }
   }
