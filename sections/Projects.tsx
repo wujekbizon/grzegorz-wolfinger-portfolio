@@ -7,13 +7,7 @@ import { fadeIn, staggerContainer } from '@/utils/motion'
 
 const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <motion.section
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={styles.projects}
-    >
+    <section className={styles.projects}>
       <ProjectsHero />
 
       <motion.div
@@ -61,7 +55,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         </motion.div>
       </motion.div>
       <ProjectList projects={projects} />
-    </motion.section>
+    </section>
   )
 }
 export default Projects
