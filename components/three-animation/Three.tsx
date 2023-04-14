@@ -5,7 +5,7 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
-import { timelineAnimation } from '@/utils/timelineAnimation'
+// import { timelineAnimation } from '@/utils/timelineAnimation'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Core, Stars, CameraContainer, Ball } from '@/components'
 import { technologies } from '@/data/constants'
@@ -48,9 +48,9 @@ const Three = () => {
     setIsFreeMode(!isFreeMode)
   }
 
-  useEffect(() => {
-    timelineAnimation(ballRef)
-  }, [ballRef])
+  // useEffect(() => {
+  //   timelineAnimation(ballRef)
+  // }, [ballRef])
 
   return (
     <>
