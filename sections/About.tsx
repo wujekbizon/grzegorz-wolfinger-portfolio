@@ -20,7 +20,7 @@ const About = () => {
           </h4>
         </div>
 
-        <Image src="/images/founder.jpg" alt="dev" width={150} height={150} priority className={styles.image} />
+        <Image src="/images/me.jpg" alt="dev" width={150} height={150} priority className={styles.image} />
         <hr className={styles.hr} />
         <div className={styles.about_title}>
           <span>◻️</span> <h2>About Me</h2>

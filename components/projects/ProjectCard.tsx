@@ -17,24 +17,30 @@ const ProjectCard = ({ project, index }: ProjecCardProps) => {
 
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <Tilt className={styles.tilt_container} scale={1} transitionSpeed={450} tiltMaxAngleX={25} tiltMaxAngleY={25}>
+      <Tilt
+        className={`glassmorphism ${styles.tilt_container}`}
+        scale={1}
+        transitionSpeed={450}
+        tiltMaxAngleX={25}
+        tiltMaxAngleY={25}
+      >
         <div className={styles.image_container}>
           <Image
             src={imgSrc}
             alt="my locker"
-            width={250}
-            height={250}
+            width={600}
+            height={450}
             loader={cloudinaryLoader}
             priority
             className={styles.image}
           />
           <div className={styles.links}>
-            <div className={`black-gradient ${styles.github}`}>
+            <div className={`glassmorphism ${styles.github}`}>
               <a target="_blank" href={githubUrl}>
                 <Image src="/images/github.png" alt="github-link" width={50} height={50} />
               </a>
             </div>
-            <div className={`black-gradient ${styles.project_url}`}>
+            <div className={`glassmorphism ${styles.project_url}`}>
               <a target="_blank" href={url}>
                 <Image src={imgSrc} alt="project-link" width={50} height={50} loader={cloudinaryLoader} />
               </a>

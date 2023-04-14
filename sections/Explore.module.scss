@@ -8,7 +8,7 @@
   justify-content: center;
   position: relative;
   padding: 4rem;
-  gap: 150px;
+  gap: 100px;
 
   @include lgTablet {
     gap: 80px;
@@ -28,7 +28,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
-    padding-top: 90px;
+    // padding-top: 90px;
 
     @include tablet {
       font-size: 14px;

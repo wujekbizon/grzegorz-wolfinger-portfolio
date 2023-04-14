@@ -29,6 +29,7 @@
     border-radius: 50%;
     border: 2px solid rgb(58, 56, 56);
     object-fit: cover;
+    object-position: top;
 
     @include lgTablet {
       width: 150px;

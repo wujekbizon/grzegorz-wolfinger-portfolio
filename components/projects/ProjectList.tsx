@@ -20,7 +20,7 @@ const ProjectList = ({ projects }: ProjectsProps) => {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: false, amount: 0.25 }}
       className={styles.project_list}
     >
       <div className={styles.cards_wrapper}>
