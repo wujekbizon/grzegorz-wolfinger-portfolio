@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { slideIn } from '../../utils/motion'
 import { Social } from '@/components'
 import Tilt from 'react-parallax-tilt'
+import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null)
@@ -27,6 +29,40 @@ const ContactForm = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
     setLoading(true)
+
+    if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY) {
+      return
+    }
+
+    emailjs
+      .send(
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: 'Grzegorz Wolfinger',
+          from_email: form.email,
+          to_email: 'grzegorz.wolfinger@gmail.com',
+          message: form.message
+        },
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false)
+          toast.success('Message successfully sent!')
+          setForm({
+            name: '',
+            email: '',
+            message: ''
+          })
+        },
+        (error) => {
+          setLoading(false)
+          console.error(error)
+          toast.error('Failed to send the message, please try again')
+        }
+      )
   }
   return (
     <Tilt scale={1} transitionSpeed={250} tiltMaxAngleX={10} tiltMaxAngleY={10} className={styles.contact}>
