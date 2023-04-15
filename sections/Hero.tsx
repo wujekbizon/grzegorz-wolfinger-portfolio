@@ -60,22 +60,33 @@ const Hero = () => {
           <div className={styles.map_container}>
             <div className={styles.network}>
               <h2>P2P Connection Network</h2>
-              <div className={styles.status}>
-                <div className={`${styles.status_online}`} />
-                <h6> - online user</h6>
-              </div>
-              <div className={styles.status}>
-                <div className={`${styles.status_offline}`} />
-                <h6> - offline user</h6>
-              </div>
-              <div>
-                <h4 className={styles.total_users}>
-                  Total Users: <span className="gradient_hero"> {onlineUsers.length} </span> / {customers.length}
+              <div className={styles.total_users}>
+                <h4>
+                  Total Connected Users: <span className="gradient_hero"> {onlineUsers.length} </span> /{' '}
+                  {customers.length}
                 </h4>
+                <div className={styles.status}>
+                  <div className={`${styles.status_online}`} />
+                  <h6> - online user</h6>
 
-                <button className={styles.users_btn} onClick={onClickHandler}>
-                  {isAllConnected ? 'Disconnnect Users' : 'Connect All Users'}
-                </button>
+                  <div className={`${styles.status_offline}`} />
+                  <h6> - offline user</h6>
+                </div>
+                <motion.button className={styles.users_btn} onClick={onClickHandler}>
+                  <motion.h6
+                    animate={{
+                      y: [0, 0, 0],
+                      x: [0, -24, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: 'loop'
+                    }}
+                  >
+                    {isAllConnected ? 'Disconnnect Users' : 'Connect All Users'}
+                  </motion.h6>
+                </motion.button>
               </div>
             </div>
             {users.map((customer, index) => {
@@ -97,6 +108,9 @@ const Hero = () => {
             <Image src="/images/map.png" alt="map" width={700} height={350} priority className={styles.map} />
           </div>
         </motion.div>
+        <div className={styles.filler}>
+          <p>All data are fetched from DB , there is no limit of users in P2P network.</p>
+        </div>
         <div className={styles.scroll}>
           <ScrollButton tag="explore" />
         </div>

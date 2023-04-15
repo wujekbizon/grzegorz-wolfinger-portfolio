@@ -7,6 +7,7 @@
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .hero_title {
       padding: 0 24px;
@@ -17,122 +18,141 @@
     }
 
     .title_container {
-      display: flex;
       width: 100%;
-      align-items: center;
-      justify-content: center;
+      max-width: 1480px;
       margin-left: auto;
       margin-right: auto;
-      flex-direction: column;
+
+      @include lgMobile {
+        margin-bottom: 50px;
+      }
 
       .map_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 1480px;
+        width: 100%;
+        height: 100%;
         position: relative;
 
-        @include xLgTablet {
-          transform: scale(0.9);
-        }
-
-        @include lgTablet {
-          transform: scale(0.8);
-        }
-
-        @include tablet {
-          transform: scale(0.7);
-        }
-
-        @include lgMobile {
-          transform: scale(0.6, 0.7);
-        }
-
-        @include mobile {
-          transform: scale(0.45, 0.68);
-        }
-
-        @include smMobile {
-          transform: scale(0.35, 0.65);
-        }
-
         .map {
-          width: 1200px;
+          width: 100%;
           height: 100%;
+          object-fit: cover;
         }
 
         .network {
           position: absolute;
           height: 120px;
-          top: 0px;
-          right: -100px;
+          bottom: -70px;
+          right: 50px;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
           justify-content: space-evenly;
-
-          @include xLgTablet {
-            top: -30px;
-            right: 0;
-          }
+          padding-bottom: 15px;
 
           @include lgTablet {
-            top: -60px;
+            bottom: -100px;
           }
 
           @include tablet {
-            top: -100px;
-            right: 100px;
+            top: -150px;
+            right: calc(50% - 337px / 2);
+          }
+
+          @include mobile {
+            right: calc(50% - 265px / 2);
           }
 
           .status {
-            width: 50%;
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
             h6 {
-              font-size: 13px;
+              font-size: 14px;
+              padding-bottom: 2px;
+              font-weight: 300;
             }
 
             .status_online {
-              width: 12px;
-              height: 12px;
+              width: 14px;
+              height: 14px;
               background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
               border-radius: 50%;
               color: #040c18;
               z-index: 0;
+              margin-right: 5px;
+
+              @include lgMobile {
+                width: 8px;
+                height: 8px;
+              }
             }
 
             .status_offline {
-              width: 12px;
-              height: 12px;
+              width: 14px;
+              height: 14px;
               background-color: grey;
               border-radius: 50%;
               color: #040c18;
               z-index: 0;
+              margin-right: 5px;
+
+              @include lgMobile {
+                width: 8px;
+                height: 8px;
+              }
+            }
+          }
+
+          h2 {
+            font-weight: 500;
+            font-size: 28px;
+            color: #fa6400;
+
+            @include mobile {
+              font-size: 22px;
             }
           }
 
           .total_users {
-            text-decoration: underline;
-            text-decoration-color: #fa6400;
-          }
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 10px;
 
-          h2 {
-            font-weight: 200;
-            font-size: 18px;
-            color: #fa6400;
+            h4 {
+              font-size: 19px;
+
+              @include lgMobile {
+                font-size: 14px;
+              }
+            }
           }
 
           .users_btn {
-            border: 1px solid #f49867;
+            width: 80%;
             background-color: transparent;
+            border: 4px solid rgb(170, 166, 195);
             color: white;
             cursor: pointer;
-            padding: 2px 10px;
-            margin-top: 5px;
+            padding: 5px 15px 5px 37px;
+            margin-top: 10px;
             font-weight: 600;
+            border-radius: 15px;
+            font-size: 25px;
+
+            @include tablet {
+              font-size: 20px;
+            }
+
+            @include mobile {
+              font-size: 14px;
+              width: 60%;
+              border: 2px solid rgb(170, 166, 195);
+            }
           }
         }
 
@@ -145,6 +165,16 @@
           cursor: pointer;
           color: #040c18;
           z-index: 0;
+
+          @include lgMobile {
+            width: 8px;
+            height: 8px;
+          }
+
+          @include mobile {
+            width: 5px;
+            height: 5px;
+          }
 
           &:hover {
             width: 200px;
@@ -160,6 +190,11 @@
             align-items: center;
             justify-content: center;
 
+            @include mobile {
+              width: 80px;
+              height: 30px;
+            }
+
             .dot_container {
               opacity: 1;
               display: flex;
@@ -173,6 +208,10 @@
                 font-size: 18px;
                 color: #040c18;
                 text-align: center;
+
+                @include mobile {
+                  font-size: 10px;
+                }
               }
             }
           }
@@ -195,6 +234,16 @@
           color: #040c18;
           z-index: 0;
 
+          @include lgMobile {
+            width: 8px;
+            height: 8px;
+          }
+
+          @include smMobile {
+            width: 5px;
+            height: 5px;
+          }
+
           &:hover {
             width: 200px;
             height: 120px;
@@ -209,6 +258,11 @@
             align-items: center;
             justify-content: center;
 
+            @include mobile {
+              width: 80px;
+              height: 30px;
+            }
+
             .dot_container {
               opacity: 1;
               display: flex;
@@ -222,6 +276,10 @@
                 font-size: 18px;
                 color: #040c18;
                 text-align: center;
+
+                @include mobile {
+                  font-size: 10px;
+                }
               }
             }
           }
@@ -249,10 +307,39 @@
       }
     }
 
+    .filler {
+      display: none;
+      width: 90%;
+      position: absolute;
+      bottom: 25%;
+      padding: 32px;
+      border-top: 2px solid rgba(124, 77, 170, 0.6);
+      border-bottom: 2px solid rgba(124, 77, 170, 0.6);
+
+      @include lgMobile {
+        display: block;
+      }
+
+      p {
+        display: none;
+        color: white;
+        text-align: center;
+        font-weight: 300;
+
+        @include lgMobile {
+          display: block;
+        }
+      }
+    }
+
     .scroll {
       position: absolute;
       bottom: 0;
       left: 50%;
+
+      @include smMobile {
+        bottom: -30px;
+      }
     }
   }
 }
