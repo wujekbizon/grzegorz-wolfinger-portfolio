@@ -1,6 +1,5 @@
 import styles from './ProjectList.module.scss'
 import type { ProjectData } from '@/types'
-import { ProjectCard } from '@/components'
 import { staggerContainer } from '../../utils/motion'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'

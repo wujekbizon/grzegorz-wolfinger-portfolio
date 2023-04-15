@@ -1,11 +1,10 @@
 import styles from './Three.module.scss'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 import * as THREE from 'three'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
-// import { timelineAnimation } from '@/utils/timelineAnimation'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Core, Stars, CameraContainer, Ball } from '@/components'
 import { technologies } from '@/data/constants'
@@ -20,7 +19,6 @@ const Three = () => {
   // code to move camera around
   const orbitControlsRef = useRef<OrbitControlsImpl>(null)
   const moonSphereRef = useRef(null)
-  const ballRef = useRef<MeshLineGeometry>(null)
   const earthRef = useRef<MeshLineGeometry>(null)
 
   useFrame((state) => {
@@ -47,10 +45,6 @@ const Three = () => {
   const freeModeClickHandler = () => {
     setIsFreeMode(!isFreeMode)
   }
-
-  // useEffect(() => {
-  //   timelineAnimation(ballRef)
-  // }, [ballRef])
 
   return (
     <>
@@ -96,16 +90,12 @@ const Three = () => {
       </mesh>
 
       {/* Earth Core */}
-
       <Core />
 
       {/* Ambient light */}
       <ambientLight args={['#ffffff', 0.3]} />
 
       <directionalLight args={['#B5F5F3', 8]} position={[25, 38, -15]} />
-
-      {/* Spotlight light */}
-      {/* <spotLight args={['#B5F5F3', 20, 150, angleToRadius(10), 2, 0.1]} position={[0, 38, -15]} castShadow /> */}
 
       {/* Environment */}
       <Environment background>

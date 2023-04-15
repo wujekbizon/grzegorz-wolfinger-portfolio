@@ -1,4 +1,3 @@
-import { ObjectId } from 'mongodb'
 export interface ProfileItems {
   id: number
   icon: JSX.Element

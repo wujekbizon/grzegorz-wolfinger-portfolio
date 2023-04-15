@@ -1,6 +1,6 @@
 import styles from './ProjectsHero.module.scss'
 import { SectionWrapper } from '@/hoc'
-import { fadeIn, text2Variant } from '../../utils/motion'
+import { fadeIn } from '../../utils/motion'
 import { motion } from 'framer-motion'
 import { ScrollButton } from '@/components'
 
