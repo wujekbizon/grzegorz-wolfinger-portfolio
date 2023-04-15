@@ -23,6 +23,12 @@ const Explore = () => {
           <h2 className={styles.title}>Overview.</h2>
         </motion.div>
 
+        <article className={styles.divider}>
+          <motion.h1 variants={fadeIn('up', 'tween', 1, 1)}>
+            As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
+            utilizing a <span className={styles.span}> peer-to-peer network </span>
+          </motion.h1>
+        </article>
         <article className={styles.explore_modern_app}>
           <div className={styles.titles}>
             <TypingText title="# Modern Applications" textStyles={styles.typing} />
@@ -36,8 +42,8 @@ const Explore = () => {
         </article>
         <article className={styles.divider}>
           <motion.h1 variants={zoomIn(1, 2)}>
-            As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure, utilizing
-            a P2P network, reliable and leveraging artificial intelligence for most tasks.
+            Today's <span className={styles.span}> web </span>is pushing the boundaries of what is possible. Let's
+            create a network of endless possibilities <span className={styles.span}>together</span>.
           </motion.h1>
         </article>
         <article className={styles.explore_cloud}>
@@ -55,8 +61,8 @@ const Explore = () => {
         </article>
 
         <article className={styles.divider}>
-          <motion.h1 variants={fadeIn('up', 'tween', 1, 1)}>
-            Do you want to find out more about new ways of creating application?{' '}
+          <motion.h1 variants={fadeIn('up', 'tween', 1.2, 1)}>
+            Do you want to find out more about new ways of creating applications?{' '}
             <Link href="/about#contact">
               Please <span className={styles.span}>contact me</span>
             </Link>
