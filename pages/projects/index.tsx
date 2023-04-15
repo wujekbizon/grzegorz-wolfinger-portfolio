@@ -8,7 +8,7 @@ const ProjectsPage = ({ projects }: { projects: ProjectData[] }) => {
   return (
     <>
       <Head>
-        <title>All Lockers</title>
+        <title>My Projects</title>
         <meta name="description" content="Browse a huge list of Grzegorz Wolfinger portfolio projects." />
       </Head>
 
