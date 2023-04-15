@@ -27,23 +27,36 @@ const ContactForm = () => {
   }
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    const { name, email, message } = form
     e.preventDefault()
-    setLoading(true)
+
+    // optional handling validation on client side
+    if (!name || name.trim() === '' || !email || email.trim() === '' || !message) {
+      // add later notification for the client
+      toast.error('Please Fill Out All Fields')
+      return
+    }
+
+    if (!email.includes('@')) {
+      toast.error('Please Provide Valid Email')
+      return
+    }
 
     if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY) {
       return
     }
 
+    setLoading(true)
     emailjs
       .send(
         process.env.EMAILJS_SERVICE_ID,
         process.env.EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
+          from_name: name,
           to_name: 'Grzegorz Wolfinger',
-          from_email: form.email,
+          from_email: email,
           to_email: 'grzegorz.wolfinger@gmail.com',
-          message: form.message
+          message
         },
         process.env.EMAILJS_PUBLIC_KEY
       )
