@@ -1,7 +1,7 @@
 import styles from './Three.module.scss'
 import { useRef, useState } from 'react'
 import * as THREE from 'three'
-import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
+import type { OrbitControls as OrbitControlsImpl } from '../../global'
 import { PerspectiveCamera, OrbitControls, Environment, Html, MeshLineGeometry } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { angleToRadius } from '@/utils/angle'
