@@ -104,9 +104,9 @@ const Hero = () => {
             Let's create a network of endless possibilities <span>together</span>.
           </motion.h1>
         </motion.div>
-      </div>
-      <div className={styles.scroll}>
-        <ScrollButton tag="explore" />
+        <div className={styles.scroll}>
+          <ScrollButton tag="explore" />
+        </div>
       </div>
     </motion.section>
   )

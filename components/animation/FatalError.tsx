@@ -33,7 +33,7 @@ const FatalErrorAnimation = () => {
   }
 
   return (
-    <motion.div variants={fadeIn('left', 'tween', 1, 1)} className={styles.animation_container}>
+    <motion.div variants={fadeIn('right', 'tween', 1.3, 1)} className={styles.animation_container}>
       <div className={active ? 'eye_gradient' : ''} />
       <div className={active ? 'eye2_gradient' : ''} />
       <div className={activeLaser ? 'laser_gradient' : ''} />
@@ -42,7 +42,7 @@ const FatalErrorAnimation = () => {
       <div className={activeImplosion ? 'boil_gradient' : ''} />
       <div className={activeGradient ? 'active feedback_gradient' : 'feedback_gradient'} />
       <div className={styles.image_container}>
-        <Image src="/images/bot.png" alt="ai" width={700} height={400} />
+        <Image src="/images/bot.png" alt="ai" width={500} height={500} />
         <button onClick={onClickHandler} className={styles.btn}>
           {!active ? 'Run "Fatal Error Animation"' : 'Abort Termination'}
         </button>

@@ -1,22 +1,11 @@
 @import '../styles/globals.scss';
 
 .hero {
-  padding: 0 0 4rem 0;
-
   .scroll {
-    // font-size: 18px;
-    // color: rgb(224, 176, 176);
-    // text-align: center;
-
     position: absolute;
-    bottom: -110px;
+    bottom: 0;
     left: 50%;
   }
-
-  // .scroll :first-child {
-  //   font-size: 20px;
-  //   color: #fa6400;
-  // }
 
   .hero_wrapper {
     width: 100%;
@@ -24,7 +13,7 @@
     margin: auto;
     display: flex;
     align-items: center;
-    background-color: #040c18;
+    // background-color: #040c18;
 
     .title_container {
       display: flex;

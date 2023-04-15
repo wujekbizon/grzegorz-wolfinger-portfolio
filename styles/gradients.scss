@@ -30,11 +30,24 @@
 
 .laser_gradient {
   position: absolute;
-  width: 5px;
-  height: 175px;
-  right: 29%;
-  top: 21px;
+  width: 6px;
+  height: 180px;
+  right: 25%;
+  top: 22%;
   background: linear-gradient(#7c4daa, rgba(212, 17, 0.7));
+  border: 1px solid red;
+  filter: blur(2px);
+  transform: rotate(140deg);
+  z-index: 1;
+}
+
+.laser2_gradient {
+  position: absolute;
+  width: 6px;
+  height: 200px;
+  right: 30%;
+  top: 20%;
+  background: linear-gradient(#7c4daa, rgba(212, 17, 17, 0.8));
   border: 1px solid red;
   filter: blur(2px);
   transform: rotate(140deg);
@@ -43,10 +56,23 @@
 
 .eye_gradient {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: 40.5%;
-  top: 5%;
+  width: 27px;
+  height: 27px;
+  right: 39.5%;
+  top: 23%;
+  background: red;
+  border: 4px solid black;
+  filter: blur(2px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.eye2_gradient {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  right: 34%;
+  top: 24%;
   background: red;
   border: 4px solid black;
   filter: blur(2px);
@@ -57,53 +83,27 @@
 .boil_gradient {
   position: absolute;
   width: 75px;
-  height: 100px;
-  right: 9%;
+  height: 170px;
+  right: 7.5%;
   top: 0;
-  background: rgba(124, 77, 170, 0.8);
-  border-bottom: 30px solid black;
+  background: rgba(124, 77, 170, 0.7);
+  border-bottom: 55px solid black;
   filter: blur(7px);
-  /* border-radius: 40%; */
-  border-bottom-left-radius: 40px;
+  border-bottom-left-radius: 50px;
   border-bottom-right-radius: 40px;
   z-index: 1;
 }
 
 .black_gradient {
   position: absolute;
-  width: 70px;
-  height: 90px;
-  right: 14%;
-  bottom: 30%;
+  width: 50px;
+  height: 60px;
+  right: 13%;
+  bottom: 40%;
   background: black;
+  border: 3px solid red;
   border-bottom-right-radius: 80px;
-  filter: blur(9px);
-  z-index: 1;
-}
-
-.eye2_gradient {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: 35%;
-  top: 7%;
-  background: red;
-  border: 4px solid black;
-  filter: blur(2px);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.laser2_gradient {
-  position: absolute;
-  width: 6px;
-  height: 200px;
-  right: 32.5%;
-  top: 14px;
-  background: linear-gradient(#7c4daa, rgba(212, 17, 17, 0.8));
-  border: 1px solid red;
-  filter: blur(2px);
-  transform: rotate(140deg);
+  filter: blur(6px);
   z-index: 1;
 }
 
