@@ -1,6 +1,7 @@
 @import '../styles/globals.scss';
 
 .contact {
+  position: relative;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -12,6 +13,21 @@
 
   @include tablet {
     flex-direction: column;
+  }
+
+  .modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #dde1e7;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+    border: 20px solid #dde1e7;
+    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
   }
 
   .subtitle {

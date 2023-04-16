@@ -206,11 +206,12 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: none;
-    background-color: white;
+    border: 1px solid #dde1e7;
+    background-color: #dde1e7;
+    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
 
     .icon {
-      font-size: 30px;
+      font-size: 25px;
 
       @include lgTablet {
         font-size: 20px;
