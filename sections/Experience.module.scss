@@ -1,51 +1,59 @@
 @import '../styles/globals.scss';
 
-.subtitle {
-  font-size: 18px;
-  color: rgb(170 166 195);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
+.experience {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  border-radius: 15px;
 
-  @include tablet {
-    font-size: 14px;
+  .subtitle {
+    font-size: 18px;
+    color: rgb(170 166 195);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 20px;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include smMobile {
+      font-size: 10px;
+    }
   }
 
-  @include smMobile {
-    font-size: 10px;
-    // margin-top: 100px;
-  }
-}
-
-.span {
-  color: #fa6400;
-}
-
-.title {
-  color: rgb(255 255 255);
-  font-weight: 900;
-  font-size: 60px;
-  text-align: center;
-
-  @include tablet {
-    font-size: 50px;
+  .span {
+    color: #fa6400;
   }
 
-  @include mobile {
-    font-size: 40px;
+  .title {
+    color: rgb(255 255 255);
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+
+    @include smMobile {
+      font-size: 25px;
+    }
   }
 
-  @include smMobile {
-    font-size: 25px;
-  }
-}
+  .experience_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 
-.experience_container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-
-  @include smMobile {
-    margin-top: 2rem;
+    @include smMobile {
+      margin-top: 2rem;
+    }
   }
 }
