@@ -19,7 +19,7 @@ const Social = () => {
         {profileItems.map(({ id, icon, title, link }, index) => {
           return (
             <Fragment key={id}>
-              <motion.div variants={fadeIn('left', 'tween', 1 + index / 2, 0.8)} className={styles.item}>
+              <motion.div variants={fadeIn('left', 'tween', 0.5 + index / 2, 0.5)} className={styles.item}>
                 {link && <TagLink icon={icon} title={title} link={link} />}
                 {!link && <TagLink icon={icon} title={title} />}
               </motion.div>

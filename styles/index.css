@@ -45,12 +45,15 @@ a {
   left: 0;
 }
 
-.hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
-  display: block;
-}
-
 .scrolled {
   background-color: #040c18;
+}
+
+.bold b {
+  font-weight: 700;
+  color: rgb(226, 216, 216);
+}
+
+.normal b {
+  font-weight: 500;
 }

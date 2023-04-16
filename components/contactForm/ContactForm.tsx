@@ -79,7 +79,7 @@ const ContactForm = () => {
   }
   return (
     <Tilt scale={1} transitionSpeed={250} tiltMaxAngleX={10} tiltMaxAngleY={10} className={styles.contact}>
-      <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className={styles.form_container}>
+      <motion.div variants={slideIn('left', 'tween', 0.2, 0.8)} className={styles.form_container}>
         <p className={styles.subtitle}>Get in touch</p>
         <h2 className={styles.title}>Contact.</h2>
 
@@ -123,7 +123,7 @@ const ContactForm = () => {
           </button>
         </form>
       </motion.div>
-      <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className={styles.social_container}>
+      <motion.div variants={slideIn('right', 'tween', 0.2, 0.5)} className={styles.social_container}>
         <Social />
       </motion.div>
     </Tilt>

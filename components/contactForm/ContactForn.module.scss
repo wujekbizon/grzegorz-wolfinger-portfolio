@@ -114,5 +114,9 @@
     @include lgTablet {
       flex: 0.75;
     }
+
+    @include tablet {
+      margin-top: 50px;
+    }
   }
 }
