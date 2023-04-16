@@ -52,11 +52,11 @@ const Hero = () => {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.25 }}
       className={styles.hero}
     >
       <div className={styles.hero_wrapper}>
-        <motion.div variants={fadeIn('left', 'tween', 0.3, 1)} className={styles.title_container}>
+        <motion.div variants={zoomIn(0.5, 0.5)} className={styles.title_container}>
           <div className={styles.map_container}>
             <div className={styles.network}>
               <h2>P2P Connection Network</h2>
@@ -79,7 +79,7 @@ const Hero = () => {
                       x: [0, -24, 0]
                     }}
                     transition={{
-                      duration: 1.5,
+                      duration: 3,
                       repeat: Infinity,
                       repeatType: 'loop'
                     }}
@@ -92,7 +92,7 @@ const Hero = () => {
             {users.map((customer, index) => {
               return (
                 <motion.div
-                  variants={zoomIn(index * 0.5, 0.4)}
+                  variants={zoomIn(index * 0.2, 0.4)}
                   key={customer.id}
                   className={customer.status === 'online' ? styles.dot : styles.dot_offline}
                   style={{ top: customer.top, left: customer.left }}

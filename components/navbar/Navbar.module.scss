@@ -74,12 +74,12 @@
       }
 
       .show {
-        width: 100%;
+        width: 150px;
         display: flex;
         padding: 24px;
         position: absolute;
         top: 50px;
-        right: 0;
+        right: 10px;
         margin-top: 5px;
         z-index: 10;
         border-radius: 12px;
@@ -91,13 +91,9 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
         flex: 1 1 0%;
-        flex-direction: row;
         gap: 16px;
-
-        @include smMobile {
-          flex-direction: column;
-        }
 
         .link_btn {
           color: hsl(209, 61%, 12%);
