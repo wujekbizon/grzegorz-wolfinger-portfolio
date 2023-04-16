@@ -109,7 +109,10 @@ const Hero = () => {
           </div>
         </motion.div>
         <div className={styles.filler}>
-          <p>All data are fetched from DB , there is no limit of users in P2P network.</p>
+          <p>
+            All data are retrieved from the database, and there is no limit on the number of users in the peer-to-peer
+            network.
+          </p>
         </div>
         <div className={styles.scroll}>
           <ScrollButton tag="explore" />

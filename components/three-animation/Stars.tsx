@@ -16,7 +16,7 @@ const Stars = (props: any) => {
     }
   }
 
-  const [sphere] = useState(() => inSphere(floatArray, { radius: 200 }))
+  const [sphere] = useState(() => inSphere(floatArray, { radius: 140 }))
 
   useFrame((state, delta) => {
     if (!!ref.current) {

@@ -1,10 +1,16 @@
+@import '../../styles/globals.scss';
+
 .container {
   position: absolute;
-  bottom: 8rem;
+  bottom: 2.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mobile {
+    bottom: 8rem;
+  }
 
   a {
     .btn_container {

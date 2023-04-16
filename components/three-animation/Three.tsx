@@ -58,7 +58,7 @@ const Three = () => {
       )}
 
       {/* Stars */}
-      <Stars color={'#f272c8'} size={0.4} />
+      <Stars color={'#f272c8'} size={0.2} />
 
       <group>
         {/* Skills Cubes */}
