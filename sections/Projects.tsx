@@ -11,15 +11,21 @@ const Projects = ({ projects }: ProjectsProps) => {
     <>
       <section className={styles.projects}>
         <ProjectsHero />
-        <div className={styles.hero_skills}>
-          {/* <Image src="/images/tech/figma.png" alt="three" width={150} height={150} className={styles.figma} /> */}
+        <motion.div
+          animate={{
+            y: [0, 12, 0],
+            x: [0, 10, 0]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: 'loop'
+          }}
+          className={styles.hero_skills}
+        >
           <Image src="/images/tech/docker.png" alt="three" width={280} height={280} className={styles.docker} />
-          <Image src="/images/tech/tailwind.png" alt="three" width={1024} height={80} className={styles.tailwind} />
-        </div>
-        {/* <Image src="/images/tech/three.png" alt="three" width={150} height={150} className={styles.threejs} /> */}
-
-        {/* <Image src="/images/tech/docker.png" alt="three" width={280} height={280} className={styles.docker} />
-      <Image src="/images/tech/tailwind.png" alt="three" width={1024} height={80} className={styles.tailwind} /> */}
+          <Image src="/images/tech/tailwind.png" alt="three" width={1024} height={90} className={styles.tailwind} />
+        </motion.div>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
