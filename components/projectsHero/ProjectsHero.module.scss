@@ -1,43 +1,36 @@
 @import '../styles/globals.scss';
 
 .projects_hero_container {
-  height: 80vh;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 160px);
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   background-image: url('/images/gate.png');
-  background-position: top;
-  background-size: 80% 60%;
-  background-repeat: no-repeat;
-  margin-top: 50px;
-  padding-top: 40px;
-
-  @include lgMobile {
-    background-size: 90% 60%;
-    padding-top: 0;
-  }
+  background-position: center;
+  background-size: cover;
 
   @include mobile {
-    background-size: 100% 60%;
     align-items: center;
   }
 
-  @include smMobile {
-    margin-top: 0;
+  .figma {
+    position: absolute;
+    top: 0;
+    left: -10px;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   .span {
     height: 20px;
     width: 15px;
     background-color: #007acc;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    color: rgb(170 166 195);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-top: 30px;
   }
 
   .title {
@@ -48,23 +41,24 @@
 
   .content_wrapper {
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    max-width: 1280px;
+    margin-bottom: 50px;
 
     .content {
-      font-size: 17px;
+      font-size: 18px;
+      padding: 10px;
       color: rgb(197, 194, 211);
-      margin-top: 25px;
+      margin-top: 35px;
       line-height: 30px;
-      font-weight: 700;
-
-      @include lgMobile {
-        font-weight: 900;
-      }
+      font-weight: 900;
+      background-color: rgba(1, 1, 1, 0.7);
+      text-align: center;
 
       @include mobile {
         font-size: 15px;
-        text-align: center;
-        background-color: rgba(1, 1, 1, 0.4);
       }
     }
   }
