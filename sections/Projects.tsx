@@ -46,26 +46,20 @@ const Projects = ({ projects }: ProjectsProps) => {
           </motion.div>
 
           <ProjectList projects={projects} />
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            <motion.div id="projects" variants={fadeIn('left', 'tween', 0.5, 0.5)} className={styles.feature}>
-              <p className={styles.subtitle}>Featured Live Demo Project</p>
-              <h2 className={styles.title}>
-                Realistic 3D Environment with <span className={styles.span}>Three.js</span>{' '}
-              </h2>
-              <motion.p variants={fadeIn('left', 'tween', 0.5, 0.5)} className={styles.content}>
-                {' '}
-                This project was a great learning experience for me. I learned how to create a realistic 3D environment
-                with Three.js, setting up the scene, adding textures and materials, creating lighting, and adding
-                objects. I also learned how to use the Three.js library to create a realistic 3D environment with
-                various features such as shadows, reflections, and more. Overall, this project was an excellent way for
-                me to gain experience in creating 3D environments with Three.js.
-              </motion.p>
-            </motion.div>
+
+          <motion.div id="projects" variants={fadeIn('left', 'tween', 0.5, 0.5)} className={styles.feature}>
+            <p className={styles.subtitle}>Featured Live Demo Project</p>
+            <h2 className={styles.title}>
+              Realistic 3D Environment with <span className={styles.span}>Three.js</span>{' '}
+            </h2>
+            <motion.p variants={fadeIn('left', 'tween', 0.5, 0.5)} className={styles.content}>
+              {' '}
+              This project was a great learning experience for me. I learned how to create a realistic 3D environment
+              with Three.js, setting up the scene, adding textures and materials, creating lighting, and adding objects.
+              I also learned how to use the Three.js library to create a realistic 3D environment with various features
+              such as shadows, reflections, and more. Overall, this project was an excellent way for me to gain
+              experience in creating 3D environments with Three.js.
+            </motion.p>
           </motion.div>
         </motion.div>
 

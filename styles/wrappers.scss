@@ -1,0 +1,15 @@
+@import './globals.scss';
+
+.section_wrapper {
+  height: 100%;
+  padding: 4.688rem 4rem 4rem 4rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 0;
+
+  @include mobile {
+    padding: 4.688rem 1.5rem 4rem 1.5rem;
+  }
+}
