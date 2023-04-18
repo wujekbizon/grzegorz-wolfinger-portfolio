@@ -5,8 +5,10 @@ import type { ProjectsProps } from '@/components/projects/ProjectList'
 import { motion } from 'framer-motion'
 import { fadeIn, staggerContainer } from '@/utils/motion'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const Projects = ({ projects }: ProjectsProps) => {
+  const [isProjectLoaded, setIsProjectLoaded] = useState(false)
   return (
     <>
       <section className={styles.projects}>
@@ -64,7 +66,17 @@ const Projects = ({ projects }: ProjectsProps) => {
         </motion.div>
 
         <div className={styles.three_canvas_container}>
-          <ThreeCanvas />
+          {!isProjectLoaded && (
+            <button className={styles.canvas_btn} onClick={() => setIsProjectLoaded(true)}>
+              Load <span>Three.js</span> Project
+            </button>
+          )}
+
+          {/* {!isProjectLoaded && (
+              <Image src="/images/tech/threejs.png" alt="three" width={150} height={150} className={styles.three} />
+            )} */}
+
+          {isProjectLoaded && <ThreeCanvas />}
         </div>
       </section>
     </>
