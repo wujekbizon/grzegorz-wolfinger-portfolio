@@ -18,6 +18,7 @@ import CanvasLoader from './canvasLoader/CanvasLoader'
 import ProjectsHero from './projectsHero/ProjectsHero'
 import Social from './social/Social'
 import ContactForm from './contactForm/ContactForm'
+import SwipeButton from './animation/SwipeButton'
 
 export {
   Layout,
@@ -39,5 +40,6 @@ export {
   CanvasLoader,
   ProjectsHero,
   Social,
-  ContactForm
+  ContactForm,
+  SwipeButton
 }

@@ -1,0 +1,65 @@
+@import '../styles/globals.scss';
+
+.btn_container {
+  width: 350px;
+  height: 90px;
+  background: rgb(170, 166, 195);
+  position: relative;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    height: 70px;
+    width: 300px;
+  }
+
+  input[type='checkbox'] {
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    -webkit-appearance: none;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2), 5px 5px 15px rgba(70, 70, 70, 0.12);
+    border-radius: 50%;
+    border: 10px solid #dde1e7;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #dde1e7;
+    z-index: 99;
+
+    @include mobile {
+      height: 80px;
+      width: 80px;
+    }
+
+    &::after {
+      font-family: FontAwesome;
+      content: '\f011';
+      color: #7a7a7a;
+      font-size: 40px;
+    }
+
+    &:checked {
+      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), -5px 5px 15px rgba(250, 100, 0, 0.12),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    }
+
+    &:checked::after {
+      color: #fa6400;
+    }
+  }
+
+  h6 {
+    position: absolute;
+    z-index: 0;
+    font-size: 20px;
+    right: 40px;
+    color: #040c18;
+    font-weight: 700;
+  }
+}

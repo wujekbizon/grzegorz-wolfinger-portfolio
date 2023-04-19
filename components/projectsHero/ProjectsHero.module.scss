@@ -31,12 +31,20 @@
     height: 20px;
     width: 15px;
     background-color: #007acc;
+
+    @include smMobile {
+      color: white;
+    }
   }
 
   .title {
     color: white;
     font-weight: 900;
     font-size: 60px;
+
+    @include smMobile {
+      color: #040c18;
+    }
   }
 
   .content_wrapper {

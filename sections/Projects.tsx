@@ -1,5 +1,5 @@
 import styles from './Projects.module.scss'
-import { ProjectList, ProjectsHero } from '@/components'
+import { ProjectList, ProjectsHero, SwipeButton } from '@/components'
 import { ThreeCanvas } from '@/canvas'
 import type { ProjectsProps } from '@/components/projects/ProjectList'
 import { motion } from 'framer-motion'
@@ -9,6 +9,13 @@ import { useState } from 'react'
 
 const Projects = ({ projects }: ProjectsProps) => {
   const [isProjectLoaded, setIsProjectLoaded] = useState(false)
+
+  const onClickHandler = () => {
+    setTimeout(() => {
+      setIsProjectLoaded(true)
+    }, 500)
+  }
+
   return (
     <>
       <section className={styles.projects}>
@@ -56,7 +63,6 @@ const Projects = ({ projects }: ProjectsProps) => {
           </motion.div>
         </motion.div>
         <ProjectList projects={projects} />
-
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -78,19 +84,16 @@ const Projects = ({ projects }: ProjectsProps) => {
             </p>
           </motion.div>
         </motion.div>
-        <div className={styles.three_canvas_container}>
-          {!isProjectLoaded && (
-            <button className={styles.canvas_btn} onClick={() => setIsProjectLoaded(true)}>
-              Load <span>Three.js</span> Project
-            </button>
-          )}
-
-          {/* {!isProjectLoaded && (
-              <Image src="/images/tech/threejs.png" alt="three" width={150} height={150} className={styles.three} />
-            )} */}
-
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className={styles.three_canvas_container}
+        >
+          {!isProjectLoaded && <SwipeButton onClickHandler={onClickHandler} />}
           {isProjectLoaded && <ThreeCanvas />}
-        </div>
+        </motion.div>
       </section>
     </>
   )
