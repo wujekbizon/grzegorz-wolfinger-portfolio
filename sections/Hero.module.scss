@@ -14,6 +14,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include mobile {
+      background-position: 30%;
+    }
+
     .network {
       position: absolute;
       height: 150px;
@@ -29,18 +33,17 @@
         right: calc(50% - 337px / 2);
       }
 
-      @include mobile {
-        bottom: calc(25% - 188px / 2);
+      @include lgMobile {
         right: calc(50% - 265px / 2);
       }
 
       @include mobile {
-        bottom: calc(25% - 168px / 2);
+        bottom: calc(20% - 130px / 2);
       }
 
-      @include smMobile {
-        bottom: calc(30% - 168px / 2);
-      }
+      // @include smMobile {
+      //   bottom: calc(30% - 168px / 2);
+      // }
 
       .status {
         width: 100%;
@@ -49,10 +52,19 @@
         justify-content: space-evenly;
         padding: 10px 0;
 
+        @include smMobile {
+          padding: 0;
+          justify-content: center;
+        }
+
         h6 {
           font-size: 14px;
           padding-bottom: 2px;
           font-weight: 300;
+
+          @include smMobile {
+            margin-right: 5px;
+          }
         }
 
         .status_online {
@@ -91,7 +103,7 @@
         font-size: 28px;
         color: #fa6400;
 
-        @include mobile {
+        @include lgMobile {
           font-size: 22px;
         }
       }
@@ -102,13 +114,16 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        padding: 20px 10px;
+        // padding: 20px 10px;
 
         h4 {
           font-size: 19px;
 
           @include lgMobile {
             font-size: 14px;
+          }
+
+          @include smMobile {
           }
         }
       }
