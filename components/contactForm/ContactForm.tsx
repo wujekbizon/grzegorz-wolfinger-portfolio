@@ -87,9 +87,9 @@ const ContactForm = () => {
   return (
     <>
       <Tilt scale={1} transitionSpeed={250} tiltMaxAngleX={10} tiltMaxAngleY={10} className={styles.contact}>
-        <div className={`${isModal && 'turn-on'} ${styles.modal}`}>
+        {/* <div className={`${isModal && 'turn-on'} ${styles.modal}`}>
           <input type="checkbox" className={styles.switch} onClick={onHandleClick} />
-        </div>
+        </div> */}
         <motion.div variants={slideIn('left', 'tween', 0.2, 0.8)} className={styles.form_container}>
           <p className={styles.subtitle}>Get in touch</p>
           <h2 className={styles.title}>Contact.</h2>
