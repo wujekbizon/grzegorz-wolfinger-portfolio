@@ -38,12 +38,13 @@
       }
 
       @include mobile {
-        bottom: calc(20% - 130px / 2);
+        bottom: calc(25% - 130px / 2);
       }
 
-      // @include smMobile {
-      //   bottom: calc(30% - 168px / 2);
-      // }
+      @include smMobile {
+        right: calc(50% - 216.5px / 2);
+        bottom: calc(25% - 130px / 2);
+      }
 
       .status {
         width: 100%;
@@ -106,6 +107,10 @@
         @include lgMobile {
           font-size: 22px;
         }
+
+        @include smMobile {
+          font-size: 18px;
+        }
       }
 
       .total_users {
@@ -121,9 +126,6 @@
 
           @include lgMobile {
             font-size: 14px;
-          }
-
-          @include smMobile {
           }
         }
       }
@@ -142,6 +144,13 @@
 
         @include tablet {
           font-size: 20px;
+        }
+
+        @include smMobile {
+          width: 60%;
+          font-size: 14px;
+          border: 2px solid rgb(170, 166, 195);
+          padding: 5px 5px 5px 32px;
         }
       }
     }
