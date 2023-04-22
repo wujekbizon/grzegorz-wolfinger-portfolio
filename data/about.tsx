@@ -16,7 +16,7 @@ export const aboutTexts = [
         eer <b>net</b>works <b>and</b> <b>art</b>ificial <b>int</b>elligence <b>i</b>n <b>to</b>days <b>appli</b>
         cations. <b>I</b> <b>bel</b>ieve <b>th</b>at <b>wi</b>th <b>m</b>y <b>tech</b>nical <b>know</b>ledge,{' '}
         <b>crea</b>tive <b>pro</b>blem <b>solv</b>ing <b>ski</b>lls, <b>a</b>nd <b>dedi</b>cation <b>t</b>o <b>learn</b>
-        ing <b>n</b>ew <b>tech</b>nologies, <b>I</b> <b>c</b>an <b>ma</b>ke <b>pos</b>tive <b>imp</b>act <b>o</b>n{' '}
+        ing <b>n</b>ew <b>tech</b>nologies, <b>I</b> <b>c</b>an <b>ma</b>ke <b>posi</b>tive <b>imp</b>act <b>o</b>n{' '}
         <b>a</b>ny <b>pro</b>ject. <b>I</b> <b>a</b>m <b>ea</b>ger <b>t</b>o <b>j</b>oin <b>a</b> <b>te</b>am <b>o</b>f{' '}
         <b>li</b>ke-<b>mi</b>nded <b>profess</b>ionals <b>w</b>ho <b>a</b>re <b>dedi</b>cated <b>t</b>o <b>creat</b>ing{' '}
         <b>inno</b>vative <b>solut</b>ions <b>f</b>or <b>t</b>he <b>w</b>eb.
