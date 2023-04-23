@@ -128,7 +128,7 @@ export const experiences = [
       'Learning the fundamentals of TypeScript, including its syntax, data types, and classes.',
       'Developing a strong understanding of object-oriented programming principles and design patterns.',
       'Utilizing the latest features of TypeScript such as generics, decorators, and async/await functions.',
-      " Creating robust applications with confidence using TypeScript's type safety and static analysis capabilities."
+      "Creating robust applications with confidence using TypeScript's type safety and static analysis capabilities."
     ]
   },
   {
