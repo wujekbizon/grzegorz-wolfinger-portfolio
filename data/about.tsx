@@ -13,7 +13,7 @@ export const aboutTexts = [
         <b>I</b> <b>a</b>m <b>pass</b>ionate <b>abo</b>ut <b>shap</b>ing <b>t</b>he <b>fut</b>ure <b>o</b>f <b>w</b>
         eb <b>devel</b>opment <b>a</b>nd <b>lever</b>aging <b>the</b> <b>po</b>wer <b>o</b>f <b>p</b>eer-<b>t</b>o-
         <b>p</b>
-        eer <b>net</b>works <b>and</b> <b>art</b>ificial <b>int</b>elligence <b>i</b>n <b>to</b>days <b>appli</b>
+        eer <b>net</b>works <b>and</b> <b>art</b>ificial <b>int</b>elligence <b>i</b>n <b>to</b>day's <b>appli</b>
         cations. <b>I</b> <b>bel</b>ieve <b>th</b>at <b>wi</b>th <b>m</b>y <b>tech</b>nical <b>know</b>ledge,{' '}
         <b>crea</b>tive <b>pro</b>blem <b>solv</b>ing <b>ski</b>lls, <b>a</b>nd <b>dedi</b>cation <b>t</b>o <b>learn</b>
         ing <b>n</b>ew <b>tech</b>nologies, <b>I</b> <b>c</b>an <b>ma</b>ke <b>posi</b>tive <b>imp</b>act <b>o</b>n{' '}

@@ -33,7 +33,7 @@ const FatalErrorAnimation = () => {
   }
 
   return (
-    <motion.div variants={fadeIn('right', 'tween', 1.3, 1)} className={styles.animation_container}>
+    <motion.div variants={fadeIn('left', 'tween', 1.3, 1)} className={styles.animation_container}>
       <div className={active ? 'eye_gradient' : ''} />
       <div className={active ? 'eye2_gradient' : ''} />
       <div className={activeLaser ? 'laser_gradient' : ''} />
