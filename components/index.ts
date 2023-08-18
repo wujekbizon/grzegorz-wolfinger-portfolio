@@ -19,6 +19,10 @@ import ProjectsHero from './projectsHero/ProjectsHero'
 import Social from './social/Social'
 import ContactForm from './contactForm/ContactForm'
 import SwipeButton from './animation/SwipeButton'
+import InfoCard from './ui-learn/InfoCard'
+import QuestionCard from './ui-learn/QuestionCard'
+import Test from './ui-learn/Test'
+import LearningPanel from './ui-learn/LearningPanel'
 
 export {
   Layout,
@@ -41,5 +45,9 @@ export {
   ProjectsHero,
   Social,
   ContactForm,
-  SwipeButton
+  SwipeButton,
+  InfoCard,
+  QuestionCard,
+  Test,
+  LearningPanel,
 }

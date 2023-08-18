@@ -29,3 +29,14 @@ export type ExperienceProps = {
   date: string
   points: string[]
 }
+
+interface AvailableOption {
+  option: string
+  isCorrect: boolean
+}
+
+export interface QuestionCardInterface {
+  number: number
+  question: string
+  answers: AvailableOption[]
+}

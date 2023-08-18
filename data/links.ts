@@ -1,14 +1,18 @@
 export const links = [
   {
     label: 'Home',
-    url: '/'
+    url: '/',
   },
   {
     label: 'About',
-    url: '/about'
+    url: '/about',
   },
   {
     label: 'Projects',
-    url: '/projects'
-  }
+    url: '/projects',
+  },
+  {
+    label: 'E-Learnings',
+    url: '/learn',
+  },
 ]

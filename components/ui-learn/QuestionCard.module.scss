@@ -1,0 +1,63 @@
+@import '../../styles/globals.scss';
+
+.question_card {
+  position: relative;
+  // min-height: 200px;
+  width: 70%;
+  background-color: white;
+  border: 1px solid $secondary300;
+  padding: 30px;
+  color: $dark800;
+
+  .question_number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .question {
+    padding: 0px 15px 15px 15px;
+    border-bottom: 1px solid $secondary300;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .answers_list {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 30px 15px;
+    gap: 10px;
+
+    .anwser {
+      font-weight: 400;
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    .correct {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .incorrect {
+      opacity: 0.3;
+    }
+  }
+
+  .correct_answer_btn {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    cursor: pointer;
+    padding: 4px 8px;
+    background-color: $dark600;
+    border: none;
+
+    &:hover {
+      background-color: $dark800;
+    }
+  }
+}

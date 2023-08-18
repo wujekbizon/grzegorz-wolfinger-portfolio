@@ -1,0 +1,130 @@
+@import '../styles/globals.scss';
+
+.learning {
+  position: relative;
+  padding: 75px 0px 0px 0px;
+
+  .learning_panel {
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    .side_panel {
+      flex: 1;
+      border-right: 1px solid grey;
+      background-color: $secondary100;
+
+      .side_top {
+        width: 100%;
+        height: 25%;
+        background: linear-gradient(109.97deg, #ae67fa 1.84%, #f49867 102.67%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+
+        h2 {
+          text-align: center;
+          font-size: 28px;
+          color: $dark800;
+        }
+      }
+
+      .side_bottom {
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+
+        .btns {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 30px;
+
+          .side_btn {
+            width: 90%;
+            height: 35px;
+            cursor: pointer;
+            background-color: $dark600;
+            border: none;
+            &:hover {
+              background-color: $dark800;
+            }
+          }
+        }
+
+        .info {
+          padding: 0 15px;
+          font-size: 14px;
+          color: $dark700;
+        }
+
+        h4 {
+          text-align: center;
+          color: $dark700;
+        }
+      }
+    }
+
+    .main_panel {
+      overflow-y: scroll;
+      flex: 4;
+      background-color: $secondary200;
+      width: calc(100% - 10px);
+
+      .nav_panel {
+        position: sticky;
+        top: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        background-color: $dark200;
+        z-index: 99;
+
+        .nav_search {
+          display: flex;
+          align-items: center;
+          color: white;
+
+          .icon {
+            cursor: pointer;
+
+            &:hover {
+              color: #f49867;
+            }
+          }
+
+          .nav_input {
+            width: 200px;
+            outline: none;
+            margin-right: 10px;
+
+            &::placeholder {
+              font-size: 13px;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+
+      .test_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 80px;
+        gap: 30px;
+      }
+    }
+  }
+}
