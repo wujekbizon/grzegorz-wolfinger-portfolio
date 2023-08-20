@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface ProfileItems {
   id: number
   icon: JSX.Element
@@ -30,7 +32,7 @@ export type ExperienceProps = {
   points: string[]
 }
 
-interface AvailableOption {
+export interface AvailableOption {
   option: string
   isCorrect: boolean
 }
@@ -39,4 +41,10 @@ export interface QuestionCardInterface {
   number: number
   question: string
   answers: AvailableOption[]
+}
+
+export interface CustomButtonInterface {
+  onClick: () => void
+  children: ReactNode
+  className?: string
 }

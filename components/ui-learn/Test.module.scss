@@ -1,0 +1,148 @@
+@import '../../styles/globals.scss';
+
+.test_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .test_btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+
+    .test_btn {
+      padding: 10px 25px;
+      border-radius: 45px;
+      border: none;
+      cursor: pointer;
+      background-color: $dark600;
+
+      &:hover {
+        background-color: $dark800;
+      }
+    }
+  }
+
+  .test_page {
+    width: 100%;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .cancel_btn {
+      position: fixed;
+      bottom: 10px;
+      right: 50px;
+      padding: 6px 25px;
+      border-radius: 45px;
+      border: none;
+      cursor: pointer;
+      background-color: $dark800;
+      z-index: 99;
+
+      &:hover {
+        background-color: rgb(214, 103, 103);
+      }
+    }
+
+    .submit_btn {
+      position: fixed;
+      bottom: 10px;
+      right: 200px;
+      padding: 6px 25px;
+      border-radius: 45px;
+      border: none;
+      cursor: pointer;
+      background-color: $dark800;
+      z-index: 99;
+
+      &:hover {
+        background-color: rgb(129, 214, 103);
+      }
+    }
+  }
+
+  .final_score {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-color: white;
+    border: 1px solid $secondary300;
+    padding: 60px;
+
+    h1 {
+      font-size: 40px;
+      color: $dark800;
+      text-align: center;
+    }
+
+    .score_btn {
+      padding: 6px 25px;
+      border-radius: 45px;
+      border: none;
+      cursor: pointer;
+      background-color: $dark600;
+
+      &:hover {
+        background-color: $dark800;
+      }
+    }
+  }
+}
+
+.progress_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .progress_bar {
+    width: 100%;
+    height: 12px;
+    color: $dark500;
+    background-color: $secondary200;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+
+    &::-webkit-progress-bar {
+      background-color: $dark600;
+      border-radius: 10px;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $logoColor;
+      border-radius: 10px;
+    }
+
+    &:after {
+      content: attr(value) '%';
+    }
+  }
+
+  .progress_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .progress_text {
+      color: $dark600;
+      font-size: 18px;
+    }
+  }
+}

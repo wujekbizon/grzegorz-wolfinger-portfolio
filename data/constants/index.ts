@@ -174,8 +174,10 @@ export const experiences = [
 
 import { questions } from '../questions'
 
+export const LETTERS = ['a', 'b', 'c', 'd']
+
 export const INFO = `Test nie jest powiązany ze szkołą, został przez mnie wykonany całkowicie dla potrzeb grupy i osób
-zainteresowanych egzaminem doskanalacym dla opiekuna medycznego. Jest również częścią mojej działalności jako
+zainteresowanych egzaminem doskanalającym dla opiekuna medycznego. Jest również częścią mojej działalności jako
 programisty. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez
 polubienie mojego profilu na LinkedIn lub klikając baner "Buy me a coffee".`
 

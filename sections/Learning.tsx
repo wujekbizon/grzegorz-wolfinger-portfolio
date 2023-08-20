@@ -2,9 +2,9 @@ import styles from './Learning.module.scss'
 import { useState, useEffect, useRef } from 'react'
 import { questions } from '@/data/questions'
 import { INFO, TEST } from '@/data/constants'
-import { InfoCard, QuestionCard, Test, LearningPanel } from '@/components'
+import { InfoCard, Test, LearningPanel, CustomButton, SidePanelTitle } from '@/components'
 import { BsSearch } from 'react-icons/bs'
-import generateRandomQuestions from '@/utils/generateRandomQuestions'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 const Learning = () => {
   const [isStudy, setIsStudy] = useState(false)
@@ -33,17 +33,15 @@ const Learning = () => {
     <section className={styles.learning}>
       <div className={styles.learning_panel}>
         <div className={styles.side_panel}>
-          <div className={styles.side_top}>
-            <h2>Praktyczne testy dla Opiekuna Medycznego</h2>
-          </div>
+          <SidePanelTitle>Praktyczne testy dla Opiekuna Medycznego</SidePanelTitle>
           <div className={styles.side_bottom}>
             <div className={styles.btns}>
-              <button onClick={handleShowStudy} className={styles.side_btn}>
+              <CustomButton onClick={handleShowStudy} className={styles.side_btn}>
                 Nauka - Wszystkie Pytania
-              </button>
-              <button onClick={handleShowTest} className={styles.side_btn}>
+              </CustomButton>
+              <CustomButton onClick={handleShowTest} className={styles.side_btn}>
                 Test
-              </button>
+              </CustomButton>
             </div>
             <p className={styles.info}>{INFO}</p>
             <h4>® WESA 2023</h4>
@@ -51,6 +49,7 @@ const Learning = () => {
         </div>
         <div className={styles.main_panel}>
           <nav className={styles.nav_panel}>
+            <RxHamburgerMenu size={24} className={styles.icon} />
             WESA E-Lerning Platform 2023
             <div className={styles.nav_search}>
               <input

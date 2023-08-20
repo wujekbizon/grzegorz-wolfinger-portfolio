@@ -23,6 +23,9 @@ import InfoCard from './ui-learn/InfoCard'
 import QuestionCard from './ui-learn/QuestionCard'
 import Test from './ui-learn/Test'
 import LearningPanel from './ui-learn/LearningPanel'
+import CustomButton from './ui-learn/CustomButton'
+import SidePanelTitle from './ui-learn/SidePanelTitle'
+import TestCard from './ui-learn/TestCard'
 
 export {
   Layout,
@@ -50,4 +53,7 @@ export {
   QuestionCard,
   Test,
   LearningPanel,
+  CustomButton,
+  SidePanelTitle,
+  TestCard,
 }

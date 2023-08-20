@@ -2,8 +2,7 @@ import styles from './QuestionCard.module.scss'
 import { QuestionCardInterface } from '@/types'
 import { questions } from '@/data/questions'
 import { useState } from 'react'
-
-const letters = ['a', 'b', 'c', 'd']
+import { LETTERS } from '@/data/constants'
 
 const QuestionCard: React.FC<QuestionCardInterface> = ({ number, answers, question }) => {
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false)
@@ -16,7 +15,7 @@ const QuestionCard: React.FC<QuestionCardInterface> = ({ number, answers, questi
       <p className={styles.question_number}>
         {number}/{questions.length}
       </p>
-      <div className={styles.question}>{question}</div>
+      <h4 className={styles.question}>{question}</h4>
       <ul className={styles.answers_list}>
         {answers.map(({ option, isCorrect }, index) => {
           return (
@@ -24,7 +23,7 @@ const QuestionCard: React.FC<QuestionCardInterface> = ({ number, answers, questi
               className={`${styles.anwser} ${showCorrectAnswer && (isCorrect ? styles.correct : styles.incorrect)}`}
               key={option}
             >
-              {letters[index]}) <span>{option}</span>
+              {LETTERS[index]}) <span>{option}</span>
             </li>
           )
         })}

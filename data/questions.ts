@@ -5188,7 +5188,7 @@ export const questions = [
         isCorrect: false,
       },
       {
-        option: 'mieniać miejsca wkłucia',
+        option: 'zmieniać miejsca wkłucia',
         isCorrect: true,
       },
     ],

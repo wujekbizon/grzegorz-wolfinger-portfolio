@@ -1,0 +1,107 @@
+@import '../../styles/globals.scss';
+
+.test_card {
+  position: relative;
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid $secondary300;
+  padding: 30px;
+  color: $dark800;
+
+  .test_number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .test_question {
+    padding: 0px 15px 15px 15px;
+    border-bottom: 1px solid $secondary300;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .test_options {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    gap: 10px;
+
+    .correct {
+      background-color: rgba(43, 245, 16, 0.3);
+    }
+
+    .incorrect {
+      background-color: rgba(219, 13, 13, 0.2);
+    }
+
+    .test_option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary100;
+      }
+
+      .input_container {
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .test_input {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 1px solid $secondary300;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .input_dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $logoColor;
+          }
+        }
+        .active {
+          border-color: $dark800;
+        }
+      }
+
+      .option {
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .form_test_btn {
+    padding: 4px 15px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    background-color: $dark600;
+    border: none;
+
+    &:hover {
+      background-color: $dark200;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: $dark600;
+      }
+    }
+  }
+}
