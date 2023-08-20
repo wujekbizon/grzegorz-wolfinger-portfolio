@@ -176,10 +176,13 @@ import { questions } from '../questions'
 
 export const LETTERS = ['a', 'b', 'c', 'd']
 
-export const INFO = `Test nie jest powiązany ze szkołą, został przez mnie wykonany całkowicie dla potrzeb grupy i osób
-zainteresowanych egzaminem doskanalającym dla opiekuna medycznego. Jest również częścią mojej działalności jako
+export const INFO = {
+  title: 'Informacje dotyczące testów',
+  content: `Testy nie są powiązane z CMKP, zostały przez mnie wykonany całkowicie dla potrzeb grupy i osób
+zainteresowanych egzaminem doskanalającym dla opiekuna medycznego. Są również częścią mojej działalności jako
 programisty. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez
-polubienie mojego profilu na LinkedIn lub klikając baner "Buy me a coffee".`
+mój profil na LinkedIn lub klikając baner "Buy me a coffee".`,
+}
 
 export const TEST = {
   title: 'Testy udostępnione dzięki uprzejmości członków grupy Opiekuna Medycznego na Facebooku.',

@@ -11,6 +11,7 @@ const Learning = () => {
   const [isTest, setIsTest] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredQuestions, setFilteredQuestions] = useState(questions)
+  const [isSidePanelOpen, setIsSidePanelOpen] = useState(true)
 
   const handleShowStudy = () => {
     setIsTest(false)
@@ -32,7 +33,13 @@ const Learning = () => {
   return (
     <section className={styles.learning}>
       <div className={styles.learning_panel}>
-        <div className={styles.side_panel}>
+        <div
+          className={styles.side_panel}
+          style={{
+            width: `${isSidePanelOpen ? '20%' : '0%'}`,
+            display: `${isSidePanelOpen ? 'flex' : 'none'}`,
+          }}
+        >
           <SidePanelTitle>Praktyczne testy dla Opiekuna Medycznego</SidePanelTitle>
           <div className={styles.side_bottom}>
             <div className={styles.btns}>
@@ -43,13 +50,13 @@ const Learning = () => {
                 Test
               </CustomButton>
             </div>
-            <p className={styles.info}>{INFO}</p>
+            {/* <p className={styles.info}>{INFO}</p> */}
             <h4>® WESA 2023</h4>
           </div>
         </div>
         <div className={styles.main_panel}>
           <nav className={styles.nav_panel}>
-            <RxHamburgerMenu size={24} className={styles.icon} />
+            <RxHamburgerMenu size={24} className={styles.icon} onClick={() => setIsSidePanelOpen(!isSidePanelOpen)} />
             WESA E-Lerning Platform 2023
             <div className={styles.nav_search}>
               <input
@@ -63,7 +70,12 @@ const Learning = () => {
             </div>
           </nav>
           <div className={styles.test_container}>
-            {!isStudy && !isTest && <InfoCard {...TEST} />}
+            {!isStudy && !isTest && (
+              <>
+                <InfoCard {...TEST} />
+                <InfoCard {...INFO} />
+              </>
+            )}
             {isStudy && <LearningPanel panelArr={filteredQuestions} />}
             {isTest && <Test />}
           </div>
