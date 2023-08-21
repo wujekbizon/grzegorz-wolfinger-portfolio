@@ -40,7 +40,7 @@ const Test = () => {
     const progress = (correctAnswers / answers.length) * 100
     return (
       <aside className={styles.progress_container}>
-        <progress value={progress} max={100} className={styles.progress_bar}>
+        <progress value={progress.toFixed(2)} max={100} className={styles.progress_bar}>
           {progress}
         </progress>
         <div className={styles.progress_content}>

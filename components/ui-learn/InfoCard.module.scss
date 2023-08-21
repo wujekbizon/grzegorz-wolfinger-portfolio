@@ -24,7 +24,7 @@
     padding: 30px;
 
     @include lgMobile {
-      height: 70px;
+      min-height: 70px;
       padding: 20px;
     }
 

@@ -142,7 +142,7 @@ export const questions = [
   {
     number: 12,
     question:
-      'Reagowanie na nowa sytuacje za pomoca wyksztalconego nawyku, odruchu i przywojenie tego schematu przez wlasna strukture osobowa, czyli dopasowanie informacji o swiecie zewnetrznym do posiadanych juz zasobow to:',
+      'Reagowanie na nowa sytuacje za pomoca wykształconego nawyku, odruchu i przyswojenie tego schematu przez własna strukturę osobową, czyli dopasowanie informacji o świecie zewnętrznym do posiadanych juz zasobów to:',
     answers: [
       { option: 'asymilacja', isCorrect: false },
       { option: 'akomodacja', isCorrect: true },
@@ -1870,7 +1870,7 @@ export const questions = [
         isCorrect: true,
       },
       {
-        option: 'kikut stomii pozostawia się poniżej poziomu skory, tak aby nie wystawał poza nią',
+        option: 'kikut stomii pozostawia się poniżej poziomu skóry, tak aby nie wystawał poza nią',
         isCorrect: false,
       },
       {
@@ -4033,7 +4033,7 @@ export const questions = [
     question: 'Najlepszą pozycją do stosowania tlenoterapii jest: ',
     answers: [
       {
-        option: 'pozycja leząca',
+        option: 'pozycja leżąca',
         isCorrect: false,
       },
       {
@@ -4215,7 +4215,7 @@ export const questions = [
   {
     number: 245,
     question:
-      'W Finlandii odpowiedzialne za zorganizowanie opieki społecznej i zdrowotnej dla osób w wieku podeszłym odpowiedzialne saj/jest:',
+      'W Finlandii odpowiedzialne za zorganizowanie opieki społecznej i zdrowotnej dla osób w wieku podeszłym odpowiedzialne są/jest:',
     answers: [
       {
         option: 'Samorządy',
