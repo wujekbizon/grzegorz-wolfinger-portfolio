@@ -307,7 +307,7 @@ export const questions = [
   {
     number: 29,
     question:
-      'Wraz z wiekiem zmniejsza się w organizmie produkcja enzymu rozkładającego laktozę, czyli laktazy. Prowadzi to do nietolerancji mleka przez osoby w podeszłym wieku. Objawem nietolerancji młaka jest wówczas:',
+      'Wraz z wiekiem zmniejsza się w organizmie produkcja enzymu rozkładającego laktozę, czyli laktazy. Prowadzi to do nietolerancji mleka przez osoby w podeszłym wieku. Objawem nietolerancji mleka są wówczas:',
     answers: [
       { option: 'Zaparcia,', isCorrect: false },
       { option: 'Biegunki', isCorrect: true },

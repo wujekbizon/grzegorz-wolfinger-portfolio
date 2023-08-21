@@ -6,9 +6,10 @@ import { BiMinus } from 'react-icons/bi'
 interface InfoCardProps {
   title: string
   content: string
+  link?: string
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, content }) => {
+const InfoCard: React.FC<InfoCardProps> = ({ title, content, link }) => {
   const [isShowTitle, setIsShowTitle] = useState(false)
 
   const handleShowContent = () => {
@@ -30,7 +31,14 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, content }) => {
       </div>
       {isShowTitle && (
         <div className={styles.info_content}>
-          <p>{content}</p>
+          <p>
+            {content}
+            {link && (
+              <a href={link} target="_blank" className={styles.link}>
+                Buy Me a Coffee
+              </a>
+            )}
+          </p>
         </div>
       )}
     </div>

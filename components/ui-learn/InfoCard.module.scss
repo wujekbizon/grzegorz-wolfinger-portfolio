@@ -6,6 +6,15 @@
   background-color: white;
   border: 1px solid $secondary300;
 
+  @include tablet {
+    width: 90%;
+  }
+
+  @include lgMobile {
+    min-height: 60px;
+    width: 100%;
+  }
+
   .info_title {
     height: 90px;
     display: flex;
@@ -13,6 +22,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px;
+
+    @include lgMobile {
+      height: 70px;
+      padding: 20px;
+    }
 
     .icon_container {
       display: flex;
@@ -34,9 +48,22 @@
   .info_content {
     padding: 0px 30px 30px 30px;
 
+    @include lgMobile {
+      padding: 0px 20px 20px 20px;
+    }
+
     p {
       color: $dark700;
       text-align: left;
+    }
+
+    .link {
+      background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      margin-left: 5px;
     }
   }
 }

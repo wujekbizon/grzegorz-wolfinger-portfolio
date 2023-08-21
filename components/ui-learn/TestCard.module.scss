@@ -8,6 +8,18 @@
   padding: 30px;
   color: $dark800;
 
+  @include tablet {
+    width: 90%;
+  }
+
+  @include lgMobile {
+    width: 100%;
+  }
+
+  @include smMobile {
+    padding: 30px 15px;
+  }
+
   .test_number {
     position: absolute;
     top: 5px;
@@ -19,6 +31,10 @@
     border-bottom: 1px solid $secondary300;
     font-weight: 700;
     font-size: 18px;
+
+    @include smMobile {
+      font-size: 15px;
+    }
   }
 
   .test_options {
@@ -27,6 +43,10 @@
     padding: 30px 0px;
     gap: 10px;
 
+    @include smMobile {
+      font-size: 14px;
+      gap: 0;
+    }
     .correct {
       background-color: rgba(43, 245, 16, 0.3);
     }

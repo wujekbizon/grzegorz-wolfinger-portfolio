@@ -26,6 +26,7 @@ import LearningPanel from './ui-learn/LearningPanel'
 import CustomButton from './ui-learn/CustomButton'
 import SidePanelTitle from './ui-learn/SidePanelTitle'
 import TestCard from './ui-learn/TestCard'
+import MenuButtons from './ui-learn/MenuButtons'
 
 export {
   Layout,
@@ -56,4 +57,5 @@ export {
   CustomButton,
   SidePanelTitle,
   TestCard,
+  MenuButtons,
 }

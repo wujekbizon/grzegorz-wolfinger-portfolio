@@ -63,7 +63,7 @@ const Test = () => {
 
   return (
     <div className={styles.test_container}>
-      {!isTestFinished && (
+      {!isTestFinished && !isTestRun && (
         <InfoCard
           title="Test wiedzy z losowo wygenerowanych 20, 40 lub 100 pytań."
           content="Test wyboru - 3 możliwości: Podstawowy - 20 pytań, Zaawansowany - 40 pytań, Legenda - 100 pytań; Test w formacie: pytanie i 3 lub 4 odpowiedzi, zawsze tylko jedna właściwa. Przy każdym pytaniu proszę zaznaczyć poprawną odpowiedż a nastepnie przejść do następnego pytania. Kolejność odpowiedz na pytania jest dowolna. Nie ma limitu czasowego, można w każdym momencie opuścić test."

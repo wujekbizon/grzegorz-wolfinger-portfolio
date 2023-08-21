@@ -178,10 +178,9 @@ export const LETTERS = ['a', 'b', 'c', 'd']
 
 export const INFO = {
   title: 'Informacje dotyczące testów',
-  content: `Testy nie są powiązane z CMKP, zostały przez mnie wykonany całkowicie dla potrzeb grupy i osób
-zainteresowanych egzaminem doskanalającym dla opiekuna medycznego. Są również częścią mojej działalności jako
-programisty. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez
-mój profil na LinkedIn lub klikając baner "Buy me a coffee".`,
+  content:
+    'Testy nie są powiązane z CMKP, zostały przez mnie wykonane całkowicie dla potrzeb grupy i osób zainteresowanych egzaminem doskanalającym dla opiekuna medycznego na podstawie materiałów udostępnionych przez członków grupy. Platforma E-learningowa jest częścią mojej działalności jako programisty, którą rozwijam w formie open-source. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez mój profil na LinkedIn lub kupując mi kawę:',
+  link: 'https://www.buymeacoffee.com/grzegorzwolfinger',
 }
 
 export const TEST = {

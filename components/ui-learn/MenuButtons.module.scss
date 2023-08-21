@@ -1,0 +1,21 @@
+@import '../../styles/globals.scss';
+
+.btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+
+  .side_btn {
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    background-color: $dark600;
+    border: none;
+    &:hover {
+      background-color: $dark800;
+    }
+  }
+}
