@@ -1,0 +1,18 @@
+.input {
+  width: 200px;
+  outline: none;
+  margin-right: 10px;
+
+  &::placeholder {
+    font-size: 13px;
+    padding-left: 10px;
+  }
+}
+
+.icon {
+  cursor: pointer;
+
+  &:hover {
+    color: #f49867;
+  }
+}

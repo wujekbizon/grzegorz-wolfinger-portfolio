@@ -1,0 +1,39 @@
+@import '../../styles/globals.scss';
+
+.nav_panel {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: $dark200;
+  z-index: 99;
+
+  @include smMobile {
+    padding: 0 15px;
+  }
+
+  .nav_brand {
+    display: flex;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+
+    &:hover {
+      color: #f49867;
+    }
+  }
+
+  .nav_search {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+}

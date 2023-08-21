@@ -1,25 +1,17 @@
 import styles from './MenuButtons.module.scss'
 import { CustomButton } from '@/components'
+import type { MenuButtonsInterface } from '@/types'
 
-interface MenuButtonsProps {
-  isStudy: boolean
-  isTest: boolean
-  handleShowStudy: () => void
-  handleShowTest: () => void
-  handleHomeBack: () => void
-  className?: string
-}
-
-const MenuButtons = ({ isStudy, isTest, handleShowStudy, handleHomeBack, handleShowTest }: MenuButtonsProps) => {
+const MenuButtons = ({ isStudy, isTest, handleModeStudy, handleHomeBack, handleModeTest }: MenuButtonsInterface) => {
   return (
     <div className={styles.btns}>
       {!isStudy && (
-        <CustomButton onClick={handleShowStudy} className={styles.side_btn}>
+        <CustomButton onClick={handleModeStudy} className={styles.side_btn}>
           Nauka
         </CustomButton>
       )}
       {!isTest && (
-        <CustomButton onClick={handleShowTest} className={styles.side_btn}>
+        <CustomButton onClick={handleModeTest} className={styles.side_btn}>
           Test
         </CustomButton>
       )}

@@ -2,6 +2,7 @@ import styles from './TestCard.module.scss'
 import { useState } from 'react'
 import { QuestionCardInterface, AvailableOption } from '@/types'
 import { LETTERS } from '@/data/constants'
+import { toast } from 'react-toastify'
 
 interface TestQuestionCardInterface extends QuestionCardInterface {
   index: number
@@ -9,7 +10,7 @@ interface TestQuestionCardInterface extends QuestionCardInterface {
   handleSubmit: (selectedOption: { answer: boolean }) => void
 }
 
-const TestCard: React.FC<TestQuestionCardInterface> = ({ number, answers, question, index, length, handleSubmit }) => {
+const TestCard: React.FC<TestQuestionCardInterface> = ({ answers, question, index, length, handleSubmit }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<{ answer: boolean } | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const [submitted, setSubmitted] = useState(false)
@@ -27,6 +28,7 @@ const TestCard: React.FC<TestQuestionCardInterface> = ({ number, answers, questi
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!selectedAnswer) {
+      toast.error('Proszę wybrać odpowiedz')
       return
     }
     handleSubmit(selectedAnswer)

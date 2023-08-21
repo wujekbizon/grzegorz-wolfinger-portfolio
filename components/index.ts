@@ -27,6 +27,10 @@ import CustomButton from './ui-learn/CustomButton'
 import SidePanelTitle from './ui-learn/SidePanelTitle'
 import TestCard from './ui-learn/TestCard'
 import MenuButtons from './ui-learn/MenuButtons'
+import SidePanel from './ui-learn/SidePanel'
+import MobileMenuButtons from './ui-learn/MobileMenuButtons'
+import InputSearch from './ui-learn/InputSearch'
+import NavBar from './ui-learn/NavBar'
 
 export {
   Layout,
@@ -58,4 +62,8 @@ export {
   SidePanelTitle,
   TestCard,
   MenuButtons,
+  SidePanel,
+  MobileMenuButtons,
+  InputSearch,
+  NavBar,
 }

@@ -2,10 +2,10 @@ import styles from './LearningPanel.module.scss'
 import type { QuestionCardInterface } from '@/types'
 import { QuestionCard } from '@/components'
 
-const LearningPanel = ({ panelArr }: { panelArr: QuestionCardInterface[] }) => {
+const LearningPanel = ({ data }: { data: QuestionCardInterface[] }) => {
   return (
     <>
-      {panelArr.map((question) => (
+      {data.map((question) => (
         <QuestionCard {...question} key={question.number} />
       ))}
     </>

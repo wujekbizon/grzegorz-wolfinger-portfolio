@@ -2,12 +2,7 @@ import { useState } from 'react'
 import styles from './InfoCard.module.scss'
 import { BsPlusSquare } from 'react-icons/bs'
 import { BiMinus } from 'react-icons/bi'
-
-interface InfoCardProps {
-  title: string
-  content: string
-  link?: string
-}
+import type { InfoCardProps } from '@/types'
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, content, link }) => {
   const [isShowTitle, setIsShowTitle] = useState(false)

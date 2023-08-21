@@ -1,12 +1,5 @@
 import styles from './SidePanelTitle.module.scss'
-import { ReactNode } from 'react'
-
-type SidePanelTitleProps = {
-  children: ReactNode
-  color?: string
-  primaryColor?: string
-  secondaryColor?: string
-}
+import type { SidePanelTitleProps } from '@/types'
 
 const SidePanelTitle = ({
   children,

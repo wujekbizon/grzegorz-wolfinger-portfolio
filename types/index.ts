@@ -48,3 +48,48 @@ export interface CustomButtonInterface {
   children: ReactNode
   className?: string
 }
+
+export interface MobileMenuButtonsInterface {
+  isStudy?: boolean
+  isTest?: boolean
+  isSidePanelOpen: boolean
+  handleModeStudy: () => void
+  handleModeTest: () => void
+  handleHomeBack: () => void
+}
+
+export interface InputSearchInterface {
+  searchTerm: string
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>
+  handleSearch: () => void
+}
+
+export interface InfoCardProps {
+  title: string
+  content: string
+  link?: string
+}
+
+export interface MenuButtonsInterface {
+  isStudy: boolean
+  isTest: boolean
+  handleModeStudy: () => void
+  handleModeTest: () => void
+  handleHomeBack: () => void
+  className?: string
+}
+
+export interface SidePanelInterface {
+  isSidePanelOpen: boolean
+  handleModeStudy: () => void
+  handleModeTest: () => void
+  handleHomeBack: () => void
+  mode: string
+}
+
+export type SidePanelTitleProps = {
+  children: ReactNode
+  color?: string
+  primaryColor?: string
+  secondaryColor?: string
+}
