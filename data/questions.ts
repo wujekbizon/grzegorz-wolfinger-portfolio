@@ -1128,11 +1128,11 @@ export const questions = [
       },
       {
         option: 'jest obowiązkowe, bo ułatwia zaplanowanie odpowiedniego leczenia ',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'jest obowiązkowe tylko w podmiotach leczniczych ',
-        isCorrect: true,
+        isCorrect: false,
       },
     ],
   },
