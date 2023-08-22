@@ -177,17 +177,20 @@ import { questions } from '../questions'
 export const LETTERS = ['a', 'b', 'c', 'd']
 
 export const INFO = {
-  title: 'Informacje dotyczące testów',
+  title: 'Informacje dotyczące platformy e-learningowej',
   content:
     'Testy nie są powiązane z CMKP, zostały przez mnie wykonane całkowicie dla potrzeb grupy i osób zainteresowanych egzaminem doskanalającym dla opiekuna medycznego na podstawie materiałów udostępnionych przez członków grupy. Platforma E-learningowa jest częścią mojej działalności jako programisty, którą rozwijam w formie open-source. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez mój profil na LinkedIn lub kupując mi kawę:',
+  linkTitle: 'Buy Me a coffee',
   link: 'https://www.buymeacoffee.com/grzegorzwolfinger',
 }
 
 export const TEST = {
-  title: 'Testy udostępnione dzięki uprzejmości członków grupy Opiekuna Medycznego na Facebooku.',
-  content: `Łączna ilość pytań na
+  title: 'Opiekun Medyczny - test, informacje ogólne',
+  content: `Testy udostępnione dzięki uprzejmości członków grupy Opiekuna Medycznego na Facebooku. Łączna ilość pytań na
   chwilę obecną ${questions.length}/418. Test z odpowiedziami bazuje w 100% na zrzutach ekranu pytań
   umieszczonych na grupie. Kilka brakujących pytań to pytania, na których były widoczne zdjęcia, atakże pytania
   w niskiej rozdzielczości. Oczywiście, w trakcie formułowania tego testu mogły się pojawić drobne błędy
-  literowe lub niezgodności. Jeżeli ktoś zauważy jakiekolwiek błędy, proszę o kontakt.`,
+  literowe lub niezgodności. Jeżeli ktoś zauważy jakiekolwiek błędy, proszę o wiadomość: `,
+  linkTitle: 'LinkedIn',
+  link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/',
 }

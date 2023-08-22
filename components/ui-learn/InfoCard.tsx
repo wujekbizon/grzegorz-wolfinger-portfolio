@@ -4,7 +4,7 @@ import { BsPlusSquare } from 'react-icons/bs'
 import { BiMinus } from 'react-icons/bi'
 import type { InfoCardProps } from '@/types'
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, content, link }) => {
+const InfoCard: React.FC<InfoCardProps> = ({ title, content, link, linkTitle }) => {
   const [isShowTitle, setIsShowTitle] = useState(false)
 
   const handleShowContent = () => {
@@ -30,7 +30,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, content, link }) => {
             {content}
             {link && (
               <a href={link} target="_blank" className={styles.link}>
-                Buy Me a Coffee
+                {linkTitle}
               </a>
             )}
           </p>

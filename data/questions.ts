@@ -3376,11 +3376,11 @@ export const questions = [
     question: 'Typowa lokalizacja owrzodzenia żylnego to:',
     answers: [
       {
-        option: 'Łyska nieco powyżej koszu',
+        option: 'Łydka nieco powyżej kostki',
         isCorrect: true,
       },
       {
-        option: 'Pieta',
+        option: 'Pięta',
         isCorrect: false,
       },
       {

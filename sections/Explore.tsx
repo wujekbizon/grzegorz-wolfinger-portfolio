@@ -25,8 +25,8 @@ const Explore = () => {
 
         <article className={styles.divider}>
           <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
-            As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
-            utilizing a <span className={styles.span}> peer-to-peer network </span>
+            Today's <span className={styles.span}> web </span>is pushing the boundaries of what is possible. Let's
+            create a network of endless possibilities <span className={styles.span}>together</span>.
           </motion.h1>
         </article>
         <article className={styles.explore_modern_app}>
@@ -42,8 +42,8 @@ const Explore = () => {
         </article>
         <article className={styles.divider}>
           <motion.h1 variants={zoomIn(1, 2)}>
-            Today's <span className={styles.span}> web </span>is pushing the boundaries of what is possible. Let's
-            create a network of endless possibilities <span className={styles.span}>together</span>.
+            As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
+            utilizing a <span className={styles.span}> peer-to-peer network </span>
           </motion.h1>
         </article>
         <article className={styles.explore_cloud}>

@@ -67,6 +67,7 @@ export interface InputSearchInterface {
 export interface InfoCardProps {
   title: string
   content: string
+  linkTitle?: string
   link?: string
 }
 
