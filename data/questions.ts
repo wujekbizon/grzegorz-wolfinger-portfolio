@@ -705,11 +705,11 @@ export const questions = [
     answers: [
       {
         option: '40-50 °C',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: '70-80 °C',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: '70-100 °C',
