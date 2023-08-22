@@ -194,3 +194,10 @@ export const TEST = {
   linkTitle: 'LinkedIn',
   link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/',
 }
+
+export const MULTIMEDIA = {
+  title: '',
+  content: '',
+  linkTitle: 'Procedury',
+  link: 'https://kidl.org.pl/book/category?id=1',
+}

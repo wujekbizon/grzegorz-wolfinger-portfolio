@@ -144,14 +144,14 @@ export const questions = [
     question:
       'Reagowanie na nowa sytuacje za pomoca wykształconego nawyku, odruchu i przyswojenie tego schematu przez własna strukturę osobową, czyli dopasowanie informacji o świecie zewnętrznym do posiadanych juz zasobów to:',
     answers: [
-      { option: 'asymilacja', isCorrect: false },
-      { option: 'akomodacja', isCorrect: true },
+      { option: 'asymilacja', isCorrect: true },
+      { option: 'akomodacja', isCorrect: false },
       { option: 'starzenie sie', isCorrect: false },
     ],
   },
   {
     number: 13,
-    question: 'Potrzeby najniżej usytuowane w piramidzie potrzeb przez Abrahama Moro:',
+    question: 'Potrzeby najniżej usytuowane w piramidzie potrzeb przez Abrahama Maslova:',
     answers: [
       { option: 'Potrzeby fizjologiczne', isCorrect: true },
       { option: 'Potrzeby poznawcze', isCorrect: false },
@@ -261,9 +261,9 @@ export const questions = [
     question:
       'Test Tinetti jest powszechnie stosowany przy całościowe ocenie geriatrycznej, jednakże zastosowanie bardzo często na oddziałach neurologicznych czy ortopedycznych. Służy do oceny ryzyka ',
     answers: [
-      { option: 'niedozywienie', isCorrect: false },
-      { option: 'upadkow', isCorrect: true },
-      { option: 'wystapienie otepienia', isCorrect: false },
+      { option: 'niedożywienie', isCorrect: false },
+      { option: 'upadków', isCorrect: true },
+      { option: 'wystąpienie otepienia', isCorrect: false },
     ],
   },
   {
@@ -1124,7 +1124,7 @@ export const questions = [
     answers: [
       {
         option: 'jest czynnością nieobowiązkową ',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'jest obowiązkowe, bo ułatwia zaplanowanie odpowiedniego leczenia ',
@@ -1132,7 +1132,7 @@ export const questions = [
       },
       {
         option: 'jest obowiązkowe tylko w podmiotach leczniczych ',
-        isCorrect: false,
+        isCorrect: true,
       },
     ],
   },
@@ -1515,11 +1515,11 @@ export const questions = [
     answers: [
       {
         option: '8 godzin',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: '24 godzin',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: '36 godzin',
