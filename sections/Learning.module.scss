@@ -18,7 +18,6 @@
     .main_panel {
       overflow-y: scroll;
       background-color: whitesmoke;
-      transition: all 0.2s ease-in-out;
 
       @include lgMobile {
         width: 100% !important;
