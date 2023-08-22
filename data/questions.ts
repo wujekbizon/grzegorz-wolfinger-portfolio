@@ -3,10 +3,10 @@ export const questions = [
     number: 1,
     question: 'Transport pobranej pełnej krwi żylnej (nieodwirowanej) powinien odbywać się w temperaturze: ',
     answers: [
-      { option: 'lodówki 4-8 C', isCorrect: false },
-      { option: 'zamrożony w -20 C;', isCorrect: false },
-      { option: 'w pojemnku z temperaturą 37 C', isCorrect: false },
-      { option: 'w temperaturze pokojowej 20-25 C', isCorrect: true },
+      { option: 'lodówki 4-8 °C', isCorrect: false },
+      { option: 'zamrożony w -20 °C;', isCorrect: false },
+      { option: 'w pojemnku z temperaturą 37 °C', isCorrect: false },
+      { option: 'w temperaturze pokojowej 20-25 °C', isCorrect: true },
     ],
   },
   {
@@ -704,15 +704,15 @@ export const questions = [
     question: 'Woda w termoforze powinna mieć temperaturę:',
     answers: [
       {
-        option: '40-50 st. C',
+        option: '40-50 °C',
         isCorrect: true,
       },
       {
-        option: '70-80 st. C',
+        option: '70-80 °C',
         isCorrect: false,
       },
       {
-        option: '70-100 st. C',
+        option: '70-100 °C',
         isCorrect: false,
       },
     ],
@@ -740,15 +740,15 @@ export const questions = [
     question: 'Temperatura wody do wykonania okładu rozgrzewającego powinna wynosić: ',
     answers: [
       {
-        option: 'ok 0 st. C',
+        option: 'ok 0 °C',
         isCorrect: false,
       },
       {
-        option: '28-33 st. C',
+        option: '28-33 °C',
         isCorrect: true,
       },
       {
-        option: '80 st. C',
+        option: '80 °C',
         isCorrect: false,
       },
     ],
@@ -1014,15 +1014,15 @@ export const questions = [
     question: 'Temperatura wody do stosowania okładu chłodzącego powinna wynosić:',
     answers: [
       {
-        option: '0 st. C',
+        option: '0 °C',
         isCorrect: false,
       },
       {
-        option: '5 st. C',
+        option: '5 °C',
         isCorrect: false,
       },
       {
-        option: '21-27 st. C',
+        option: '21-27 °C',
         isCorrect: true,
       },
     ],
