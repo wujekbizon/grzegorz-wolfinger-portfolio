@@ -1326,7 +1326,7 @@ export const questions = [
     answers: [
       {
         option: 'chorobie Huntingtona',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'rdzeniowym zaniku mięśni',
@@ -1334,7 +1334,7 @@ export const questions = [
       },
       {
         option: 'stwardnieniu zanikowym bocznym',
-        isCorrect: true,
+        isCorrect: false,
       },
     ],
   },
@@ -1440,11 +1440,11 @@ export const questions = [
     answers: [
       {
         option: 'Proszę nie krzyczeć',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'Proszę mówić ciszej',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'Ta rozmowa nie ma sensu',
