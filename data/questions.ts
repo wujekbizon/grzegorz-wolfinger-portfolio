@@ -3798,11 +3798,11 @@ export const questions = [
     answers: [
       {
         option: 'Biernym',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'Czynnym',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'Bierno-czynnym',
@@ -4238,11 +4238,11 @@ export const questions = [
     answers: [
       {
         option: 'Lekarski',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'Pielęgniarski',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'fizjoterapeutyczny',
