@@ -1,10 +1,11 @@
 import styles from './Learning.module.scss'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { questions } from '@/data/questions'
 import { INFO, TEST } from '@/data/constants'
 import { InfoCard, Test, LearningPanel, SidePanel, NavBar } from '@/components'
+import { QuestionCardInterface } from '@/types'
 
-const Learning = () => {
+const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
   const [mode, setMode] = useState<'study' | 'test' | ''>('')
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredQuestions, setFilteredQuestions] = useState(questions)
@@ -34,16 +35,19 @@ const Learning = () => {
     setFilteredQuestions(questions)
     setSearchTerm('')
     setMode('study')
+    setIsSidePanelOpen(false)
   }
   const handleModeTest = () => {
     setFilteredQuestions(questions)
     setSearchTerm('')
     setMode('test')
+    setIsSidePanelOpen(false)
   }
   const handleHomeBack = () => {
     setFilteredQuestions(questions)
     setSearchTerm('')
     setMode('')
+    setIsSidePanelOpen(false)
   }
 
   return (
@@ -83,6 +87,11 @@ const Learning = () => {
             {mode === 'study' && <LearningPanel data={filteredQuestions} />}
             {mode === 'test' && <Test />}
           </div>
+          {!mode && (
+            <div className={styles.image_container}>
+              <Image src="/images/online.png" alt="learn" width={650} height={300} className={styles.image} priority />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -3448,7 +3448,7 @@ export const questions = [
     question: 'W przypadku rany niepowikłanej chirurgicznej zmieniamy opatrunek nie wcześniej niż: ',
     answers: [
       {
-        option: '6 godzin po zaiegu',
+        option: '6 godzin po zabiegu',
         isCorrect: false,
       },
       {
