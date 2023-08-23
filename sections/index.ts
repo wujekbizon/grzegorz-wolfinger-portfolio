@@ -5,5 +5,6 @@ import About from './About'
 import Projects from './Projects'
 import Footer from './Footer'
 import Learning from './Learning'
+import Technologies from './Technologies'
 
-export { Hero, Explore, Experience, About, Projects, Footer, Learning }
+export { Hero, Explore, Experience, About, Projects, Footer, Learning, Technologies }
