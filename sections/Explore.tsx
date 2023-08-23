@@ -1,75 +1,63 @@
 import styles from './Explore.module.scss'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
-import { features, modernLinks } from '@/data/features'
-import { TypingText } from '@/components/animation/CustomText'
-import FatalErrorAnimation from '@/components/animation/FatalError'
-import Link from 'next/link'
-import { SectionWrapper } from '@/hoc'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { fadeIn, zoomIn, staggerContainer } from '@/utils/motion'
+import { DESIGN, AI } from '@/data/constants/cards'
+import { Title, TitleButton, Card } from '@/components'
+import { useDebouncedMouseMove } from '@/hooks/useDebouncedMouseMove'
 
 const Explore = () => {
-  return (
-    <>
-      <motion.section
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={styles.explore}
-      >
-        <motion.div variants={fadeIn('down', 'twwen', 0.1, 0.5)}>
-          <p className={styles.subtitle}>Introduction</p>
-          <h2 className={styles.title}>Overview.</h2>
-        </motion.div>
+  const animationRef = useRef<HTMLDivElement | null>(null)
+  const targetRef = useRef<HTMLDivElement>(null)
+  useDebouncedMouseMove(animationRef, 5)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['start end', 'end start'],
+  })
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1])
 
+  return (
+    <motion.section
+      className={styles.explore}
+      id="explore"
+      ref={animationRef}
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
+      <motion.div className={styles.overview} ref={targetRef} style={{ opacity }}>
+        <motion.div className={styles.explore_title}>
+          <TitleButton title="Introduction" />
+          <Title title="Overview" />
+        </motion.div>
         <article className={styles.divider}>
-          <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
+          <motion.h1>
             Today's <span className={styles.span}> web </span>is pushing the boundaries of what is possible. Let's
             create a network of endless possibilities <span className={styles.span}>together</span>.
           </motion.h1>
         </article>
-        <article className={styles.explore_modern_app}>
-          <div className={styles.titles}>
-            <TypingText title="# Modern Applications" textStyles={styles.typing} />
-            {modernLinks.map((link, index) => (
-              <motion.h1 variants={fadeIn('right', 'tween', 0.5 + index / 2, 0.5)} key={link.id}>
-                {link.link}
-              </motion.h1>
-            ))}
-          </div>
-          <FatalErrorAnimation />
-        </article>
-        <article className={styles.divider}>
-          <motion.h1 variants={zoomIn(1, 2)}>
-            As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
-            utilizing a <span className={styles.span}> peer-to-peer network </span>
-          </motion.h1>
-        </article>
-        <article className={styles.explore_cloud}>
-          <motion.div variants={fadeIn('right', 'tween', 0.5, 0.5)} className={styles.image_container}>
-            <Image src="/images/cloud.png" alt="cloud" width={550} height={400} />
-          </motion.div>
-          <div className={styles.titles}>
-            <TypingText title="# Cloud Services" textStyles={styles.typing} />
-            {features.map((feature, index) => (
-              <motion.h1 variants={fadeIn('left', 'tween', 0.5 + index / 2, 0.5)} key={feature.id}>
-                {feature.title}
-              </motion.h1>
-            ))}
-          </div>
-        </article>
+      </motion.div>
 
-        <article className={styles.divider}>
-          <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
-            Do you want to find out more about new ways of creating applications?{' '}
-            <Link href="/about#contact">
-              Please <span className={styles.span}>contact me</span>
-            </Link>
-          </motion.h1>
-        </article>
-      </motion.section>
-    </>
+      <Card {...DESIGN} />
+      <Card {...AI} custom />
+
+      {/* <article className={styles.divider}>
+        <motion.h1 variants={zoomIn(1, 2)}>
+          As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
+          utilizing a <span className={styles.span}> peer-to-peer network </span>
+        </motion.h1>
+      </article> */}
+
+      <article className={styles.divider}>
+        {/* <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
+          Do you want to find out more about new ways of creating applications?{' '}
+          <Link href="/about#contact">
+            Please <span className={styles.span}>contact me</span>
+          </Link>
+        </motion.h1> */}
+      </article>
+    </motion.section>
   )
 }
-export default SectionWrapper(Explore, 'explore')
+export default Explore

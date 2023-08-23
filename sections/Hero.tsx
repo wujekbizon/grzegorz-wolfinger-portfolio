@@ -1,115 +1,51 @@
 import styles from './Hero.module.scss'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn, zoomIn } from '@/utils/motion'
-import Image from 'next/image'
-import { customers } from '@/data/customers'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { staggerContainer, fadeIn, openOut } from '@/utils/motion'
 import { ScrollButton } from '@/components'
 
-type User = {
-  id: number
-  name: string
-  top: string
-  left: string
-  status: string
-}
-let allUsers: User[] = []
-
 const Hero = () => {
-  const [users, setUsers] = useState<User[]>(customers)
-  const [isAllConnected, setIsAllConnected] = useState(false)
+  const targetRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['end end', 'end start'],
+  })
 
-  let onlineUsers: User[] = customers.reduce((acc: User[], currentValue) => {
-    if (currentValue.status === 'online') {
-      acc.push(currentValue)
-    }
-    return acc
-  }, [])
-
-  const onClickHandler = () => {
-    if (isAllConnected) {
-      for (let user of allUsers) {
-        user.status = 'offline'
-      }
-
-      setUsers(allUsers)
-      setIsAllConnected(false)
-      return
-    }
-
-    allUsers = []
-
-    for (let customer of customers) {
-      customer.status = 'online'
-      allUsers.push(customer)
-    }
-    setIsAllConnected(true)
-    setUsers(allUsers)
-  }
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+  const position = useTransform(scrollYProgress, (pos) => {
+    return pos === 1 ? 'relative' : 'fixed'
+  })
 
   return (
     <motion.section
+      style={{ opacity }}
+      ref={targetRef}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       className={styles.hero}
     >
-      <div className={styles.hero_wrapper}>
-        {/* <div className={styles.network}>
-          <h2>P2P Connection Network</h2>
-          <div className={styles.total_users}>
-            <h4>
-              Total Connected Users: <span className="gradient_hero"> {onlineUsers.length} </span> / {customers.length}
-            </h4>
-            <div className={styles.status}>
-              <div className={`${styles.status_online}`} />
-              <h6> - online user</h6>
-
-              <div className={`${styles.status_offline}`} />
-              <h6> - offline user</h6>
-            </div>
-            <motion.button className={styles.users_btn} onClick={onClickHandler}>
-              <motion.h6
-                animate={{
-                  y: [0, 0, 0],
-                  x: [0, -24, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-              >
-                {isAllConnected ? 'Disconnnect Users' : 'Connect All Users'}
-              </motion.h6>
-            </motion.button>
-          </div>
-        </div> */}
-        <motion.div variants={zoomIn(0.5, 1)} className={styles.title_container}>
-          <div className={styles.map_container}>
-            {/* {users.map((customer, index) => {
-              return (
-                <motion.div
-                  variants={zoomIn(index * 0.2, 0.4)}
-                  key={customer.id}
-                  className={customer.status === 'online' ? styles.dot : styles.dot_offline}
-                  style={{ top: customer.top, left: customer.left }}
-                >
-                  <div className={styles.dot_container}>
-                    <p className={styles.dot_content}>
-                      {customer.status === 'online' ? customer.name : 'User Offline'}
-                    </p>
-                  </div>
-                </motion.div>
-              )
-            })} */}
-            {/* <Image src="/images/map.png" alt="universe" width={700} height={450} priority className={styles.map} /> */}
-          </div>
-        </motion.div>
-        <div className={styles.scroll}>
-          <ScrollButton tag="explore" />
+      <motion.div
+        style={{ scale, x: '-50%', position }}
+        className={styles.hero_title}
+        variants={openOut('tween', 0.5, 1)}
+      >
+        <motion.h1 className={styles.title} variants={fadeIn('down', 'tween', 0.8, 0.5)}>
+          Welcome to my coding playground!
+        </motion.h1>
+        <div className={styles.hero_intro}>
+          <motion.p variants={fadeIn('up', 'tween', 1, 0.5)}>
+            As a passionate programmer, I blend creativity and logic to fulfill your software dreams. Step into a world
+            where innovation meets efficiency, and let's embark on a journey of technical wizardry together! Whether
+            it's web development, app creation, or solving complex problems, I've got the skills and wit to deliver
+            top-notch solutions.
+          </motion.p>
         </div>
+      </motion.div>
+      <div className={styles.scroll}>
+        <ScrollButton tag="explore" />
       </div>
     </motion.section>
   )

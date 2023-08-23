@@ -31,6 +31,10 @@ import SidePanel from './ui-learn/SidePanel'
 import MobileMenuButtons from './ui-learn/MobileMenuButtons'
 import InputSearch from './ui-learn/InputSearch'
 import NavBar from './ui-learn/NavBar'
+import TitleButton from './ui/TitleButton'
+import Title from './ui/Title'
+import ExploreLink from './ui/ExploreLink'
+import Card from './card/Card'
 
 export {
   Layout,
@@ -66,4 +70,8 @@ export {
   MobileMenuButtons,
   InputSearch,
   NavBar,
+  Title,
+  TitleButton,
+  ExploreLink,
+  Card,
 }

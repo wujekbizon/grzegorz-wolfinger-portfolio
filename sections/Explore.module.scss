@@ -1,19 +1,23 @@
 @import '../styles/globals.scss';
 
 .explore {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
+  width: 100%;
+  background: radial-gradient(circle farthest-side at var(--x, 100px) var(--y, 100px), #fa6400 0.1%, transparent 1.5%);
 
-  @include lgTablet {
-    gap: 80px;
-  }
+  .overview {
+    padding: 100px;
 
-  @include mobile {
-    gap: 50px;
+    @include smMobile {
+      padding: 25px;
+    }
+
+    .explore_title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
   }
 
   .subtitle {

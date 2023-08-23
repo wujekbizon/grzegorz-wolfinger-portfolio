@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 
 export interface ProfileItems {
@@ -93,4 +94,15 @@ export type SidePanelTitleProps = {
   color?: string
   primaryColor?: string
   secondaryColor?: string
+}
+
+export interface CardProps {
+  description: string
+  title: string
+  titleBtn: string
+  imgSrc: StaticImageData
+  text: string
+  url: string
+  style?: React.CSSProperties
+  custom?: boolean
 }

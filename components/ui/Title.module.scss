@@ -1,0 +1,15 @@
+@import '../../styles/globals.scss';
+
+.title {
+  font-size: 73px;
+  font-weight: 500;
+  line-height: 92px;
+
+  @include lgMobile {
+    font-size: 55px;
+  }
+
+  @include smMobile {
+    font-size: 40px;
+  }
+}

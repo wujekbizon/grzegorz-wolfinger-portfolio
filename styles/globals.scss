@@ -27,6 +27,7 @@ $orangeColor: #fa8231;
 $widthSmWideScreen: 1570px;
 $widthXLgTablet: 1360px;
 $widthLgTablet: 1180px;
+$widthLaptop: 1024px;
 $widthTablet: 960px;
 $widthlgMobile: 778px;
 $widthMobile: 640px;
@@ -46,6 +47,12 @@ $widthsmMobile: 450px;
 
 @mixin lgTablet {
   @media (max-width: #{$widthLgTablet}) {
+    @content;
+  }
+}
+
+@mixin Laptop {
+  @media (max-width: #{$widthLaptop}) {
     @content;
   }
 }
