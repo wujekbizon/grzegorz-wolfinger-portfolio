@@ -56,7 +56,7 @@ const Hero = () => {
       className={styles.hero}
     >
       <div className={styles.hero_wrapper}>
-        <div className={styles.network}>
+        {/* <div className={styles.network}>
           <h2>P2P Connection Network</h2>
           <div className={styles.total_users}>
             <h4>
@@ -73,22 +73,22 @@ const Hero = () => {
               <motion.h6
                 animate={{
                   y: [0, 0, 0],
-                  x: [0, -24, 0]
+                  x: [0, -24, 0],
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
-                  repeatType: 'loop'
+                  repeatType: 'loop',
                 }}
               >
                 {isAllConnected ? 'Disconnnect Users' : 'Connect All Users'}
               </motion.h6>
             </motion.button>
           </div>
-        </div>
+        </div> */}
         <motion.div variants={zoomIn(0.5, 1)} className={styles.title_container}>
           <div className={styles.map_container}>
-            {users.map((customer, index) => {
+            {/* {users.map((customer, index) => {
               return (
                 <motion.div
                   variants={zoomIn(index * 0.2, 0.4)}
@@ -103,8 +103,8 @@ const Hero = () => {
                   </div>
                 </motion.div>
               )
-            })}
-            <Image src="/images/map.png" alt="map" width={700} height={350} priority className={styles.map} />
+            })} */}
+            {/* <Image src="/images/map.png" alt="universe" width={700} height={450} priority className={styles.map} /> */}
           </div>
         </motion.div>
         <div className={styles.scroll}>

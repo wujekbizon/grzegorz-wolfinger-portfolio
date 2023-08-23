@@ -9,7 +9,7 @@ import { SectionWrapper } from '@/hoc'
 
 const Experience = () => {
   return (
-    <div className={`glassmorphism ${styles.experience}`}>
+    <section className={`glassmorphism ${styles.experience}`}>
       <motion.div variants={fadeIn('up', 'tween', 0.1, 0.5)}>
         <p className={styles.subtitle}>What I have done so far</p>
         <h2 className={styles.title}>
@@ -24,7 +24,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </div>
+    </section>
   )
 }
 
