@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter'
+
 export const questions = [
   {
     number: 1,
@@ -192,8 +194,8 @@ export const questions = [
     question:
       'W Całościowej Ocenie Geriatrycznej (CO) do oceny funkcjonowania czynnościowego stosuje się różnego rodzaju skal Jedną z takich jest:',
     answers: [
-      { option: 'Skala Katza', isCorrect: false },
-      { option: 'Skala Lawtona', isCorrect: true },
+      { option: 'Skala Katza', isCorrect: true },
+      { option: 'Skala Lawtona', isCorrect: false },
       { option: 'Krótka skala oceny stanu psychicznego', isCorrect: false },
     ],
   },
@@ -1368,11 +1370,11 @@ export const questions = [
       },
       {
         option: 'rdzeniowym zaniku mięśni',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'stwardnieniu zanikowym bocznym',
-        isCorrect: false,
+        isCorrect: true,
       },
     ],
   },
@@ -7352,6 +7354,100 @@ export const questions = [
       {
         option: 'przetoka odżywcza wykonana na żołądku',
         isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 411,
+    question: capitalizeFirstLetter('KONSTRUKTYWNA KRYTYKA ZAWIERA:'),
+    answers: [
+      {
+        option: 'OCENĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'FAKTY'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'RADĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 412,
+    question: capitalizeFirstLetter('AGRESJA SŁOWNA PRZEJAWIA SIĘ:'),
+    answers: [
+      {
+        option: 'PRZEZWISKAMI, UPOKORZENIEM, SARKAZMEM, DRWINĄ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'SZARPANIEM, POPYCHANIEM I LEKCEWAŻENIEM'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'CIĄGŁYM PODWAŻANIEM, CO MÓWI ROZMÓWCA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 413,
+    question: capitalizeFirstLetter(
+      'DOSTOSOWANIE WŁASNEGO ZACHOWANIA I SPOSOBU MYŚLENIA DO ZACHOWANIA I MYŚLENIA INNYCH CZŁONKÓW DANEJ ZBIOROWOŚCI TO:'
+    ),
+    answers: [
+      {
+        option: 'KONFORMIZM'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ULEGŁOŚĆ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'APODYKTYCZNOŚĆ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 414,
+    question: capitalizeFirstLetter(
+      'JEDNĄ Z FORM TERAPII CHOREGO JEST ZACHĘCANIE CHOREGO DO CZYNNEGO UCZESTNICZENIA W SPOTKANIACH TOWARZYSKICH, KULTURALNYCH, SPORTOWYCH, DO UCZESTNICZENIA W KLUBACH SENIORÓW ORAZ UNIWERSYTETACH:'
+    ),
+    answers: [
+      {
+        option: 'TRZECIEGO WIEKU'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'CZWARTEGO WIEKU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'STARSZEGO WIEKU'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 415,
+    question: capitalizeFirstLetter('KRÓTKA SKALA OCENY STANU PSYCHICZNEGO TO W SKRÓCIE:'),
+    answers: [
+      {
+        option: 'MMSE',
+        isCorrect: true,
+      },
+      {
+        option: 'KSOSP',
+        isCorrect: false,
+      },
+      {
+        option: 'PSYCHOTEST',
+        isCorrect: false,
       },
     ],
   },

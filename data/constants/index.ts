@@ -187,7 +187,7 @@ export const INFO = {
 export const TEST = {
   title: 'Opiekun Medyczny - test, informacje ogólne',
   content: `Testy udostępnione dzięki uprzejmości członków grupy Opiekuna Medycznego na Facebooku. Łączna ilość pytań na
-  chwilę obecną ${questions.length}/418. Test z odpowiedziami bazuje w 100% na zrzutach ekranu pytań
+  chwilę obecną ${questions.length}/477. Test z odpowiedziami bazuje w 100% na zrzutach ekranu pytań
   umieszczonych na grupie. Kilka brakujących pytań to pytania, na których były widoczne zdjęcia, atakże pytania
   w niskiej rozdzielczości. Oczywiście, w trakcie formułowania tego testu mogły się pojawić drobne błędy
   literowe lub niezgodności. Jeżeli ktoś zauważy jakiekolwiek błędy, proszę o wiadomość: `,
