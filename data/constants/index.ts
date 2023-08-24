@@ -209,11 +209,11 @@ export const MULTIMEDIA = {
   links: [
     {
       title: 'Procedury i algorytmy',
-      url: 'https://drive.google.com/file/d/1BXNkqw6mL9F_Ami5gSmqNU7eU2FVUhHt/view?usp=drive_link',
+      url: 'https://drive.google.com/file/d/1BXNkqw6mL9F_Ami5gSmqNU7eU2FVUhHt/view?usp=sharing',
     },
     {
       title: 'Skrypt-Opiekun Medyczny',
-      url: 'https://drive.google.com/file/d/1jA7JxVKTdETIeU90Rb1fpUeiwMcGxVaC/view?usp=drive_link',
+      url: 'https://drive.google.com/file/d/1jA7JxVKTdETIeU90Rb1fpUeiwMcGxVaC/view?usp=sharing',
     },
     {
       title: 'Literatura dodatkowa',
@@ -221,7 +221,7 @@ export const MULTIMEDIA = {
     },
     {
       title: 'Pytania-Medyczne',
-      url: 'https://drive.google.com/file/d/1CbDT7ha5tK3B8K3QYYlh8JfQStZNiHkb/view?usp=drive_link',
+      url: 'https://drive.google.com/file/d/1CbDT7ha5tK3B8K3QYYlh8JfQStZNiHkb/view?usp=sharing',
     },
   ],
 }

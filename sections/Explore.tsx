@@ -14,7 +14,8 @@ const Explore = () => {
     target: targetRef,
     offset: ['start end', 'end start'],
   })
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1])
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0, 1])
 
   return (
     <motion.section
@@ -32,7 +33,7 @@ const Explore = () => {
           <Title title="Overview" />
         </motion.div>
         <article className={styles.divider}>
-          <motion.h1>
+          <motion.h1 style={{ scale }}>
             Today's <span className={styles.span}> web </span>is pushing the boundaries of what is possible. Let's
             create a network of endless possibilities <span className={styles.span}>together</span>.
           </motion.h1>

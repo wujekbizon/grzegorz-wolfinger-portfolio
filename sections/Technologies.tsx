@@ -1,6 +1,7 @@
 import styles from './Technologies.module.scss'
 import { technologyStack } from '../data/constants/skills'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 // components
 import { Title, TitleButton } from '../components'
