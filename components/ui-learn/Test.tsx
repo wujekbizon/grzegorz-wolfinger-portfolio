@@ -84,14 +84,6 @@ const Test = () => {
       )}
       {isTestRun && !isTestFinished && (
         <div className={styles.test_page}>
-          {(answers.length === 20 || answers.length === 40 || answers.length === 100) && (
-            <CustomButton className={styles.submit_btn} onClick={handleSubmitTest}>
-              Zatwierdz Test
-            </CustomButton>
-          )}
-          <CustomButton className={styles.cancel_btn} onClick={handleCancelTest}>
-            Zakończ Test
-          </CustomButton>
           {randomQuestions.map((question, index) => (
             <TestCard
               {...question}
@@ -101,6 +93,17 @@ const Test = () => {
               key={question.number}
             />
           ))}
+
+          <div className={styles.test_btns}>
+            {(answers.length === 20 || answers.length === 40 || answers.length === 100) && (
+              <CustomButton className={styles.submit_btn} onClick={handleSubmitTest}>
+                Zatwierdz Test
+              </CustomButton>
+            )}
+            <CustomButton className={styles.cancel_btn} onClick={handleCancelTest}>
+              Zakończ Test
+            </CustomButton>
+          </div>
         </div>
       )}
       {!isTestRun && isTestFinished && (

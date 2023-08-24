@@ -45,9 +45,6 @@
     gap: 40px;
 
     .cancel_btn {
-      position: fixed;
-      top: 15px;
-      right: 50px;
       padding: 6px 25px;
       border-radius: 45px;
       border: none;
@@ -58,12 +55,15 @@
       &:hover {
         background-color: rgb(214, 103, 103);
       }
+
+      @include smMobile {
+        padding: 4px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
     }
 
     .submit_btn {
-      position: fixed;
-      top: 15px;
-      right: 200px;
       padding: 6px 25px;
       border-radius: 45px;
       border: none;
@@ -73,6 +73,12 @@
 
       &:hover {
         background-color: rgb(129, 214, 103);
+      }
+
+      @include smMobile {
+        padding: 4px 15px;
+        border-radius: 10px;
+        font-size: 14px;
       }
     }
   }
@@ -89,10 +95,19 @@
     border: 1px solid $secondary300;
     padding: 60px;
 
+    @include smMobile {
+      gap: 40px;
+      padding: 30px;
+    }
+
     h1 {
       font-size: 40px;
       color: $dark800;
       text-align: center;
+
+      @include smMobile {
+        font-size: 30px;
+      }
     }
 
     .score_btn {

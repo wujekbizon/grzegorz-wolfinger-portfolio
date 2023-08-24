@@ -31,7 +31,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, content, links }) => {
             {links &&
               links.map((link, index) => (
                 <a href={link.url} target="_blank" className={styles.link} key={index}>
-                  {link.title}
+                  {link.title},{' '}
                 </a>
               ))}
           </p>
