@@ -13,7 +13,7 @@ const HomePage = () => {
         />
       </Head>
       <Home />
-      <AnimationLayout />
+      {/* <AnimationLayout /> */}
     </>
   )
 }
