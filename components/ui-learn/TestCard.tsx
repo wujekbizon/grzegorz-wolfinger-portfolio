@@ -1,5 +1,6 @@
 import styles from './TestCard.module.scss'
 import { useState } from 'react'
+import Image from 'next/image'
 import { QuestionCardInterface, AvailableOption } from '@/types'
 import { LETTERS } from '@/data/constants'
 import { toast } from 'react-toastify'
@@ -10,7 +11,7 @@ interface TestQuestionCardInterface extends QuestionCardInterface {
   handleSubmit: (selectedOption: { answer: boolean }) => void
 }
 
-const TestCard: React.FC<TestQuestionCardInterface> = ({ answers, question, index, length, handleSubmit }) => {
+const TestCard: React.FC<TestQuestionCardInterface> = ({ answers, question, index, length, handleSubmit, imgSrc }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<{ answer: boolean } | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const [submitted, setSubmitted] = useState(false)
@@ -61,7 +62,11 @@ const TestCard: React.FC<TestQuestionCardInterface> = ({ answers, question, inde
           )
         })}
       </ul>
-
+      {imgSrc && (
+        <div className={styles.card_image_container}>
+          <Image src={imgSrc} alt="img" width={400} height={250} priority className={styles.card_image} />
+        </div>
+      )}
       <button className={styles.form_test_btn} type="submit" disabled={submitted}>
         Zatwierdz
       </button>

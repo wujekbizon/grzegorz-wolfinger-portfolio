@@ -20,6 +20,25 @@
     padding: 30px 15px;
   }
 
+  .card_image_container {
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card_image {
+      width: 400px;
+      height: 250px;
+      object-fit: contain;
+
+      @include lgMobile {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   .test_number {
     position: absolute;
     top: 5px;

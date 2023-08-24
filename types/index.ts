@@ -41,6 +41,7 @@ export interface AvailableOption {
 export interface QuestionCardInterface {
   number: number
   question: string
+  imgSrc?: StaticImageData
   answers: AvailableOption[]
 }
 

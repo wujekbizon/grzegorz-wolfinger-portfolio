@@ -1,5 +1,8 @@
 import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter'
 import { capitalizeSentences } from '@/utils/capitalizeSentences'
+import img1 from '../public/images/wesa/korek.png'
+import img2 from '../public/images/wesa/wenflon.png'
+import img3 from '../public/images/wesa/wlew.png'
 
 export const questions = [
   {
@@ -8583,6 +8586,69 @@ export const questions = [
       },
       {
         option: 'CHĘTNIE UDZIELASZ INF. PONIEWAŻ ZNASZ RODZINĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 475,
+    question: capitalizeSentences(
+      'WYRÓŻNIA SIĘ KILKA RODZAJÓW KORECZKÓW UŻYWANYCH DO ZAMYKANIA WENFLONU. PRZEDSTAWIONY NA RYSUNKU KORECZEK TO:'
+    ),
+    imgSrc: img1,
+    answers: [
+      {
+        option: 'KOREK DWUSTRONNY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZWYKŁY KORECZEK'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KOREK- NIE KAPEK'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 476,
+    question: capitalizeSentences(
+      'WENFLON ZBUDOWANY JEST Z KILKU ELEMENTÓW: KANIULI, KTÓRĄ WPROWADZA SIĘ DO ŻYŁY, PORTU GŁÓWNEGO, PORTU POBOCZNEGO ORAZ SKRZYDEŁEK WENFLONU. ELEMENT ZAZNACZONY NA WENFLONIE TO:'
+    ),
+    imgSrc: img2,
+    answers: [
+      {
+        option: 'PORT GŁÓWNY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PORT POBOCZNY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'SKRZYDEŁKO WENFLONU'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 477,
+    question: capitalizeSentences(
+      'ODŁĄCZAJĄC KROPLOWY WLEW DOŻYTNY WIDZISZ, ŻE KANIULA WENFLONU, KTÓRA POWINNATKWIĆ W NACZYNIU JEST WYSUNIĘTA, TAK JAK NA RYSUNKU OBOK. CO ZROBISZ?'
+    ),
+    imgSrc: img3,
+    answers: [
+      {
+        option: 'ODŁĄCZYSZ KROPLOWY WLEW DOŻYTNY I UDASZ SIĘ DO NASTEPNEGO PACJENTA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'POINFORMUJESZ O TYM PIELĘGNIARKĘ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'USUNIESZ SAMODZIELNIE WENFLON'.toLowerCase(),
         isCorrect: false,
       },
     ],
