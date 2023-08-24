@@ -174,7 +174,7 @@ export const experiences = [
 
 import { questions } from '../questions'
 
-export const LETTERS = ['a', 'b', 'c', 'd']
+export const LETTERS = ['a', 'b', 'c', 'd', 'e']
 
 export const INFO = {
   title: 'Informacje dotyczące platformy e-learningowej',

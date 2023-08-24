@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter'
+import { capitalizeSentences } from '@/utils/capitalizeSentences'
 
 export const questions = [
   {
@@ -40,7 +41,7 @@ export const questions = [
   },
   {
     number: 4,
-    question: 'Hemolioza to:',
+    question: 'Hemoliza to:',
     answers: [
       {
         option: 'zmętnienie surowicy o jasnym kolorze wynikające z niezachowania 12 godzin postu przed badaniem:',
@@ -104,7 +105,7 @@ export const questions = [
   },
   {
     number: 8,
-    question: 'Wskaz zdanie faszywe:',
+    question: 'Wskaż zdanie faszywe:',
     answers: [
       { option: 'Skierowanie na badania powinno zawierać adres pacjenta', isCorrect: false },
       { option: 'Skierowanie na badania powinno zawierać telefon pacjenta', isCorrect: false },
@@ -175,7 +176,7 @@ export const questions = [
     question: 'Okres prenatalny w rozwoju człowieka obejmuje okres:',
     answers: [
       { option: 'Od poczęcia do narodzin;', isCorrect: true },
-      { option: 'Do 1r.z.', isCorrect: false },
+      { option: 'Do 1r.ż.', isCorrect: false },
       { option: 'Do ukończenia 18 r.ż.', isCorrect: false },
     ],
   },
@@ -301,9 +302,9 @@ export const questions = [
     number: 28,
     question: 'Według Światowej Organizacji Zdrowia wczesna starość rozpoczyna się po:',
     answers: [
-      { option: '50 r.z', isCorrect: false },
-      { option: '60 r.z', isCorrect: true },
-      { option: '70 r.z', isCorrect: false },
+      { option: '50 r.ż', isCorrect: false },
+      { option: '60 r.ż', isCorrect: true },
+      { option: '70 r.ż', isCorrect: false },
     ],
   },
   {
@@ -427,7 +428,7 @@ export const questions = [
   {
     number: 39,
     question:
-      'Sytuacja, wtóre zachodzi konieczność wyboru pomiędzy co najmniej dwoma niezadowalającymi rozwiązania to:',
+      'Sytuacja, w której zachodzi konieczność wyboru pomiędzy co najmniej dwoma niezadowalającymi rozwiązania to:',
     answers: [
       {
         option: 'Dylemat moralny',
@@ -2105,19 +2106,19 @@ export const questions = [
   },
   {
     number: 130,
-    question: 'Przed przyklejeniem worka stomijnego do skóry należy: ',
+    question: capitalizeSentences('WORKI STOMIJNE STOSUJE SIĘ GŁÓWNIE DO:'),
     answers: [
       {
-        option: 'natłuścić skórę maścią',
+        option: 'ILEOSTOMII'.toLowerCase(),
         isCorrect: false,
       },
       {
-        option: 'natrzeć skórę oliwka',
-        isCorrect: false,
-      },
-      {
-        option: 'osuszyć dokładnie skórę i nie nakładać żadnych maści',
+        option: 'KOLOSTOMII'.toLowerCase(),
         isCorrect: true,
+      },
+      {
+        option: 'TRACHEOSTOMII'.toLowerCase(),
+        isCorrect: false,
       },
     ],
   },
@@ -2216,7 +2217,7 @@ export const questions = [
     question: 'Zaburzenia połykania to inaczej:',
     answers: [
       {
-        option: 'odynofagia',
+        option: 'edynofagia',
         isCorrect: false,
       },
       {
@@ -2996,7 +2997,7 @@ export const questions = [
         isCorrect: false,
       },
       {
-        option: 'miarkowanego stopnia odwodnienia',
+        option: 'umiarkowanego stopnia odwodnienia',
         isCorrect: true,
       },
       {
@@ -3070,7 +3071,7 @@ export const questions = [
         isCorrect: false,
       },
       {
-        option: 'w miejscu, gdzie temperatura wynosi ok. 4%',
+        option: 'w miejscu, gdzie temperatura wynosi ok. 4 °C',
         isCorrect: true,
       },
       {
@@ -3649,7 +3650,7 @@ export const questions = [
   },
   {
     number: 214,
-    question: 'Płukania gardła nie wykonuje się u osób: ',
+    question: 'Płukanie gardła nie wykonuje się u osób: ',
     answers: [
       {
         option: 'współpracujących',
@@ -3815,7 +3816,7 @@ export const questions = [
   {
     number: 223,
     question:
-      'Oddech Kussmaula polegający na pogłębieniu i przyśpieszeniu oddechu z krótkimi okresami bezdechu występujący, np. w kwasicy ketonowej, zwany jest inaczej:',
+      'Oddech Kussmala polegający na pogłębieniu i przyśpieszeniu oddechu z krótkimi okresami bezdechu występujący, np. w kwasicy ketonowej, zwany jest inaczej:',
     answers: [
       {
         option: 'Oddechem gonionego psa',
@@ -4273,7 +4274,7 @@ export const questions = [
   },
   {
     number: 248,
-    question: 'Zastanów się, którą odpowiedź byś wybrał: Przykładem dokumentacji indywidualnej zewnętrznej jest: ',
+    question: 'Przykładem dokumentacji indywidualnej zewnętrznej jest: ',
     answers: [
       {
         option: 'wykaz raportów pielęgniarskich',
@@ -4291,7 +4292,7 @@ export const questions = [
   },
   {
     number: 249,
-    question: 'Zastanów się, którą odpowiedź byś wybrał. Dokumentacja medyczna powinna być prowadzona w wersji: ',
+    question: 'Dokumentacja medyczna powinna być prowadzona w wersji: ',
     answers: [
       {
         option: 'elektronicznej, a jeśli z przyczyn organizacyjno-technicznych jest to niemożliwe, papierowej',
@@ -4310,7 +4311,7 @@ export const questions = [
   {
     number: 250,
     question:
-      'Zastanów się, którą odpowiedź byś wybrał. Dokumentacja medyczna (z wyjątkiem zdjęć rentgenowskich i dotycząca pracowników narażonych na czynniki rakotwórcze) powinna być przechowywana przez okres: ',
+      'Dokumentacja medyczna (z wyjątkiem zdjęć rentgenowskich i dotycząca pracowników narażonych na czynniki rakotwórcze) powinna być przechowywana przez okres: ',
     answers: [
       {
         option: '5 lat',
@@ -4328,7 +4329,7 @@ export const questions = [
   },
   {
     number: 251,
-    question: 'Zastanów się, którą odpowiedź byś wybrał. Poprawkę w dokumentacji można nanieść po uprzednim: ',
+    question: 'Poprawkę w dokumentacji można nanieść po uprzednim: ',
     answers: [
       {
         option: 'zakorektorowaniu błędnego zapisu',
@@ -4346,8 +4347,7 @@ export const questions = [
   },
   {
     number: 252,
-    question:
-      'Zastanów się, którą odpowiedź byś wybrał. Który ze sposobów udostępnienia dokumentacji medycznej pacjentowi jest bezpłatny? ',
+    question: 'Który ze sposobów udostępnienia dokumentacji medycznej pacjentowi jest bezpłatny? ',
     answers: [
       {
         option: 'wydanie kopii',
@@ -4672,11 +4672,11 @@ export const questions = [
       },
       {
         option: 'nordic walking',
-        isCorrect: true,
+        isCorrect: false,
       },
       {
         option: 'podnoszenie ciężarów',
-        isCorrect: false,
+        isCorrect: true,
       },
     ],
   },
@@ -5072,15 +5072,15 @@ export const questions = [
     question: 'Leki mukolityczne, czyli rozrzedzające wydzielinę, powinno się podawać najpóźniej do godziny: ',
     answers: [
       {
-        option: '12.00',
+        option: '12:00',
         isCorrect: false,
       },
       {
-        option: '14.00',
+        option: '14:00',
         isCorrect: false,
       },
       {
-        option: '16.00',
+        option: '16:00',
         isCorrect: true,
       },
     ],
@@ -5455,7 +5455,7 @@ export const questions = [
     question: 'Glukagon należy przechowywać w temperaturze: ',
     answers: [
       {
-        option: 'od 2 do 8 st.C',
+        option: 'od 2 do 8 °C',
         isCorrect: true,
       },
       {
@@ -5463,7 +5463,7 @@ export const questions = [
         isCorrect: false,
       },
       {
-        option: 'powyżej 30 st.C',
+        option: 'powyżej 30 °C',
         isCorrect: false,
       },
     ],
@@ -7447,6 +7447,1142 @@ export const questions = [
       },
       {
         option: 'PSYCHOTEST',
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 416,
+    question: capitalizeFirstLetter(
+      'W ZALEŻNOŚCI OD LICZBY ZGONÓW SAMOBÓJSTWA DZIELĄ SIĘ NA INDYWIDUALNE, ZBIOROWE LUB ROZSZERZONE. SAMOBÓJSTWO, KTÓRE JEST POPRZEDZONE DOKONANIEM ZABÓJSTWA INNEJ OSOBY ( JEDNEJ LUB WIĘCEJ ) TO SAMOBÓJSTWO:'
+    ),
+    answers: [
+      {
+        option: 'INDYWIDUALNE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'GRUPOWE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ROZSZERZONE'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 417,
+    question: capitalizeFirstLetter(
+      'DO CZYNNIKÓW ISTOTNIE WPŁYWAJĄCYCH NA PRZYSTOSOWANIE SIĘ DO CHOROBY NALEŻĄ WIEK OSOBY, RODZAJ NIEPEŁNOSPRAWNOŚCI ORAZ ROZMIAR NIEPEŁNOSPRAWNOŚCI. PRZYJMUJE SIĘ, ŻE IM WCZEŚNIEJ NIEPEŁOSPRAWNOŚĆ NASTĄPI, TYM:'
+    ),
+    answers: [
+      {
+        option: 'ŁATWIEJ PACJENTA REHABILITOWAĆ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'TRUDNIEJ PACJENTA REHABILITOWAĆ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WIĘKSZE RYZYKO WYSTĄPIENIA DEPRESJI'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 418,
+    question: capitalizeFirstLetter(
+      'FAZA, W KTÓREJ DOMINUJE PRZEKONANIE, ŻE „WSZYSTKO STRACONE”, W KTÓREJ POJAWIA SIĘ DEPRESJA, APATYCZNOŚĆ, ZREZYGNOWANIE, ŻYCIE TRACI SENS, CHORY MOŻE MIEĆ MYŚLI SAMOBÓJCZE TO FAZA: '
+    ),
+    answers: [
+      {
+        option: 'POGODZENIE SIĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'FAZA ZAPRZECZENIA I IZOLACJI'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'FAZA LAMENTU'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 419,
+    question: capitalizeSentences(
+      'PO FAZIE LAMENTU MOŻE NASTĄPIĆ ETAP OBRONY ZDROWEJ ALBO ETAP OBRONY NEUROTYCZNEJ. ETAP, W KTÓRYM CHORY STAWIA SOBIE NOWE CELE I REALIZUJE NOWE ZADANIA, JEST GOTOWY DO PODJĘCIA DZIAŁANIA O ISTOTNEJ WARTOŚCI, A TAKŻE AKCEPTUJE POŁOŻENIE ŻYCIOWE TO ETAP: '
+    ),
+    answers: [
+      {
+        option: 'OBRONY ZDROWEJ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ETAP OBRONY NEUROTYCZNEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ŻADNE Z POWYŻSZYCH'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 420,
+    question: capitalizeSentences(
+      'W STOSUNKU PACJENTA DO CHOROBY WYRÓŻNIA SIĘ DWIE POSTAWY: POSTAWĘ SPRZYJAJĄCA LECZENIU I POSTAWĘ NIEKORZYSTNĄ WOBEC LECZENIA. POSTAWA CHARAKTERYZUJĄCA SIĘ TYM, ŻE PACJENCI SELEKCJONUJĄ DOCIERAJĄCE DO NICH INFORMACJE O STANIE ZDROWIA W TAKI SPOSÓB ABY UNIKNĄC LĘKU I POMNIEJSZYĆ WAGĘ AKTUALNEJ SYTUACJI ZDROWOTNEJ TO POSTAWA:'
+    ),
+    answers: [
+      {
+        option: 'SPRZYJAJĄCA LECZENIU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'POSTAWA NIEKORZYSTNA WOBEC LECZENIA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ŻADNA Z ODP. NIE JEST PRAWIDŁOWA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 421,
+    question: capitalizeSentences(
+      'ISTNIEJE WIELE DEFINICJI CHOROBY PRZEWLEKŁEJ. JEDNA Z NICH MÓWI, ŻE CHOROBA PRZEWLEKŁA TO TAKI NIEKORZYSTNY STAN, KTÓRY TRWA DŁUŻEJ NIŻ 3 MIESIĄCE W ROKU LUB WYMAGA CIĄGŁEJ HOSPITALIZACJI CO NAJMNIEJ PRZEZ OKRES:'
+    ),
+    answers: [
+      {
+        option: '1 MIESIĄCA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '5 MIESIĘCY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '12 MIESIĘCY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 422,
+    question: capitalizeSentences('DO OKLEPYWANIA PLECÓW PACJENTA DŁUGOTRWALE UNIERUCHOMIONEGO ZALECA SIĘ UŻYWANIE:'),
+    answers: [
+      {
+        option: 'ŻELU AKTYWIZUJĄCEGO Z GUARANĄ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'SPIRYTUSU SALICYLOWEGO'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WODY UTLENIONEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 423,
+    question: capitalizeSentences('PODCZAS OKLEPYWANIA DŁOŃ UKŁADAMY:'),
+    answers: [
+      {
+        option: 'PŁASKO'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'W KSZTAŁCIE ŁÓDKI'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'PŁASKO Z ROZSTAWIONYMI PALCAMI'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 424,
+    question: capitalizeSentences('OKLEPUJĄC PLECY PACJENTA NALEŻY OMIJAĆ:'),
+    answers: [
+      {
+        option: 'OKOLICE PŁUC'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OKOLICE NEREK I KREGOSŁUPA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'OKOLICE ŁOPATEK'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 425,
+    question: capitalizeSentences('OKLEPUJĄC PLECY PACJENTA NALEŻY PAMIĘTAĆ O KIERUNKU OKLEPYWANIA, KTÓRY ODBYWA SIĘ:'),
+    answers: [
+      {
+        option: 'OD DOŁU KU GÓRZE'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'OD GÓRY KU DOŁOWI'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OD LEWEJ DO PRAWEJ STRONY PLECÓW'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 426,
+    question: capitalizeSentences(
+      'PO WYKONANIU NEBULIZACJI Z GLIKOKORTYKOSTEROIDÓW NALEŻY POINFORMOWAĆ PACJENTA O KONIECZNOŚCI:'
+    ),
+    answers: [
+      {
+        option: 'PRZEPŁUKANIA JAMY USTNEJ WODĄ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'WYPICIA DWÓCH SZKLANEK WODY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'SSANIA CUKIERKÓW MIĘTOWYCH'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 427,
+    question: capitalizeSentences('ABY WYKONAĆ NEBULIZACJĘ U PACJENTA NALEŻY UŁOŻYĆ PACJENTA W POZYCJI:'),
+    answers: [
+      {
+        option: 'PŁASKIEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WYSOKIEJ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'NA BOKU'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 428,
+    question: capitalizeSentences('JEŚLI PODCZAS ODSYSANIA PACJENT ZROBI SIĘ SINY I NIESPOKOJNY NALEŻY:'),
+    answers: [
+      {
+        option: 'WYCOFAĆ CEWNIK I ZAWIADOMIĆ PIELĘGNIARKĘ LUB LEKARZA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'KONTYNUOWAĆ ODSYSANIE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WŁOŻYĆ GŁĘBIEJ CEWNIK'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 429,
+    question: capitalizeSentences('ŚREDNICA CEWNIKA DO ODSYSANIA POWINNA BYĆ:'),
+    answers: [
+      {
+        option: 'MNIEJSZA NIŻ POŁOWA ŚREDNICY RURKI TRACHEOSTOMIJNEJ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'WIĘKSZA NIŻ POŁOWA ŚREDNICY RURKI TRACHEOSTOMIJNEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'TAKA SAMA JAK ŚREDNICA RURKI TRACHEOSTOMIJNEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 430,
+    question: capitalizeSentences('ODSYSANIE JAMY USTNEJ A POŹNIEJ TCHAWICY TYM SAMYM CEWNIKIEM MOŻE POWODOWAĆ:'),
+    answers: [
+      {
+        option: 'ZAKRZTUSZENIE SIĘ PACJENTA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZADŁAWIENIE SIĘ PACJENTA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZAPALENIE PŁUC'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 431,
+    question: capitalizeSentences('ZBYT LUŹNE UMOCOWANIE RURKI TRACHEOSTOMIJNEJ:'),
+    answers: [
+      {
+        option: 'POPRAWIA WYMIANĘ GAZOWĄ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'GROZI WYSUNIĘCIEM SIĘ RURKI'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'POPRAWIA ODKRZTUSZANIE WYDZIELINY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 432,
+    question: capitalizeSentences(
+      'JEŚLI PODCZAS WYMIANY OPASKI DO RURKI TRACHEOSTOMIJNEJ PRZETNIESZ PRZEWÓD BALONU KONTROLONEGO WÓWCZAS MUSISZ:'
+    ),
+    answers: [
+      {
+        option: 'NIEZWŁOCZNIE POWIADOMIĆ PIELĘGNIARKĘ LUB LEKARZA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'POSTARAĆ SIĘ PRZYKLEIĆ ODCIĘTY FRAGMENT'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ODCIĘCIE BALONIKA NIE WPŁYWA NA WYMIANĘ GAZOWĄ WIĘC NIE MUSISZ NIC ROBIĆ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 433,
+    question: capitalizeSentences(
+      'NIESTOSOWANIE WYMIENNIKÓW CIEPŁA I WILGOCI ,CZYLI TZW. „SZTUCZNYCH NOSÓW” PROWADZI:'
+    ),
+    answers: [
+      {
+        option: 'NADMIERNEGO WYSUSZENIA BŁONY ŚLUZOWEJ TCHAWICY'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ZWIĘKSZENIA ODPORNOŚCI ORGANIZMU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZWIĘKSZENIA LICZBY ODDECHÓW'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 434,
+    question: capitalizeSentences(
+      'ETAPY CHOROBY WG. KÓBLER – ROSS TO ZAPRZECZENIE I IZOLACJA, GNIEW, TARGOWANIE, SIĘ, DEPRESJA, POGODZENIE SIĘ. ETAP W KTÓRYM OSOBA CHORA JEST PEŁNA BUNTU, DRAŻLIWOŚCI, PRETENSJI DO RODZINY I PERSONELU MEDYCZNEGO O NIEWYSTARCZAJĄCĄ OPIEKĘ. BEZ POWODU MOŻE WYBUCHAĆ GNIEWEM, JEST PEŁNA PRETENSJI, CO DO LECZENIA, MOŻE ŻĄDAĆ ZMIANY LEKARZA NA TAKIEGO, KTÓRY MU POMOŻE. CHORY JEST ZŁY NA LEKARZY, PIELĘGNIARKI, JEST NIEMIŁY DLA RODZINY TO ETAP:'
+    ),
+    answers: [
+      {
+        option: 'GNIEWU'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'POGODZENIE SIĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'TARGOWANIE'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 435,
+    question: capitalizeSentences('STOSOWANIE POSTRZĘPIONYCH GAZIKÓW WOKÓŁ RURKI TRACHEOSTOMIJNEJ MOŻE BYĆ POWODEM:'),
+    answers: [
+      {
+        option: 'ASPIRACJI NITKI'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ZAKAŻENIA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ROZKRWAWIENIA SIĘ RANY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 436,
+    question: capitalizeSentences(
+      'ZBYT MOCNE WYPEŁNIENIE MANKIETU USZCZELNIAJĄCEGO RURKI TRACHEOSTOMIJNEJ MOŻE SPOWODOWAĆ POWSTANIE:'
+    ),
+    answers: [
+      {
+        option: 'ODLEŻYNY'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ZESPÓŁU ZŁEGO WCHŁANIANIA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZADŁAWIENIE SIĘ PACJENTA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 437,
+    question: capitalizeSentences('W CELU ODŚLUZOWANIA DRÓG ODDECHOWYCH CEWNIK WPROWADZA SIĘ NA:'),
+    answers: [
+      {
+        option: 'OTWARTM SSANIU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZAMKNIĘTYM SSANIU'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'NIE MA ZNACZENIA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 438,
+    question: capitalizeSentences('CZAS ODSYSANIA PACJENTA NIE POWINIEN TRWAĆ DŁUŻEJ NIŻ:'),
+    answers: [
+      {
+        option: '2 SEKUNDY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '10-15 SEKUND'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '2 MINUTY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 439,
+    question: capitalizeSentences('ZADANIEM WYMIENNIKA CIEPŁA I WILGOCI JEST:'),
+    answers: [
+      {
+        option: 'ZAPOBIEGANIE DOSTANIU SIĘ DROBNOUSTROJOW DO TRACHEOSTOMII'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PEŁNI FUNKCJĘ ESTETYCZNĄ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OGRZEWA I NAWILŻA POWIETRZE, KTÓRE DOSTAJE SIĘ DO DOLNYCH DRÓG ODDECHOWYCH'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 440,
+    question: capitalizeSentences('JAKI OPATRUNEK DO TRACHEOSTOMII POWINNO UŻYWAĆ SIĘ:'),
+    answers: [
+      {
+        option: 'POSTRZĘPIONYCH GAZIKÓW'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KOMPRESÓW TRACHEOTOMIJNYCH'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'NIE JEST WYMAGANY OPATRUNEK DO TRACHEOSTOMII'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 441,
+    question: capitalizeSentences('PODCZAS ZABIEGU TRACHEOTOMII WYTWARZA SIĘ:'),
+    answers: [
+      {
+        option: 'TRACHEOSTOMIĘ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'GASTROSTOMIĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'JEJUNOSTOMIĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 442,
+    question: capitalizeSentences('JEDNYM ZE WSKAZAŃ DO TRACHEOTOMII MOŻE BYĆ:'),
+    answers: [
+      {
+        option: 'RAK TRZUSTKI'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'RAK WĄTROBY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'RAK KRTANI'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 443,
+    question: capitalizeSentences('WYMIENNIK CIEPŁA I WILGOCI JEST INACZEJ NAZYWANY:'),
+    answers: [
+      {
+        option: '„SZTUCZNYM NOSEM”'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '„SZTUCZNĄ KRTANIĄ”'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '„SZTUCZNĄ TCHAWICĄ”'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 444,
+    question: capitalizeSentences('MANKIET USZCZELNIAJĄCY WYPEŁNIA SIĘ:'),
+    answers: [
+      {
+        option: 'WODĄ Z KRANU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'POWIETRZEM'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'WYŁĄCZNIE SOLĄ FIZJOLOGICZNĄ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 445,
+    question: capitalizeSentences('TRACHEOTOMIA TO:'),
+    answers: [
+      {
+        option: 'INACZEJ TRACHEOSTOMIA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZABIEG, PODCZAS KTÓREGO WYTWARZA SIĘ TRACHEOSTOMIĘ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'USUNIĘCIE PĘCHERZYKA ŻÓŁCIOWEGO'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 446,
+    question: capitalizeSentences('RURKA, KTÓRA UMOŻLIWA PRZEPŁYW POWIETRZA DO KRTANI I POWSTANIE GŁOSU TO:'),
+    answers: [
+      {
+        option: 'KLASYCZNA RURKA TRACHEOSTOMIJNA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'RURKA FENESTRACYJNA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'RURKA Z OKIENKIEM'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 447,
+    question: capitalizeSentences(
+      'GRUŹLICA MOŻE DOTYCZYĆ KAŻDEGO NARZĄDU W ORGANIZMIE CZŁOWIEKA, JEDNAK ZARAŹLIWA JEST TYLKO GRUŹLICA: '
+    ),
+    answers: [
+      {
+        option: 'PŁUC'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'NEREK'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PRZYSADKI MÓZGOWEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 448,
+    question: capitalizeSentences(
+      'PŁEĆ MĘSKA , WIEK > 40 R.Ż. OTYŁOŚĆ, OBWÓD SZYI > 43 CM U MĘŻCZYZN I > 40 CM U KOBIET , ZMIANY ANATOMICZNE GÓRNYCH DRÓG ODDECHOWYCH, ZABURZENIA ROZWOJOWE ŻUCHWY, NADMIERNE SPOŻYWANIE ALKOHOLU, PALENIE PAPIEOSÓW TO CZYNNIKI RYZYKA: '
+    ),
+    answers: [
+      {
+        option: 'RAKA PŁUC'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OBTURACYJNEGO BEZDECHU SENNEGO'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'GRUŹLICY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 449,
+    question: capitalizeSentences(
+      'ZŁOTYM STANDARDEM I NAJSKUTECZNIEJSZĄ METODĄ LECZENIA OBTURACYJNEGO BEZDECHU SENNEGO, JEST WSPOMAGANIE ODDYCHANIA STAŁYM DODATNIM CIŚNIENIEM W DROGACH ODDECHOWYCH WYTWARZANYM ZA POMOCĄ TZW.'
+    ),
+    answers: [
+      {
+        option: 'aparatu CPAP',
+        isCorrect: true,
+      },
+      {
+        option: 'BUTLI TLENOWEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'RESPIRATORA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 450,
+    question: capitalizeSentences('OBJAWEM NAJCZĘŚCIEJ WYSTĘPUJĄCYM OBJAWEM RAKA PŁUC JEST/SĄ:'),
+    answers: [
+      {
+        option: 'NAWRACAJĄCE STANY ZAPALNE DRÓG ODDECHOWYCH'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KRWIOPLUCIE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KASZEL'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 451,
+    question: capitalizeSentences(
+      'OSTRE ZAPALENIE OSKRZELI TO OSTRE ZAKAŻENIE UKŁADU ODDECHOWEGO Z KASZLEM TRWAJĄCYM DO:'
+    ),
+    answers: [
+      {
+        option: '1 TYGODNIA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '3 TYGODNI'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'PÓŁ ROKU'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 452,
+    question: capitalizeSentences(
+      'BADANIE POLIGRAFICZNE TO BADANIE POLEGAJĄCE NA REJESTRACJI PRZEPŁYWU POWIETRZA PRZEZ DROGI ODDECHOWE, SATURACJI, REJESTRACJI CHRAPANIA ORAZ POZYCJI CIAŁA W CZASIE SNU. BADANIE TO PRZEPROWADZA SIĘ ABY ZDIAGNOZOWAĆ:'
+    ),
+    answers: [
+      {
+        option: 'ZAPALENIE PŁUC'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'GRUŹLICĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OBTURACYJNY BEZDECH SENNY'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 453,
+    question: capitalizeSentences(
+      'RAK PŁUCA JEST NAJCZĘSTSZYM NOWOTWOREM ZŁOŚLIWYM PŁUC WYWODZĄCYM SIĘ Z KOMÓREK NABŁONKA WYŚCIELAJĄCEGO DRZEWO OSKRZELOWEGO. GŁÓWNYM CZYNNIKIEM RYZYKA RAKA PŁUCA ODPOWIEDZIALNYM ZA 80-90% PRZYPADKÓW ZACHOROWAŃ NA TO SCHORZENIE JEST:'
+    ),
+    answers: [
+      {
+        option: 'WIEK'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PALENIE TYTONIU'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'NIEWŁAŚCIWA DIETA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 454,
+    question: capitalizeSentences(
+      'MUKOWISCYDOZA TO UWARUNKOWANA GENETYCZNIE CHOROBA POLEGAJĄCA NA ZABURZENIU WYDZIELANIA PRZEZ GRUCZOŁY ZEWNĄTRZWYDZIELNICZE CHLORU SODU I WODY. ZABURZENIA TE POLEGAJĄ NA:'
+    ),
+    answers: [
+      {
+        option: 'ZMNIEJSZENIU WYDZIELANIA CHLORU A ZWIEKSZENIE WYDZIELANIA WODY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZWIĘKSZENIE WYDZIELANIA CHLORU I SODU A ZMNIEJSZENIE WYDZIELANIA WODY'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ZMNIEJSZENIE WYDZIELANIA CHLORU, SODU I WODY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 455,
+    question: capitalizeSentences(
+      'OSTRE ZAPALENIE OSKRZELI TO OSTRE ZAKAŻENIE UKŁADU ODDECHOWEGO Z KASZLEM TRWAJĄCYM DO 3 TYGODNI, ROZPOZNAWANE PO WYKLUCZENIU ZAPALENIA PŁUC. NAJCZĘSTSZĄ PRZYCZYNĄ OSTREGO ZAPALNIA OSKRZELI SĄ: '
+    ),
+    answers: [
+      {
+        option: 'BAKTERIE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WIRUSY'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'PRIONY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 456,
+    question: capitalizeSentences('ASTMĘ ALERGICZNĄ , INACZEJ ZWANĄ ATOPOWĄ , POWODUJĄ/ POWODUJE:'),
+    answers: [
+      {
+        option: 'INFEKCJE WIRUSOWE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'STRES'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ALERGENY'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 457,
+    question: capitalizeSentences('CZĘSTOŚĆ WYSTĘPOWANIA ASTMY ROŚNIE BARDZO SZYBKO WŚRÓD DZIECI MIESZKAJĄCYCH:'),
+    answers: [
+      {
+        option: 'NA WSIACH'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'W DUŻYCH AGLOMERACJACH MIEJSKICH'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'WSKAŹNIK ZACHOROWALNOŚCI NA ASTMĘ NA WSI I W DUŻYCH AGLOMERACJACH JEST PORÓWNYWALNY'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 458,
+    question: capitalizeSentences(
+      'WSZYSTKIM CHORYM Z PRZEWLEKŁĄ OBTURACYJNĄ CHOROBA PŁUC ( POChP) ZALECA SIĘ SZCZEPIENIA PRZECIWKO:'
+    ),
+    answers: [
+      {
+        option: 'GRYPIE'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ODRZE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'MENINGOKOKOM'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 459,
+    question: capitalizeSentences(
+      'CHARAKTERYSTYCZNYM OBJAWEM DLA PRZEWLEKŁEJ OBTURACYJNEJ CHOROBY PŁUC ( POChP), KTÓRY NIE WYSTĘPUJE W ASTMIE OSKRZELOWEJ JEST: '
+    ),
+    answers: [
+      {
+        option: 'DUSZNOŚĆ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KASZEL'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ODKSZTUSZANIE PLWOCINY'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 460,
+    question: capitalizeSentences(
+      'PODSTAWĄ LECZENIA ASTMY SĄ GLIKORTYKOSTEROIDY WZIEWNE. ABY ZAPOBIEC ICH SKUTKOM UBOCZNYM W POSTACI GRZYBICY JAMY USTNEJ I GARDŁA, NALEŻY: '
+    ),
+    answers: [
+      {
+        option: 'STOSOWAĆ PROFILAKTYCZNIE PREPARATY Z NYSTATYNĄ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PŁUKAĆ JAMĘ USTNĄ I GARDŁO PO KAŻDEJ INHALACJI Z LEKU'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'PĘDZLOWAĆ JAMĘ USTNĄ BORAKSEM Z GLICERYNĄ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 461,
+    question: 'Badania umożliwiające diagnostykę POChiP to:',
+    answers: [
+      {
+        option: 'EKG wysiłkowe',
+        isCorrect: false,
+      },
+      {
+        option: 'BRONCHOSKOPIA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'SPIROMETRIA'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 462,
+    question: capitalizeSentences(
+      'TECHNIKA MAJĄCA NA CELU OCZYSZCZENIE RANY POPRZEZ FIZYCZNE USUNIĘCIE (WYPŁUKANIE) Z NIEJ SUBSTANCJI SZKODLIWYCH, TAKICH JAK ZIEMIA, ENDOGENNE I ENZOGENNE SUBSTANCJE TRUJĄCE, RESZTKI TKANKOWE, TOKSYNY RÓŻNEGO POCHODZENIA, MIKROORGANIZMY, W TYM MECHANICZNE USUNIĘCIE BIOFILMU BAKTERYJNEGO TO:'
+    ),
+    answers: [
+      {
+        option: 'LAWASEPTYKA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ANTYSEPTYKA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ASEPTYKA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 463,
+    question: capitalizeSentences('HIPOGLIKEMIA TO STĘŻENIE POZIOMU CUKRU WE KRWI: '),
+    answers: [
+      {
+        option: 'PONIŻEJ 100 MG/DL'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'POWYŻEJ 70 MG/DL'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PONIŻEJ 70 MG/DL'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 464,
+    question:
+      'Na pośladku długotrwale unieruchomionego zauważasz zaczerwienienie. Po uciśnięciu palcem zaczerwienienie blednie. W skali Torance’a jest to odleżyna:',
+    answers: [
+      {
+        option: '1 STOPNIA (BLEDNĄCE ZACZERWIENIENIA)'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '2 STOPNIA (NIE BLEDNIE)'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '3 STOPNIA (USZKODZENIE SKÓRY DO TKAN. PODSKÓR.)'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '4 STOPNIA (USZKODZENIE DO TKAN. TŁUSZCZOWEJ)'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '5 STOPNIA (ZAAWANSOWANA MARTWICA)'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 465,
+    question: capitalizeSentences(
+      'PIONIZACJA PACJENTA PO DŁUGOTRWAŁYM UNIERUCHOMIENIU POWINNA ODBYWAĆ SIĘ STOPNIOWO. PIERWSZE SADZENIE NA ŁÓŻKU NIE POWINNO TRWAĆ DŁUŻEJ NIŻ: '
+    ),
+    answers: [
+      {
+        option: '2 MINUTY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '10 MINUT'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '1 GODZINĘ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 466,
+    question: capitalizeSentences(
+      'JEDNĄ ZE ZMIAN W UKŁ.MIĘŚNIOWO – SZKIELETOWYM ZACHODZĄCĄ NA SKUTEK UBYTKU MASY MIĘŚNIOWEJ JEST SARKOPENIA. SARKOPENIA TO:'
+    ),
+    answers: [
+      {
+        option: 'ZMNIEJSZENIE MASY MIĘŚNIOWEJ'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'ZWIĘKSZENIE MASY MIĘŚNIOWEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'ZMNIEJSZENIE MASY KOSTNEJ'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 467,
+    question: 'Wg. Pól Lalonde’a największy wpływ na zdrowie człowieka ma:',
+    answers: [
+      {
+        option: 'STYL ŻYCIA (PONAD 50%)'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'GENETYKA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'OPIEKA ZDROWOTNA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 468,
+    question: capitalizeSentences('DO OCENY ZAAWANSOWANYCH CZYNNOŚCI ŻYCIA CODZIENNEGO NALEŻĄ: '),
+    answers: [
+      {
+        option: 'Skala Katza',
+        isCorrect: false,
+      },
+      {
+        option: 'Skala Lawtona',
+        isCorrect: true,
+      },
+      {
+        option: 'Skala Norton',
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 469,
+    question: capitalizeSentences('PODSTAWOWĄ JEDNOSTKĄ FUNKCJONALNĄ I BUDULCOWĄ KAŻDEGO ŻYWEGO ORGANIZMU JEST:'),
+    answers: [
+      {
+        option: 'KOMÓRKA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'TKANKA'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'NARZĄD'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 470,
+    question: capitalizeSentences('WSKAŻ ZASADY PRZECHOWYWANIA LEKÓW:'),
+    answers: [
+      {
+        option: 'LEKÓW NIE MOŻNA PRZECHOWYWAĆ W MIEJSCACH WILGOTNYCH, CIEPŁYCH, NASŁONECZNIONYCH '.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'NIE WOLNO ODCINAĆ Z BLISTRÓW DATY WAŻNOŚCI I SERII LEKU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'PRZETERMINOWANE LEKI WYRZUCA SIĘ DO MIEJSC DO TEGO PRZEZNACZONYCH, NP. APTEKI'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WSZYSTKIE ODPOWIEDZI SĄ PRAWDZIWE'.toLowerCase(),
+        isCorrect: true,
+      },
+    ],
+  },
+  {
+    number: 471,
+    question:
+      'Co oznacza "LADME" ? <L – liberation (uwolnienie) A – absorption (wchłanianie) D – distribution (rozmieszczenie) M – metabolism (metabolizm) E – excretion lub elimination (wydalanie/usuwanie)>',
+    answers: [
+      {
+        option: 'CZAS, W JAKIM LEK POZOSTAJE W USTROJU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'FARMAKOKINETYCZNY OPIS LEKÓW W ORGANIZMIE'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'POLE POD KRZYWĄ ZALEŻNOŚCI STĘŻENIA LEKU WE KRWI OD CZASU'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'KLIRENS LEKU'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 472,
+    question: capitalizeSentences('WSKAŻ, CZEGO NALEŻY BEZWGLĘDNIE PRZESTRZEGAĆ PODCZAS STOSOWANIA ANTYBIOTYKÓW:'),
+    answers: [
+      {
+        option: 'WŁAŚCIWEGO DAWKOWANIA LEKÓW'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'POZOSTAWIENIE ANTYBIOTYKU ,,NA PÓŹNIEJ” W RAZIE NIEPOWODZENIA TERAPII'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'POPIJANIA ANTYBIOTYKU MINIMALNĄ ILOŚCIĄ WODY'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'WSZYSTKIE ODPOWIEDZI SĄ POPRAWNE'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 473,
+    question: capitalizeSentences('SERCE SKŁADA SIĘ Z: '),
+    answers: [
+      {
+        option: 'Z 2 PRZEDSIONKÓW I 2 KOMÓR'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: '1 PRZEDSIONKA I 2 KOMÓR'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: '2 KOMÓR I 1 PRZEDSIONKA'.toLowerCase(),
+        isCorrect: false,
+      },
+    ],
+  },
+  {
+    number: 474,
+    question: capitalizeSentences(
+      'PODCZAS ODWIEDZN W SZPITALU RODZINA CHOREGO PROSI CIĘ O INFORMACJĘ O STANIE ZROWIA PACJENTA, CHODZI O WYNIKI KTÓRE ZNASZ BO SŁYSZAŁEŚ ROZMOWĘ LEKARZY. JAK POSTĄPISZ?'
+    ),
+    answers: [
+      {
+        option: 'UDZIELASZ INFORMACJI WYŁĄCZNIE SIOSTRZE'.toLowerCase(),
+        isCorrect: false,
+      },
+      {
+        option: 'GRZECZNIE POINFORMUJESZ ŻE NIE WOLNO CI UDZIELAĆ INF. O STANIE ZDROWIA'.toLowerCase(),
+        isCorrect: true,
+      },
+      {
+        option: 'CHĘTNIE UDZIELASZ INF. PONIEWAŻ ZNASZ RODZINĘ'.toLowerCase(),
         isCorrect: false,
       },
     ],
