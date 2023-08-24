@@ -174,30 +174,54 @@ export const experiences = [
 
 import { questions } from '../questions'
 
-export const LETTERS = ['a', 'b', 'c', 'd', 'e']
+export const LETTERS = ['a', 'b', 'c', 'd', 'e'] // it depends on how many options in answers []
 
 export const INFO = {
   title: 'Informacje dotyczące platformy e-learningowej',
   content:
     'Testy nie są powiązane z CMKP, zostały przez mnie wykonane całkowicie dla potrzeb grupy i osób zainteresowanych egzaminem doskanalającym dla opiekuna medycznego na podstawie materiałów udostępnionych przez członków grupy. Platforma E-learningowa jest częścią mojej działalności jako programisty, którą rozwijam w formie open-source. Nie czerpię z tego żadnych korzyści finansowych, ale każdy chętny może mnie wesprzeć poprzez mój profil na LinkedIn lub kupując mi kawę:',
-  linkTitle: 'Buy Me a coffee',
-  link: 'https://www.buymeacoffee.com/grzegorzwolfinger',
+  links: [
+    {
+      title: 'Buy Me a coffee',
+      url: 'https://www.buymeacoffee.com/grzegorzwolfinger',
+    },
+  ],
 }
 
 export const TEST = {
   title: 'Opiekun Medyczny - test, informacje ogólne',
   content: `Testy udostępnione dzięki uprzejmości członków grupy Opiekuna Medycznego na Facebooku. Łączna ilość pytań na
   chwilę obecną ${questions.length}/477. Test z odpowiedziami bazuje w 100% na zrzutach ekranu pytań
-  umieszczonych na grupie. Kilka brakujących pytań to pytania, na których były widoczne zdjęcia, atakże pytania
-  w niskiej rozdzielczości. Oczywiście, w trakcie formułowania tego testu mogły się pojawić drobne błędy
+  umieszczonych na grupie. Oczywiście, w trakcie formułowania tego testu mogły się pojawić drobne błędy
   literowe lub niezgodności. Jeżeli ktoś zauważy jakiekolwiek błędy, proszę o wiadomość: `,
-  linkTitle: 'LinkedIn',
-  link: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/',
+  links: [
+    {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/grzegorz-wolfinger-b88856229/',
+    },
+  ],
 }
 
 export const MULTIMEDIA = {
-  title: '',
-  content: '',
-  linkTitle: 'Procedury',
-  link: 'https://kidl.org.pl/book/category?id=1',
+  title: 'Opiekun Medyczny - linki do literatury dodatkowej i pliki do pobrania ',
+  content:
+    'W tym miejscu bedą zamieszczane wszystkie linki i pliki , które są zamieszczane na grupie lub ktoś wyśle je bezpośrednio do mnie, żebym je dołączył. Poniżej znajdziecie linki:',
+  links: [
+    {
+      title: 'Procedury i algorytmy',
+      url: 'https://drive.google.com/file/d/1BXNkqw6mL9F_Ami5gSmqNU7eU2FVUhHt/view?usp=drive_link',
+    },
+    {
+      title: 'Skrypt-Opiekun Medyczny',
+      url: 'https://drive.google.com/file/d/1jA7JxVKTdETIeU90Rb1fpUeiwMcGxVaC/view?usp=drive_link',
+    },
+    {
+      title: 'Literatura dodatkowa',
+      url: 'https://kidl.org.pl/book/category?id=1&fbclid=IwAR0LxLTredD4WnlBKa7sjFfez6BjXSECe7JGh86oWm6HK9qDyEfzIg3d9f8',
+    },
+    {
+      title: 'Pytania-Medyczne',
+      url: 'https://drive.google.com/file/d/1CbDT7ha5tK3B8K3QYYlh8JfQStZNiHkb/view?usp=drive_link',
+    },
+  ],
 }

@@ -1,7 +1,7 @@
 import styles from './Learning.module.scss'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { INFO, TEST } from '@/data/constants'
+import { INFO, TEST, MULTIMEDIA } from '@/data/constants'
 import { InfoCard, Test, LearningPanel, SidePanel, NavBar } from '@/components'
 import { QuestionCardInterface } from '@/types'
 
@@ -77,21 +77,22 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
             setSearchTerm={setSearchTerm}
             setIsSidePanelOpen={setIsSidePanelOpen}
           />
+          {!mode && (
+            <div className={styles.image_container}>
+              <Image src="/images/online.png" alt="learn" width={650} height={300} className={styles.image} priority />
+            </div>
+          )}
           <div className={styles.test_container}>
             {!mode && (
               <>
                 <InfoCard {...TEST} />
+                <InfoCard {...MULTIMEDIA} />
                 <InfoCard {...INFO} />
               </>
             )}
             {mode === 'study' && <LearningPanel data={filteredQuestions} />}
             {mode === 'test' && <Test />}
           </div>
-          {!mode && (
-            <div className={styles.image_container}>
-              <Image src="/images/online.png" alt="learn" width={650} height={300} className={styles.image} priority />
-            </div>
-          )}
         </div>
       </div>
     </section>
