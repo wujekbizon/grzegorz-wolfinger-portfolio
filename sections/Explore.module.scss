@@ -3,6 +3,7 @@
 .explore {
   width: 100%;
   background: radial-gradient(circle farthest-side at var(--x, 100px) var(--y, 100px), #fa6400 0.1%, transparent 1.5%);
+  padding-bottom: 50px;
 
   .overview {
     padding: 100px;

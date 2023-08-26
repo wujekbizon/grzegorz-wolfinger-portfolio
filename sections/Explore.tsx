@@ -1,5 +1,6 @@
 import styles from './Explore.module.scss'
 import { useRef } from 'react'
+import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { fadeIn, zoomIn, staggerContainer } from '@/utils/motion'
 import { DESIGN, AI } from '@/data/constants/cards'
@@ -51,12 +52,12 @@ const Explore = () => {
       </article> */}
 
       <article className={styles.divider}>
-        {/* <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
+        <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
           Do you want to find out more about new ways of creating applications?{' '}
           <Link href="/about#contact">
             Please <span className={styles.span}>contact me</span>
           </Link>
-        </motion.h1> */}
+        </motion.h1>
       </article>
     </motion.section>
   )
