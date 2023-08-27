@@ -8,7 +8,7 @@ const HtmlIcon: React.FC<IconAttributes> = ({
 }) => {
   return (
     <motion.svg
-      animate={{ rotate: [0, 90], x: [0, 0, 0, -30] }}
+      animate={{ rotate: [0, 90], x: [0, 0, 0, -20] }}
       transition={{
         duration: 2,
         repeat: Infinity,

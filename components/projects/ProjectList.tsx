@@ -4,9 +4,9 @@ import { staggerContainer } from '../../utils/motion'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
-const DynamicProjectCard = dynamic(() => import('../projects/ProjectCard'), {
+export const DynamicProjectCard = dynamic(() => import('../projects/ProjectCard'), {
   loading: () => <p>Loading...</p>,
-  ssr: false
+  ssr: false,
 })
 
 export type ProjectsProps = {

@@ -2,7 +2,7 @@ import styles from './ProjectCard.module.scss'
 import { ProjectData } from '@/types'
 import Image from 'next/image'
 import { cloudinaryLoader } from '@/helpers/cloudinary'
-import { motion } from 'framer-motion'
+import { MotionStyle, motion } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
 import { fadeIn } from '../../utils/motion'
 import generateRandomColor from '@/utils/generateRandomColor'
@@ -10,13 +10,14 @@ import generateRandomColor from '@/utils/generateRandomColor'
 type ProjecCardProps = {
   project: ProjectData
   index: number
+  style?: MotionStyle
 }
 
-const ProjectCard = ({ project, index }: ProjecCardProps) => {
+const ProjectCard = ({ project, index, style }: ProjecCardProps) => {
   const { name, text, skills, url, imgSrc, githubUrl } = project
 
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)} style={style}>
       <Tilt
         className={`glassmorphism ${styles.tilt_container}`}
         scale={1}

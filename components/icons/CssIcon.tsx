@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const CssIcon: React.FC<IconAttributes> = ({ width = 56, height = 56, primary = '#1B73BA', secondary = '#1C88C7' }) => {
   return (
     <motion.svg
-      animate={{ rotate: [0, -90], x: [0, 0, 0, 30] }}
+      animate={{ rotate: [0, -90], x: [0, 0, 0, 20] }}
       transition={{
         duration: 2,
         repeat: Infinity,

@@ -1,7 +1,107 @@
+@import '../../styles/globals.scss';
+
 .animation_container {
-  height: 100vh;
-  width: 500vw;
-  // display: flex;
-  // flex-direction: row;
-  overflow-x: clip;
+  position: relative;
+  display: grid;
+  gap: $spacer;
+  grid-auto-flow: column;
+  grid-auto-columns: 98%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  padding: 0 $spacer $spacer;
+  margin-top: 30px;
+  // scrollbar-width: none;
+  // -ms-overflow-style: none;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+
+  .card_wrapper {
+    padding: $spacer;
+    border-radius: 0.5rem;
+    background-color: $dark600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    gap: 40px;
+
+    .card_project {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card_extra {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 30px;
+      gap: 10px;
+
+      h3 {
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      p {
+        font-size: 15px;
+        padding-bottom: 20px;
+        font-weight: 300;
+        color: $secondary200;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      li {
+        font-size: 14px;
+        font-weight: 500;
+        color: #db6300;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: $spacer;
+    }
+
+    .image {
+      inline-size: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+  .progress_bar {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #db6300;
+    transform-origin: 0%;
+  }
+}
+
+.animation_snaps {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: $spacer;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+
+  &:last-child {
+    scroll-snap-align: end;
+  }
 }

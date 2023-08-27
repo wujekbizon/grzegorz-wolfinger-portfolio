@@ -1,6 +1,5 @@
 import { Home } from '@/components'
 import Head from 'next/head'
-import AnimationLayout from '@/components/layout/AnimationLayout'
 
 const HomePage = () => {
   return (
@@ -13,7 +12,6 @@ const HomePage = () => {
         />
       </Head>
       <Home />
-      {/* <AnimationLayout /> */}
     </>
   )
 }

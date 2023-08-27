@@ -8,6 +8,13 @@ export interface ProfileItems {
   link?: string
 }
 
+export interface ProjectExtraContent {
+  question: string
+  content: string
+  items: string[]
+  summary: string
+}
+
 export interface ProjectData {
   _id: string
   type: string
@@ -16,12 +23,13 @@ export interface ProjectData {
   skills: string[]
   url: string
   githubUrl: string
-  imgSrc: string
+  imgSrc: string | StaticImageData
   createdAt?: Date
   x?: number
   y?: number
   z?: number
   color?: string
+  extraContent?: ProjectExtraContent
 }
 
 export type ExperienceProps = {

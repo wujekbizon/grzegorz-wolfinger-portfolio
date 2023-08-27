@@ -1,8 +1,8 @@
 import styles from './Explore.module.scss'
 import { useRef } from 'react'
-import Link from 'next/link'
+
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { fadeIn, zoomIn, staggerContainer } from '@/utils/motion'
+import { staggerContainer } from '@/utils/motion'
 import { DESIGN, AI } from '@/data/constants/cards'
 import { Title, TitleButton, Card } from '@/components'
 import { useDebouncedMouseMove } from '@/hooks/useDebouncedMouseMove'
@@ -43,22 +43,6 @@ const Explore = () => {
 
       <Card {...DESIGN} />
       <Card {...AI} custom />
-
-      {/* <article className={styles.divider}>
-        <motion.h1 variants={zoomIn(1, 2)}>
-          As a developer, I believe applications should be scalable, cost-effective, cross-platform, secure and should
-          utilizing a <span className={styles.span}> peer-to-peer network </span>
-        </motion.h1>
-      </article> */}
-
-      <article className={styles.divider}>
-        <motion.h1 variants={fadeIn('up', 'tween', 0.5, 0.5)}>
-          Do you want to find out more about new ways of creating applications?{' '}
-          <Link href="/about#contact">
-            Please <span className={styles.span}>contact me</span>
-          </Link>
-        </motion.h1>
-      </article>
     </motion.section>
   )
 }

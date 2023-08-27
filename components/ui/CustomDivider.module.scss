@@ -1,0 +1,41 @@
+@import '../../styles/globals.scss';
+
+.divider_wrapper {
+  padding: 35px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  .divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .span {
+      color: #fa6400;
+    }
+
+    h1 {
+      max-width: 1280px;
+      font-size: 30px;
+      padding: 30px 0;
+      border-top: 1px solid rgba(124, 77, 170, 0.4);
+      border-bottom: 1px solid rgba(124, 77, 170, 0.4);
+      text-align: center;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include smMobile {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.show {
+  transform: translateX(0%);
+  opacity: 1;
+}

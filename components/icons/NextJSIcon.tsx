@@ -8,7 +8,7 @@ const NextJSIcon: React.FC<IconAttributes> = ({
 }) => {
   return (
     <motion.svg
-      animate={{ y: [0, -200, 0], rotateX: [0, 360] }}
+      animate={{ y: [0, -45, 0], rotateX: [0, 360] }}
       transition={{
         duration: 2,
         repeat: Infinity,
