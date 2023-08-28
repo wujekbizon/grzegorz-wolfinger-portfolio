@@ -35,6 +35,11 @@ import TitleButton from './ui/TitleButton'
 import Title from './ui/Title'
 import ExploreLink from './ui/ExploreLink'
 import Card from './card/Card'
+import Line from './ui/Line'
+import PortfolioTitle from './ui/PortfolioTitle'
+import CustomDivider from './ui/CustomDivider'
+import VerticalLine from './ui/VerticalLine'
+import NeonDigit from './ui/NeonDigit'
 
 export {
   Layout,
@@ -74,4 +79,9 @@ export {
   TitleButton,
   ExploreLink,
   Card,
+  Line,
+  PortfolioTitle,
+  CustomDivider,
+  VerticalLine,
+  NeonDigit,
 }

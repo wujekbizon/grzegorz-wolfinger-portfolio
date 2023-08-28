@@ -1,6 +1,6 @@
 import styles from './Home.module.scss'
 import { Hero, Explore, Technologies } from '@/sections'
-import CustomDivider from '../ui/CustomDivider'
+import { CustomDivider, PortfolioTitle } from '@/components'
 import AnimationLayout from '../layout/AnimationLayout'
 
 const Home = () => {
@@ -10,7 +10,8 @@ const Home = () => {
       <Explore />
       <Technologies />
       <CustomDivider />
-      {/* <AnimationLayout /> */}
+      <PortfolioTitle />
+      <AnimationLayout />
     </main>
   )
 }

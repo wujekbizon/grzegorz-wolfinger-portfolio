@@ -10,7 +10,6 @@
   overflow-y: hidden;
   overscroll-behavior-inline: contain;
   padding: 0 $spacer $spacer;
-  margin-top: 30px;
   // scrollbar-width: none;
   // -ms-overflow-style: none;
 
@@ -18,15 +17,47 @@
   //   display: none;
   // }
 
+  @include smMobile {
+    padding: 0 $smSpacer $smSpacer;
+    gap: $smSpacer;
+  }
+
   .card_wrapper {
     padding: $spacer;
     border-radius: 0.5rem;
-    background-color: $dark600;
+    background-color: rgba(26, 45, 71, 0.3);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     // justify-content: center;
     gap: 40px;
+
+    @include lgTablet {
+      gap: 20px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include smMobile {
+      padding: $spacer $smSpacer;
+    }
+
+    .title_wrapper {
+      text-transform: uppercase;
+
+      @include lgTablet {
+        h4 {
+          text-transform: none;
+          font-size: 10px;
+        }
+      }
+
+      @include smMobile {
+        align-self: center;
+      }
+    }
 
     .card_project {
       flex: 1;
@@ -38,34 +69,71 @@
     .card_extra {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       flex: 1;
       padding: 30px;
       gap: 10px;
+
+      @include lgTablet {
+        padding: 0;
+      }
+
+      @include tablet {
+        padding: 30px;
+      }
+
+      @include mobile {
+        padding: 0;
+      }
 
       h3 {
         font-size: 17px;
         font-weight: 700;
         text-transform: uppercase;
         color: white;
+        font-family: 'Raleway';
       }
 
       p {
+        font-family: 'Raleway';
         font-size: 15px;
-        padding-bottom: 20px;
-        font-weight: 300;
-        color: $secondary200;
+        margin: 20px 0px;
+        font-weight: 200;
+        color: white;
+
+        @include smMobile {
+          text-align: center;
+        }
       }
 
       ul {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        padding: 0 30px;
+        font-family: 'Raleway';
+        margin-bottom: 20px;
       }
 
       li {
         font-size: 14px;
         font-weight: 500;
-        color: #db6300;
+        text-align: left;
+        color: white;
+        list-style: square;
+
+        @include smMobile {
+          text-align: center;
+          list-style: none;
+        }
+      }
+
+      h5 {
+        font-size: 18px;
+        line-height: normal;
+        font-weight: 500;
+        font-family: 'Raleway';
+        text-align: center;
       }
     }
 
@@ -84,12 +152,13 @@
   }
   .progress_bar {
     position: fixed;
-    top: 74px;
+    bottom: 10px;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 10px;
     background: #db6300;
     transform-origin: 0%;
+    z-index: 99;
   }
 }
 
