@@ -1,25 +1,12 @@
 import styles from './AnimationLayout.module.scss'
-import { useRef } from 'react'
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { DynamicProjectCard } from '../projects/ProjectList'
 import { featuredProjects } from '../../data/featuredProjects'
-import { TitleButton, Line, Title } from '@/components'
+import { TitleButton, Line } from '@/components'
 
 const AnimationLayout = () => {
-  const targetRef = useRef<HTMLDivElement>(null)
-  const { scrollXProgress } = useScroll({
-    container: targetRef,
-  })
-
-  const scaleX = useSpring(scrollXProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
-
   return (
-    <motion.section className={`${styles.animation_container} ${styles.animation_snaps}`} ref={targetRef}>
-      <motion.div className={styles.progress_bar} style={{ scaleX }} />
+    <motion.section className={`${styles.animation_container} ${styles.animation_snaps}`}>
       {featuredProjects.map((project, index) => {
         const { extraContent } = project
         return (

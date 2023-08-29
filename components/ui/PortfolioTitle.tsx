@@ -1,5 +1,6 @@
 import styles from './PortfolioTitle.module.scss'
-import { TitleButton, Title, Line, VerticalLine, NeonDigit } from '@/components'
+import { motion } from 'framer-motion'
+import { TitleButton, Title } from '@/components'
 
 const PortfolioTitle = () => {
   return (
@@ -8,20 +9,18 @@ const PortfolioTitle = () => {
         <TitleButton title="My recent additions to" />
         <Title title="Portfolio Projects" />
       </div>
-      {/* <div className={styles.digital_screen}>
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="transparent" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-        <NeonDigit width="25px" height="20px" color="white" />
-      </div> */}
+      <div className={styles.scroll}>
+        <motion.h4
+          animate={{ x: [-45, 0], opacity: [0, 1] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: 'loop',
+          }}
+        >
+          Scroll Right -&gt;
+        </motion.h4>
+      </div>
     </section>
   )
 }

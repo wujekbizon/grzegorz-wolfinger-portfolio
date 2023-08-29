@@ -10,12 +10,19 @@
   overflow-y: hidden;
   overscroll-behavior-inline: contain;
   padding: 0 $spacer $spacer;
-  // scrollbar-width: none;
-  // -ms-overflow-style: none;
 
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(189.97deg, #ae67fa 50% 1.84%, #f49867 102.67%);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
   @include smMobile {
     padding: 0 $smSpacer $smSpacer;
@@ -149,16 +156,6 @@
       aspect-ratio: 16 / 9;
       object-fit: cover;
     }
-  }
-  .progress_bar {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background: #db6300;
-    transform-origin: 0%;
-    z-index: 99;
   }
 }
 
