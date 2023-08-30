@@ -52,7 +52,7 @@ export const featuredProjects: ProjectData[] = [
     skills: ['nextjs, typescript, redux, mongodb'],
     githubUrl: 'https://github.com/wujekbizon/next-wolfpad',
     text: 'Welcome to Wolfpad - an interactive coding environment. The code in each code editor is all joined together into one file. If you define a variable in cell #1, you can refer to it in any following cell! In addition, it allows you to use Excalidraw, Lexical Editor, and even get access to Chat Gpt3.5. New version coming soon!',
-    url: 'https://wolfpad.vercel.app/wolfpad',
+    url: 'https://wolfpad.vercel.app/',
     type: 'FULL STACK DEVELOPER',
     extraContent: {
       question: 'Ready to level up your coding experience with Wolfpad?',
@@ -72,9 +72,9 @@ export const featuredProjects: ProjectData[] = [
     imgSrc: 'v1693221550/Wesa/wesa1_v6sshx.png',
     name: 'WESA',
     skills: ['react,vite, typescript, framer-motion'],
-    githubUrl: 'https://github.com/wujekbizon/rn-school-lockers',
+    githubUrl: 'https://github.com/wujekbizon/wesa-web',
     text: 'At WESA, we specialize in designing and delivering customized web and mobile applications for businesses and private customers. Our team of expert solution architects combines the latest technologies with industry best practices to create innovative, user-friendly, and scalable solutions.',
-    url: 'https://github.com/wujekbizon/rn-school-lockers',
+    url: 'https://wesa.vercel.app/',
     type: 'SASS SOLUTIONS',
     extraContent: {
       question: 'Welcome to WESA, where innovation thrives!',
@@ -140,7 +140,7 @@ export const featuredProjects: ProjectData[] = [
     skills: ['react native, typescript, redux, mongodb'],
     githubUrl: 'https://github.com/wujekbizon/wesa-web',
     text: 'Introducing City Tour, the mobile react native app that brings maps to life! With real-time rendering and an interactive interface, this app showcases all the attractions near you. Coming to Android and iOS - Spring 2024',
-    url: 'https://github.com/wujekbizon/wesa-web',
+    url: 'https://wesa.vercel.app/',
     type: 'MOBILE APPLICATION',
     extraContent: {
       question: 'What is City Tour ?',
