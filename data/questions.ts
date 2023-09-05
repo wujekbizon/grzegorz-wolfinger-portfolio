@@ -4675,11 +4675,11 @@ export const questions = [
       },
       {
         option: 'nordic walking',
-        isCorrect: false,
+        isCorrect: true,
       },
       {
         option: 'podnoszenie ciężarów',
-        isCorrect: true,
+        isCorrect: false,
       },
     ],
   },
