@@ -5,6 +5,7 @@ import { InputValues } from '@/types'
 import { questionnaireOptions } from '@/data/questionnaireOptions'
 
 const QuestionnaireForm = () => {
+  const [isFormValid, setIsFormValid] = useState(false)
   const [inputValues, setInputValues] = useState<InputValues>({
     selectedOption1: '',
     selectedOption2: '',
@@ -12,11 +13,12 @@ const QuestionnaireForm = () => {
     selectedOption4: '',
     selectedOption5: '',
   })
-  const [isFormValid, setIsFormValid] = useState(false)
 
   useEffect(() => {
-    setIsFormValid(Object.values(inputValues).every((val) => val !== ''))
-  }, [inputValues])
+    setIsFormValid(
+      questionnaireOptions?.every(({ options }) => options.some((option) => inputValues[option.name] !== ''))
+    )
+  }, [inputValues, questionnaireOptions])
 
   const handleOptionChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
