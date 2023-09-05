@@ -16,6 +16,7 @@ const NavBar: React.FC<LearningNavBarInterface> = ({
   handleHomeBack,
   handleModeStudy,
   handleModeTest,
+  handleQuestionnaire,
   isSidePanelOpen,
   setIsSidePanelOpen,
 }) => {
@@ -31,9 +32,11 @@ const NavBar: React.FC<LearningNavBarInterface> = ({
       <MobileMenuButtons
         isStudy={mode === 'study'}
         isTest={mode === 'test'}
+        isForm={mode === 'form'}
         handleHomeBack={handleHomeBack}
         handleModeStudy={handleModeStudy}
         handleModeTest={handleModeTest}
+        handleQuestionnaire={handleQuestionnaire}
         isSidePanelOpen={isSidePanelOpen}
       />
     </nav>

@@ -62,10 +62,12 @@ export interface CustomButtonInterface {
 export interface MobileMenuButtonsInterface {
   isStudy?: boolean
   isTest?: boolean
+  isForm?: boolean
   isSidePanelOpen: boolean
   handleModeStudy: () => void
   handleModeTest: () => void
   handleHomeBack: () => void
+  handleQuestionnaire: () => void
 }
 
 export interface InputSearchInterface {
@@ -83,9 +85,11 @@ export interface InfoCardProps {
 export interface MenuButtonsInterface {
   isStudy: boolean
   isTest: boolean
+  isForm: boolean
   handleModeStudy: () => void
   handleModeTest: () => void
   handleHomeBack: () => void
+  handleQuestionnaire: () => void
   className?: string
 }
 
@@ -94,6 +98,7 @@ export interface SidePanelInterface {
   handleModeStudy: () => void
   handleModeTest: () => void
   handleHomeBack: () => void
+  handleQuestionnaire: () => void
   mode: string
 }
 
@@ -113,4 +118,18 @@ export interface CardProps {
   url: string
   style?: React.CSSProperties
   custom?: boolean
+}
+
+export interface AnnouncementCardInterface {
+  title: string
+  content: string
+}
+
+export type InputValues = {
+  selectedOption1: string
+  selectedOption2: string
+  selectedOption3: string
+  selectedOption4: string
+  selectedOption5: string
+  [key: string]: string
 }

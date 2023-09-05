@@ -108,7 +108,7 @@ export const questions = [
   },
   {
     number: 8,
-    question: 'Wskaż zdanie faszywe:',
+    question: 'Wskaż zdanie fałszywe:',
     answers: [
       { option: 'Skierowanie na badania powinno zawierać adres pacjenta', isCorrect: false },
       { option: 'Skierowanie na badania powinno zawierać telefon pacjenta', isCorrect: false },

@@ -1,12 +1,12 @@
 import styles from './Learning.module.scss'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { INFO, TEST, MULTIMEDIA } from '@/data/constants'
-import { InfoCard, Test, LearningPanel, SidePanel, NavBar } from '@/components'
+import { INFO, TEST, MULTIMEDIA, ANNOUNCEMENT } from '@/data/constants'
+import { InfoCard, Test, LearningPanel, SidePanel, NavBar, AnnouncementCard, QuestionnaireForm } from '@/components'
 import { QuestionCardInterface } from '@/types'
 
 const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
-  const [mode, setMode] = useState<'study' | 'test' | ''>('')
+  const [mode, setMode] = useState<'study' | 'test' | 'form' | ''>('')
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredQuestions, setFilteredQuestions] = useState(questions)
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(true)
@@ -50,6 +50,13 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
     setIsSidePanelOpen(false)
   }
 
+  const handleQuestionnaire = () => {
+    setFilteredQuestions(questions)
+    setSearchTerm('')
+    setMode('form')
+    setIsSidePanelOpen(false)
+  }
+
   return (
     <section className={styles.learning}>
       <div className={styles.learning_panel}>
@@ -58,6 +65,7 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
           handleModeStudy={handleModeStudy}
           handleModeTest={handleModeTest}
           handleHomeBack={handleHomeBack}
+          handleQuestionnaire={handleQuestionnaire}
           isSidePanelOpen={isSidePanelOpen}
         />
         <div
@@ -72,6 +80,7 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
             handleModeStudy={handleModeStudy}
             handleModeTest={handleModeTest}
             handleSearch={handleSearch}
+            handleQuestionnaire={handleQuestionnaire}
             searchTerm={searchTerm}
             isSidePanelOpen={isSidePanelOpen}
             setSearchTerm={setSearchTerm}
@@ -85,6 +94,7 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
           <div className={styles.test_container}>
             {!mode && (
               <>
+                <AnnouncementCard {...ANNOUNCEMENT} />
                 <InfoCard {...TEST} />
                 <InfoCard {...MULTIMEDIA} />
                 <InfoCard {...INFO} />
@@ -92,6 +102,7 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
             )}
             {mode === 'study' && <LearningPanel data={filteredQuestions} />}
             {mode === 'test' && <Test />}
+            {mode === 'form' && <QuestionnaireForm />}
           </div>
         </div>
       </div>

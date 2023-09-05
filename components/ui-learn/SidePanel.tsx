@@ -6,6 +6,7 @@ const SidePanel: React.FC<SidePanelInterface> = ({
   handleHomeBack,
   handleModeStudy,
   handleModeTest,
+  handleQuestionnaire,
   isSidePanelOpen,
   mode,
 }) => {
@@ -22,9 +23,11 @@ const SidePanel: React.FC<SidePanelInterface> = ({
         <MenuButtons
           isStudy={mode === 'study'}
           isTest={mode === 'test'}
+          isForm={mode === 'form'}
           handleModeStudy={handleModeStudy}
           handleModeTest={handleModeTest}
           handleHomeBack={handleHomeBack}
+          handleQuestionnaire={handleQuestionnaire}
         />
         <h4>® WESA 2023</h4>
       </div>

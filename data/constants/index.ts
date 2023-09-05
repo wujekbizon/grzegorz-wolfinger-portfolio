@@ -172,6 +172,7 @@ export const experiences = [
   },
 ]
 
+import { AnnouncementCardInterface } from '@/types'
 import { questions } from '../questions'
 
 export const LETTERS = ['a', 'b', 'c', 'd', 'e'] // it depends on how many options in answers []
@@ -224,4 +225,10 @@ export const MULTIMEDIA = {
       url: 'https://drive.google.com/file/d/1CbDT7ha5tK3B8K3QYYlh8JfQStZNiHkb/view?usp=sharing',
     },
   ],
+}
+
+export const ANNOUNCEMENT: AnnouncementCardInterface = {
+  title: 'UWAGA OGŁOSZENIE',
+  content:
+    'W związku z tym że platforma cieszy sie powodzeniem, testujecie swoją wiedzę i mam nadzieję że dzięki temu możecie się lepiej przygotować do egazminu Opiekuna Medycznego, to będe chciał rozwijać ją dalej. Więc zapraszam was do wzięcia udziału w krótkiej ankiecie dotyczącej rozwoju i oceny tej platformy, którą znajdziecie w zakładce Ankieta. Pozdrawiam Admin',
 }

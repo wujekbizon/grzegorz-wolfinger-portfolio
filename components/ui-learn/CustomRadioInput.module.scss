@@ -1,0 +1,10 @@
+@import '../../styles/globals.scss';
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark700;
+  font-size: 12px;
+  min-width: 100px;
+}

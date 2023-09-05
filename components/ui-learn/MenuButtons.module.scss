@@ -1,21 +1,44 @@
 @import '../../styles/globals.scss';
 
-.btns {
-  width: 100%;
+.container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
+  justify-content: space-between;
+  padding: 30px 0;
 
-  .side_btn {
+  .btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+    .side_btn {
+      width: 100%;
+      height: 35px;
+      cursor: pointer;
+      background-color: $dark600;
+      border: none;
+      &:hover {
+        background-color: $dark800;
+      }
+    }
+  }
+
+  .form_btn {
     width: 100%;
     height: 35px;
     cursor: pointer;
-    background-color: $dark600;
+    background-color: rgb(231, 124, 124);
     border: none;
+    color: black;
+    font-weight: 500;
+
     &:hover {
-      background-color: $dark800;
+      background-color: #db3724;
     }
   }
 }

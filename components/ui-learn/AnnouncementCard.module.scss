@@ -1,0 +1,36 @@
+@import '../../styles/globals.scss';
+
+.announcement_card {
+  min-height: 50px;
+  width: 70%;
+  background-color: rgb(231, 124, 124);
+  border: 1px solid $dark500;
+  padding: 15px;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include lgMobile {
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
