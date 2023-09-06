@@ -230,5 +230,5 @@ export const MULTIMEDIA = {
 export const ANNOUNCEMENT: AnnouncementCardInterface = {
   title: 'UWAGA OGŁOSZENIE',
   content:
-    'W związku z tym że platforma cieszy sie powodzeniem, testujecie swoją wiedzę i mam nadzieję że dzięki temu możecie się lepiej przygotować do egazminu Opiekuna Medycznego, to będe chciał rozwijać ją dalej. Więc zapraszam was do wzięcia udziału w krótkiej ankiecie dotyczącej rozwoju i oceny tej platformy, którą znajdziecie w zakładce Ankieta. Pozdrawiam Admin',
+    'W związku z tym że platforma cieszy sie powodzeniem, testujecie swoją wiedzę, a mam nadzieję, że dzięki temu możecie się lepiej przygotować do egazminu opiekuna medycznego, to będe chciał rozwijać ją dalej. Więc zapraszam Was do wzięcia udziału w krótkiej ankiecie dotyczącej rozwoju i oceny tej platformy, którą znajdziecie w zakładce Ankieta. Pozdrawiam Admin',
 }

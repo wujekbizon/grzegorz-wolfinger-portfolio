@@ -102,7 +102,7 @@ const Learning = ({ questions }: { questions: QuestionCardInterface[] }) => {
             )}
             {mode === 'study' && <LearningPanel data={filteredQuestions} />}
             {mode === 'test' && <Test />}
-            {mode === 'form' && <QuestionnaireForm />}
+            {mode === 'form' && <QuestionnaireForm setMode={setMode} />}
           </div>
         </div>
       </div>
